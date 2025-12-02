@@ -18,8 +18,6 @@ The Layout Manager Panel is the main control center for creating and configuring
 
 Once you have a layout created, you can configure the following options:
 
-**Basic Toggles**:
-
 **Enabled**:
 - Controls whether this layout gets synced during NoGUI output
 - Disabled layouts are ignored by automation
@@ -29,9 +27,6 @@ Once you have a layout created, you can configure the following options:
 - When enabled: Outputted M3U and EPG files upload to your configured cloud provider
 - When disabled: Files only save locally
 - Requires cloud provider setup (see Cloud Storage section)
-
-
-**Layout Upload Options**:
 
 **Upload Raw XML**:
 - Uploads uncompressed EPG XML file to cloud
