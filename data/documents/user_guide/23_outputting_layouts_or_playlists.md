@@ -1,6 +1,6 @@
 # Outputting Layouts / Playlists for Players
 
-### Outputting Layouts / Playlists for Players
+### Outputting Layouts or Playlists for Players
 
 Outputting generates M3U and EPG files for your player apps.
 
