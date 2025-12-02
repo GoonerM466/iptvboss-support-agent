@@ -20,7 +20,7 @@ Task-oriented guides for managing your IPTV channels with IPTVBoss/EPGBoss.
 ### Layouts (Files 07-17)
 
 - [07 - Layouts Overview](07_layouts_overview.md)
-- [08 - Layout Manager Panel](08_layout_manager_panel.md)
+- [08 - Layout Manager](08_layout_manager.md)
 - [09 - Creating a Layout Workflow](09_creating_layout_workflow.md)
 - [10 - Layout Editor Overview](10_layout_editor_overview.md)
 - [11 - Layout Editor - Channel Options](11_layout_editor_channel_options.md)

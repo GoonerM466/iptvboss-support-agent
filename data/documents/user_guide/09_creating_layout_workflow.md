@@ -49,5 +49,5 @@
 
 ## Related Topics
 
-- [Previous: Layout Manager Panel](08_layout_manager_panel.md)
+- [Previous: Layout Manager](08_layout_manager.md)
 - [Next: Working in Layout Editor - Overview](10_layout_editor_overview.md)

@@ -15,4 +15,4 @@ Layouts are your custom channel organizations. You can have multiple layouts for
 ## Related Topics
 
 - [Previous: Managing EPG Sources - Adding](06_managing_epg_sources_adding.md)
-- [Next: Layout Manager Panel](08_layout_manager_panel.md)
+- [Next: Layout Manager](08_layout_manager.md)
