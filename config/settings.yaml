@@ -1,0 +1,64 @@
+# IPTVBoss Support Agent - Application Settings
+
+# Application Info
+app:
+  name: "IPTVBoss Support Agent"
+  version: "1.0.0"
+  description: "AI-powered support for IPTVBoss & EPGBoss"
+
+# Vector Search Settings
+vector_search:
+  top_k: 10                   # Number of chunks to retrieve (INCREASED for better coverage)
+  min_score: 0.2              # Minimum similarity score (LOWERED for more lenient matching)
+  embedding_model: "all-MiniLM-L6-v2"
+
+# LLM Settings
+llm:
+  model: "gemini-2.5-flash"
+  temperature: 0.5            # INCREASED for more natural responses
+  max_output_tokens: 3072     # INCREASED for longer, more complete answers
+  top_p: 0.8
+  top_k: 40
+
+# Image Display Settings
+images:
+  max_per_response: 8         # Maximum images to show per response
+  display_width: 400          # Image width in pixels
+  show_captions: true
+
+# Document Processing Settings
+document_processing:
+  chunk_size: 5000           # Characters per chunk (INCREASED to keep sections together)
+  chunk_overlap: 1000          # Overlap between chunks (INCREASED for better continuity)
+
+# UI Settings
+ui:
+  page_title: "IPTVBoss Support Agent"
+  page_icon: "🎬"
+  layout: "wide"
+  theme: "light"
+  show_sidebar: true
+
+# Support Links
+support:
+  discord: "https://discord.gg/QCxpA9yvWP"
+  website: "https://members.bosstees.net"
+  documentation: "https://github.com/YOUR_USERNAME/iptv-support"
+
+# Rate Limiting (future feature)
+rate_limiting:
+  enabled: false
+  requests_per_minute: 10
+  requests_per_day: 100
+
+# Analytics (future feature)
+analytics:
+  enabled: false
+  track_queries: false
+  track_feedback: false
+
+# Debug Settings
+debug:
+  show_retrieved_chunks: false
+  show_image_detection: false
+  log_level: "INFO"          # DEBUG, INFO, WARNING, ERROR

@@ -1,0 +1,217 @@
+{
+  "image1.png": {
+    "section": "OVERVIEW",
+    "context": "At the top of the manual, right after the title 'IPTVBOSS USER MANUAL' and before the overview text",
+    "description": "IPTVBoss logo or banner image"
+  },
+  "image2.png": {
+    "section": "OVERVIEW",
+    "context": "After download and docker links, before Cloud Provider Setup section. Links to PayPal donation",
+    "description": "PayPal donation button/link"
+  },
+  "image3.png": {
+    "section": "SETUP DROPBOX",
+    "context": "Step 2: Click on Create an App",
+    "description": "Dropbox developer page showing 'Create an App' button"
+  },
+  "image4.png": {
+    "section": "SETUP DROPBOX",
+    "context": "Step 3: Choose: 1. Scoped Access, 2. App Folder, 3. Name your App",
+    "description": "Dropbox app creation dialog with options for Scoped Access, App Folder, and naming the app"
+  },
+  "image5.png": {
+    "section": "SETUP DROPBOX",
+    "context": "Step 4: Change the permissions of your Dropbox app, by clicking on the permissions tab & use the picture below to set your permission as required for IPTVBoss",
+    "description": "Dropbox app permissions tab showing required permissions for IPTVBoss"
+  },
+  "image6.png": {
+    "section": "SETUP DROPBOX",
+    "context": "Step 5: Open IPTVBoss and go to 'Settings' then 'IPTVBoss Settings'",
+    "description": "IPTVBoss settings dialog showing Dropbox cloud provider configuration with App Key and App Secret fields"
+  },
+  "image7.png": {
+    "section": "SETUP GOOGLE DRIVE",
+    "context": "Step 1: Select the dropdown next to Google APIs and select New Project",
+    "description": "Google Cloud Console showing the project dropdown and 'New Project' option"
+  },
+  "image8.png": {
+    "section": "SETUP GOOGLE DRIVE",
+    "context": "Step 2: Give your project a name and press create",
+    "description": "Google Cloud Console new project creation dialog with project name field"
+  },
+  "image9.png": {
+    "section": "SETUP GOOGLE DRIVE",
+    "context": "Step 3: Make sure the project you created is selected in the dropdown next to 'Google APIs' at the top right. Then click '+ ENABLE APIS AND SERVICES'",
+    "description": "Google Cloud Console showing the '+ ENABLE APIS AND SERVICES' button"
+  },
+  "image10.png": {
+    "section": "SETUP GOOGLE DRIVE",
+    "context": "Step 4: Search for 'drive' and then select 'Google Drive API'",
+    "description": "Google Cloud Console API library showing search results for 'drive' with Google Drive API"
+  },
+  "image11.png": {
+    "section": "SETUP GOOGLE DRIVE",
+    "context": "Step 5: Click the blue 'Enable' button if it is not already enabled",
+    "description": "Google Drive API page showing the blue 'Enable' button"
+  },
+  "image12.png": {
+    "section": "SETUP GOOGLE DRIVE",
+    "context": "Step 6: Select 'OAuth Consent Screen' on the left hand side",
+    "description": "Google Cloud Console showing the OAuth Consent Screen option in left sidebar"
+  },
+  "image13.png": {
+    "section": "SETUP GOOGLE DRIVE",
+    "context": "Step 7: Select 'External' and press 'Create'",
+    "description": "OAuth consent screen type selection showing 'External' option"
+  },
+  "image14.png": {
+    "section": "SETUP GOOGLE DRIVE",
+    "context": "Step 9: On the Scopes page, click 'Add or Remove Scopes'",
+    "description": "OAuth consent screen Scopes page with 'Add or Remove Scopes' button"
+  },
+  "image15.png": {
+    "section": "SETUP GOOGLE DRIVE",
+    "context": "Step 10: Enable 'drive.appdate' and 'drive.file' and click 'update'. Click 'Save and Continue'",
+    "description": "Scopes selection dialog showing drive.appdate and drive.file scopes selected"
+  },
+  "image16.png": {
+    "section": "SETUP GOOGLE DRIVE",
+    "context": "Step 13: If the App is left in 'Testing', tokens will expire after 7 days. To avoid this, click 'Publish App'. Then click confirm",
+    "description": "OAuth consent screen showing 'Publish App' button to avoid token expiration"
+  },
+  "image17.png": {
+    "section": "SETUP GOOGLE DRIVE",
+    "context": "Step 14: Click 'Credentials' on the left hand side",
+    "description": "Google Cloud Console showing 'Credentials' option in left sidebar"
+  },
+  "image18.png": {
+    "section": "SETUP GOOGLE DRIVE",
+    "context": "Step 15: Click 'Create Credentials' at the top and Select 'OAuth client ID'",
+    "description": "Credentials page showing 'Create Credentials' dropdown with 'OAuth client ID' option"
+  },
+  "image19.png": {
+    "section": "SETUP GOOGLE DRIVE",
+    "context": "Step 16: In the Application type dropdown, select 'TVs and Limited Input devices'. Then click 'Create'",
+    "description": "OAuth client ID creation dialog showing application type dropdown with 'TVs and Limited Input devices' selected"
+  },
+  "image20.png": {
+    "section": "SETUP GOOGLE DRIVE",
+    "context": "Step 17: Open IPTVBoss. Go to Settings, IPTVBoss Settings. Select 'Cloud Sync Enabled'. From the 'Cloud Provider' dropdown, select 'Google Drive'. Enter your Client Id and Client Secret. Press Authorize",
+    "description": "IPTVBoss settings dialog showing Google Drive cloud provider configuration with Client ID and Client Secret fields"
+  },
+  "image21.png": {
+    "section": "BUILT IN EPG GUIDES",
+    "context": "To activate your IPTVBoss Pro subscription, simply enter your IPTVBoss token (which you will receive in your welcome email from IPTVBoss) in the IPTVBoss Pro Setting dialog under the Settings menu in IPTVBoss",
+    "description": "Menu showing how to access IPTVBoss Pro Settings dialog"
+  },
+  "image22.png": {
+    "section": "BUILT IN EPG GUIDES",
+    "context": "After image21, showing the actual IPTVBoss Pro subscription token entry",
+    "description": "IPTVBoss Pro Settings dialog with token entry field"
+  },
+  "image23.png": {
+    "section": "LAYOUT MANAGER PANEL",
+    "context": "The layout manager panel is the main setup page of IPTVBoss. Here you will create and edit layouts that allow you to take your provider sources and epgs and customize them as you desire",
+    "description": "Layout Manager panel showing layout list and configuration options"
+  },
+  "image24.png": {
+    "section": "SOURCES MANAGER PANEL",
+    "context": "The Sources Manager panel is where you will manage all your iptv sources you want to edit and epg sources you want to use. The Sources Manager can be found under the 'Sources Menu'",
+    "description": "Sources Manager panel showing playlist sources and EPG sources management interface"
+  },
+  "image25.png": {
+    "section": "Managing EPG Sources",
+    "context": "Add EPG - Name the EPG Source. To use the IPTVBoss built-in guides, click the dropdown window in 'Source' and choose the EPG you want to add. You can also add your own EPG by pasting the URL",
+    "description": "Add EPG dialog showing EPG source dropdown with built-in guide options"
+  },
+  "image26.png": {
+    "section": "EPG Layout Settings",
+    "context": "An example of a custom EPG setting I use is pictured below. Shows drag/drop components from the bottom into the Title & Description windows",
+    "description": "EPG Layout Settings dialog showing custom title and description configuration with draggable components"
+  },
+  "image27.png": {
+    "section": "EPG Layout Settings",
+    "context": "These are examples of the results using the above settings. First example image",
+    "description": "Example result of custom EPG layout showing formatted program title and description in player"
+  },
+  "image28.png": {
+    "section": "EPG Layout Settings",
+    "context": "These are examples of the results using the above settings. Second example image",
+    "description": "Another example result of custom EPG layout showing formatted program information"
+  },
+  "image29.png": {
+    "section": "EPG Layout Settings",
+    "context": "These are examples of the results using the above settings. Third example image",
+    "description": "Third example result of custom EPG layout showing formatted program details"
+  },
+  "image30.png": {
+    "section": "Importing Channels - Import Channels From Sources Dialog",
+    "context": "In this GUI, you import channels from your sources into your layout. You can import by 'Source', which imports all enabled groups from the selected Sources; you can import by Category; or you can import by Channel",
+    "description": "Import Channels From Sources dialog showing source selection, categories list, and channels list with import options"
+  },
+  "image31.png": {
+    "section": "Importing Channels - Import Channels From Layouts Dialog",
+    "context": "In this GUI, you import channels from your existing layouts into another layout. You can import by 'Layout', which imports all enabled groups from the selected Layouts; you can import by Group; or you can import by Channel",
+    "description": "Import Channels From Layouts dialog showing layout selection, groups list, and channels list with import options"
+  },
+  "image32.png": {
+    "section": "Editing Layouts - LAYOUT EDITOR PANEL",
+    "context": "Most function/actions that are completed on this panel can be undone or redone using the 'Undo' and 'Redo' functions on the top toolbar",
+    "description": "Layout Editor panel showing groups list, channels list, channel options, and group options interface"
+  },
+  "image33.png": {
+    "section": "Tips For EPG Mapping",
+    "context": "Example: I want to map US Network channels using IPTVBoss built-in guides. I prefer to see the channels with no mapping, so I check the 'Highlight Missing EPGs' box in the 'Preferences' options at the top. Also, I highlight all channels I plan to 'Auto' map",
+    "description": "Channel list showing highlighted channels with missing EPG mappings ready for auto-mapping"
+  },
+  "image34.png": {
+    "section": "Tips For EPG Mapping",
+    "context": "Then I would click on 'Search Options' buttons and uncheck the guides that I don't want interfering. In this case, UK/Can",
+    "description": "Search Options dialog showing checkboxes for different EPG guides (US, UK, Can) to enable/disable for mapping"
+  },
+  "image35.png": {
+    "section": "Tips For EPG Mapping",
+    "context": "Finally, click 'Auto' in the EPG Assignment section of the Channel Editor. Any channel that doesn't 'Auto', try using 'Manual' and it more than likely will be the first option",
+    "description": "Channel Editor showing EPG Assignment section with Auto and Manual buttons and EPG sensitivity settings"
+  },
+  "image36.png": {
+    "section": "NEW CHANNEL MANAGER",
+    "context": "The New Channel Manager can be used to determine how new channels from enabled categories will be treated when added by your provider. You are free to manage how channels are added, and from what categories into what Layout Groups",
+    "description": "New Channel Manager dialog showing Layout Groups on left and Included Categories with drag-and-drop interface"
+  },
+  "image37.png": {
+    "section": "USER SYSTEM",
+    "context": "Once in the 'Manage User' dialog, you can add multiple users, changing the credentials for each user as necessary. Each playlist can be independently enabled/disabled per User. Users can also be enabled/disabled",
+    "description": "Manage Users dialog showing user list with username/password fields and playlist enable/disable options"
+  },
+  "image38.png": {
+    "section": "USER SYSTEM",
+    "context": "You can also enable users for a layout from the Layout Manager Screen by clicking on the Manage Users button of a selected Layout. Right clicking a user will toggle them between Enabled and Disabled",
+    "description": "Layout Users dialog showing list of users that can be enabled/disabled for a specific layout"
+  },
+  "image39.png": {
+    "section": "IPTVBoss XC Server - Getting Started",
+    "context": "Before starting the XC Server, it is important to set the XC API Settings in IPTVBoss. To do this, go to 'Settings', 'XC Server Settings'",
+    "description": "XC Server Settings dialog showing server configuration options including URL, port, sync times, and XC enable options"
+  },
+  "image40.png": {
+    "section": "IPTVBoss XC Server - Running the XC Server",
+    "context": "If you are running the server on a headless system (or as a service). The log and commands can be accessed through a url endpoint. Accessing the endpoint will give a page that looks like the following. It will contain the server log as well as links for Stopping and Reloading the server",
+    "description": "XC Server web interface showing server log and control buttons (Stop/Reload) for headless operation"
+  },
+  "image41.png": {
+    "section": "IPTVBoss XC Server - User Links",
+    "context": "User links for XC can be found under the layouts pane in IPTVBoss. Simply look for the 'View XC Login' button. Once looking at the user links, links can be copied to clipboard by simply clicking the user",
+    "description": "XC User Links dialog showing list of users with their XC API login credentials and URLs"
+  },
+  "image42.png": {
+    "section": "Setting up IPTVBoss XC Server as a Service - Windows",
+    "context": "Setting up as a service in windows is more complicated than Linux. For windows users, I suggest just using the task scheduler to start the server on startup",
+    "description": "Windows Task Scheduler showing basic settings for creating a task to auto-start IPTVBoss XC Server"
+  },
+  "image43.png": {
+    "section": "Setting up IPTVBoss XC Server as a Service - Windows",
+    "context": "After basic task settings. Program/Script: C:\\Windows\\System32\\cmd.exe. Add arguments: /C iptvboss-c -xcserver",
+    "description": "Windows Task Scheduler Actions tab showing program/script and arguments configuration for starting XC Server"
+  }
+}

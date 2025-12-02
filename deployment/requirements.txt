@@ -1,0 +1,26 @@
+# IPTVBoss Support Agent - Python Dependencies
+
+# Core Framework
+streamlit>=1.29.0
+
+# LLM Integration
+google-generativeai>=0.3.2
+
+# Vector Database & Embeddings
+faiss-cpu>=1.9.0
+sentence-transformers>=2.2.2
+
+# NLP & Text Processing
+nltk>=3.8.1
+markdown>=3.5.1
+
+# Data Processing
+numpy>=1.24.3
+pandas>=2.1.4
+
+# Configuration
+pyyaml>=6.0.1
+
+# Utilities
+python-dotenv>=1.0.0
+Pillow>=10.0.0
