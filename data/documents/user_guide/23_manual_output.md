@@ -1,4 +1,8 @@
-# Manually outputting Layouts / Playlists, m3u and epg files for Players
+# Manually outputting 
+- Layout 
+- Playlist
+- m3u
+- epg 
 
 Outputting generates M3U and EPG files for your player apps.
 

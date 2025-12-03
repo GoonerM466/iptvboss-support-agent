@@ -20,8 +20,6 @@ The Layout Manager Panel is the main control center for creating and configuring
 
 Once you have a layout created, you can configure the following options:
 
-### Basic Toggles
-
 **Enabled**:
 - Controls whether this layout gets synced during NoGUI output
 - Disabled layouts are ignored by automation
@@ -31,8 +29,6 @@ Once you have a layout created, you can configure the following options:
 - When enabled: Outputted M3U and EPG files upload to your configured cloud provider
 - When disabled: Files only save locally
 - Requires cloud provider setup (see Cloud Storage section)
-
-### EPG/M3U Options
 
 **Upload Raw XML**:
 - Uploads uncompressed EPG XML file to cloud
@@ -63,13 +59,13 @@ Once you have a layout created, you can configure the following options:
 - **Must end in ".xml"** (or ".xml.gz" if using compression)
 - Example: `family_epg.xml`
 
-### EPG Configuration
-
 **Layout EPG - Days to Keep**:
 - Controls how many days of EPG data to include
 - Lower value = smaller XML file
 - Default is usually sufficient
 - **Use case**: Reduce file size if player has memory limits
+
+### EPG Override Configuration
 
 **Override EPG Layout Settings** (checkbox):
 - When enabled: Use custom EPG layout settings for this layout only
@@ -82,7 +78,7 @@ Once you have a layout created, you can configure the following options:
 - Configure title/description format for this layout's EPG
 - See "EPG Layout Customization" section for details
 
-### Output Location
+### Custom Output Location
 
 **Use Custom Output Folder** (checkbox):
 - When enabled: Save M3U/XML files to custom location instead of default
