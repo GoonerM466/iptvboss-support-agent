@@ -41,7 +41,7 @@ Task-oriented guides for managing your IPTV channels with IPTVBoss/EPGBoss.
 
 ### Output and Distribution (Files 23-25)
 
-- [23 - Manually outputting Layouts / Playlists, m3u and epg files for Players](23_manual_output.md)
+- [23 - Manually outputting](23_manual_output.md)
 - [24 - Cloud Storage Options](24_cloud_storage_overview.md)
 - [25 - Using TinyURL for Short Links](25_tinyurl_short_links.md)
 

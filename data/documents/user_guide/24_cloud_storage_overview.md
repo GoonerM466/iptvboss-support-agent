@@ -47,5 +47,5 @@ IPTVBoss uploads M3U and EPG files to cloud storage for access from player apps.
 
 ### Related Topics
 
-- [Previous: Manually outputting Layouts / Playlists, m3u and epg files for Players](23_manual_output.md)
+- [Previous: Manually outputting](23_manual_output.md)
 - [Next: Using TinyURL for Short Links](25_tinyurl_short_links.md)

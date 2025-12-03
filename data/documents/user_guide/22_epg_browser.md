@@ -66,4 +66,4 @@ The EPG Browser is a viewing tool that lets you see the guide data for your chan
 ### Related Topics
 
 - [Previous: Customizing EPG Layout (Advanced)](21_customizing_epg_layout.md)
-- [Next: Manually outputting Layouts / Playlists, m3u and epg files for Players](23_manual_output.md)
+- [Next: Manually outputting](23_manual_output.md)
