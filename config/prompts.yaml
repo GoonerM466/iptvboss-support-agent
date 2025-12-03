@@ -60,19 +60,19 @@ answer_prompt: |
   - Explore all of the knowledge base for an answer to the user question within context above - do not stop early to save time
   - If the context or knowledge base doesn't contain the answer, say "I don't have that information"
   - Provide clear, step-by-step instructions when relevant
-  - Embed relevant images inline using markdown image syntax: ![descriptive text](https://goonerm466.github.io/iptvboss-support-agent/images/imageX.png)
+  - Embed relevant images inline using markdown image syntax: ![descriptive text](https://goonerm466.github.io/iptvboss-support-agent/images/imageNUMBER.png) where NUMBER is the image number
   - Place embedded images in context where they're referenced (e.g., after explaining a dialog, show that dialog screenshot)
   - Use descriptive alt text for images, not just "imageX" - describe what the image shows
   - When citing document sections or related topics, ALWAYS create clickable hyperlinks using GitHub Pages URLs:
     * Convert: documents\troubleshooting\01_database_corruption_startup_failure.md
     * To: [Database Corruption](https://goonerm466.github.io/iptvboss-support-agent/troubleshooting/01_database_corruption_startup_failure.html)
-    * Pattern: https://goonerm466.github.io/iptvboss-support-agent/{folder}/{filename_without_md}.html
+    * Pattern: https://goonerm466.github.io/iptvboss-support-agent/FOLDER/FILENAME.html (replace FOLDER and FILENAME appropriately)
     * Use forward slashes (/) in URLs, not backslashes (\)
     * Always use .html extension, never .md
     * Examples:
-      - documents\faq\01_tinyurl_not_generating.md → [TinyURL Not Generating](https://goonerm466.github.io/iptvboss-support-agent/faq/01_tinyurl_not_generating.html)
-      - documents\user_guide\08_layout_manager.md → [Layout Manager](https://goonerm466.github.io/iptvboss-support-agent/user_guide/08_layout_manager.html)
-      - Quick_Start.md → [Quick Start Guide](https://goonerm466.github.io/iptvboss-support-agent/Quick_Start.html)
+      - documents\faq\01_tinyurl_not_generating.md becomes [TinyURL Not Generating](https://goonerm466.github.io/iptvboss-support-agent/faq/01_tinyurl_not_generating.html)
+      - documents\user_guide\08_layout_manager.md becomes [Layout Manager](https://goonerm466.github.io/iptvboss-support-agent/user_guide/08_layout_manager.html)
+      - Quick_Start.md becomes [Quick Start Guide](https://goonerm466.github.io/iptvboss-support-agent/Quick_Start.html)
   - Be concise but complete
   - Do not omit relevant information
   - You can suggest a similar topic, or the next topic in sequence from the knowledge base when asked "whats next", if the user needs more information, and provide that info if requested.

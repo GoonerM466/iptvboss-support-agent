@@ -26,6 +26,12 @@ Get IPTVBoss/EPGBoss working in 10-15 minutes. This guide covers essential setup
    - Wait for validation (may take 1-2 minutes)
    - Confirm "Pro Active" status
 
+![Menu showing how to access IPTVBoss Pro Settings dialog](images/image10.png)
+*Menu showing how to access IPTVBoss Pro Settings dialog*
+
+![IPTVBoss Pro Settings dialog with token entry field](images/image37.png)
+*IPTVBoss Pro Settings dialog with token entry field*
+
 **Important**: Activate Pro before proceeding. Many features require it.
 
 ---
@@ -45,6 +51,9 @@ Get IPTVBoss/EPGBoss working in 10-15 minutes. This guide covers essential setup
 3. Select "XC API"
 4. Enter server, username, password
 5. Click "Load"
+
+![Sources Manager panel showing playlist sources and EPG sources management interface](images/image15.png)
+*Sources Manager panel showing playlist sources and EPG sources management interface*
 
 **Troubleshooting**: If you get "Could not load categories" error, verify your credentials are correct and service is active.
 
@@ -69,16 +78,26 @@ You need cloud storage to share playlists with your player apps.
 2. **Create Dropbox App**
    - Go to [https://www.dropbox.com/developers](https://www.dropbox.com/developers)
    - Click **"Create an App"**
+
+![Dropbox developer page showing 'Create an App' button](images/image11.png)
+*Dropbox developer page showing 'Create an App' button*
+
    - Choose settings:
      1. **Scoped Access**
      2. **App Folder**
      3. **Name your App** (this will be the folder name inside your Dropbox/Apps folder)
    - Click Create
 
+![Dropbox app creation dialog with options for Scoped Access, App Folder, and naming the app](images/image33.png)
+*Dropbox app creation dialog with options for Scoped Access, App Folder, and naming the app*
+
 3. **Set App Permissions**
    - In your app settings, click the **Permissions** tab
-   - Enable required permissions (see image references in manual - [IPTVBoss 3.5 User Manual\images\image5.png](../IPTVBoss 3.5 User Manual/images/image5.png))
+   - Enable required permissions
    - Click **Submit**
+
+![Dropbox app permissions tab showing required permissions for IPTVBoss](images/image14.png)
+*Dropbox app permissions tab showing required permissions for IPTVBoss*
 
 4. **Get App Credentials**
    - Stay on your Dropbox app settings page
@@ -98,6 +117,9 @@ You need cloud storage to share playlists with your player apps.
    - Select **"Cloud Sync Enabled"** at the top
    - Click **OK**
 
+![IPTVBoss settings dialog showing Dropbox cloud provider configuration with App Key and App Secret fields](images/image12.png)
+*IPTVBoss settings dialog showing Dropbox cloud provider configuration with App Key and App Secret fields*
+
 **Note**: Free Dropbox works for personal use (1-5 devices). For more users, consider Google Drive or Dropbox paid tier.
 
 ### Option B: Google Drive Setup
@@ -115,19 +137,45 @@ You need cloud storage to share playlists with your player apps.
 2. **Create New Project**
    - Click the dropdown next to "Google APIs"
    - Select **"New Project"**
+
+![Google Cloud Console showing the project dropdown and 'New Project' option](images/image36.png)
+*Google Cloud Console showing the project dropdown and 'New Project' option*
+
    - Give your project a name
    - Click **"Create"**
+
+![Google Cloud Console new project creation dialog with project name field](images/image22.png)
+*Google Cloud Console new project creation dialog with project name field*
 
 3. **Enable Google Drive API**
    - Make sure your new project is selected (check dropdown)
    - Click **"+ ENABLE APIS AND SERVICES"**
+
+![Google Cloud Console showing the '+ ENABLE APIS AND SERVICES' button](images/image42.png)
+*Google Cloud Console showing the '+ ENABLE APIS AND SERVICES' button*
+
    - Search for **"drive"**
+
+![Google Cloud Console API library showing search results for 'drive' with Google Drive API](images/image5.png)
+*Google Cloud Console API library showing search results for 'drive' with Google Drive API*
+
    - Select **"Google Drive API"**
    - Click **"Enable"**
 
+![Google Drive API page showing the blue 'Enable' button](images/image28.png)
+*Google Drive API page showing the blue 'Enable' button*
+
 4. **Configure OAuth Consent Screen**
    - Select **"OAuth Consent Screen"** on left sidebar
+
+![Google Cloud Console showing the OAuth Consent Screen option in left sidebar](images/image43.png)
+*Google Cloud Console showing the OAuth Consent Screen option in left sidebar*
+
    - Select **"External"**
+
+![OAuth consent screen type selection showing 'External' option](images/image23.png)
+*OAuth consent screen type selection showing 'External' option*
+
    - Click **"Create"**
    - Fill in required fields:
      - App Name
@@ -137,9 +185,17 @@ You need cloud storage to share playlists with your player apps.
 
 5. **Add Scopes**
    - On the Scopes page, click **"Add or Remove Scopes"**
+
+![OAuth consent screen Scopes page with 'Add or Remove Scopes' button](images/image31.png)
+*OAuth consent screen Scopes page with 'Add or Remove Scopes' button*
+
    - Enable these two scopes:
      - `drive.appdata`
      - `drive.file`
+
+![Scopes selection dialog showing drive.appdate and drive.file scopes selected](images/image38.png)
+*Scopes selection dialog showing drive.appdata and drive.file scopes selected*
+
    - Click **"Update"**
    - Click **"Save and Continue"**
 
@@ -154,11 +210,26 @@ You need cloud storage to share playlists with your player apps.
    - Click **"Confirm"**
    - **Why**: If left in "Testing", tokens expire after 7 days
 
+![OAuth consent screen showing 'Publish App' button to avoid token expiration](images/image19.png)
+*OAuth consent screen showing 'Publish App' button to avoid token expiration*
+
 8. **Create OAuth Credentials**
    - Click **"Credentials"** on left sidebar
+
+![Google Cloud Console showing 'Credentials' option in left sidebar](images/image35.png)
+*Google Cloud Console showing 'Credentials' option in left sidebar*
+
    - Click **"Create Credentials"** at top
    - Select **"OAuth client ID"**
+
+![Credentials page showing 'Create Credentials' dropdown with 'OAuth client ID' option](images/image34.png)
+*Credentials page showing 'Create Credentials' dropdown with 'OAuth client ID' option*
+
    - In Application type dropdown, select **"TVs and Limited Input devices"**
+
+![OAuth client ID creation dialog showing application type dropdown with 'TVs and Limited Input devices' selected](images/image27.png)
+*OAuth client ID creation dialog showing application type dropdown with 'TVs and Limited Input devices' selected*
+
    - Click **"Create"**
    - Note your **Client ID** and **Client Secret**
 
@@ -175,6 +246,9 @@ You need cloud storage to share playlists with your player apps.
      - Copy authorization code
      - Return to IPTVBoss
    - Click **OK**
+
+![IPTVBoss settings dialog showing Google Drive cloud provider configuration with Client ID and Client Secret fields](images/image25.png)
+*IPTVBoss settings dialog showing Google Drive cloud provider configuration with Client ID and Client Secret fields*
 
 ---
 
@@ -209,12 +283,18 @@ You can watch the video "My First Layout" to help guide you: https://youtu.be/gf
    - IPTVBoss → Layout → Layout Manager (click "+" to create new)
    - Name it (e.g., "Home", "Main")
 
+![Layout Manager panel showing layout list and configuration options](images/image16.png)
+*Layout Manager panel showing layout list and configuration options*
+
 2. **Add Channels**:
    - Select your layout
    - Click "Add Channels"
    - Select channels from your source
    - Choose groups/categories to add
    - Click "Add to Layout"
+
+![Import Channels From Sources dialog showing source selection, categories list, and channels list with import options](images/image13.png)
+*Import Channels From Sources dialog showing source selection, categories list, and channels list with import options*
 
 3. **Assing EPG**
    - Select a channel or channels
