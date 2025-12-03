@@ -110,7 +110,8 @@ After adding a source, you can configure advanced options in Sources Manager to 
 
 **Access**: **Sources → Sources Manager**
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image24.png](images/image24.png)
+![Sources Manager panel showing playlist sources and EPG sources management interface](images/image15.png)
+*Sources Manager panel showing playlist sources and EPG sources management interface*
 
 ---
 
@@ -239,7 +240,8 @@ EPG sources provide guide data for your channels.
 3. Paste EPG URL (XML format)
 4. Click OK
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image25.png](images/image25.png)
+![Add EPG dialog showing EPG source dropdown with built-in guide options](images/image6.png)
+*Add EPG dialog showing EPG source dropdown with built-in guide options*
 
 **EPG Layout Settings**:
 - See [Customizing EPG Layout](#customizing-epg-layout-advanced) section
@@ -264,7 +266,8 @@ The Layout Manager Panel is the main control center for creating and configuring
 
 **Access**: **Layout → Layout Manager**
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image23.png](images/image23.png)
+![Layout Manager panel showing layout list and configuration options](images/image16.png)
+*Layout Manager panel showing layout list and configuration options*
 
 **Creating a New Layout**:
 
@@ -657,9 +660,17 @@ Buttons above Channels List (left to right):
 - Automatically removes common prefixes from channel names
 - Alternative to manual find/replace
 
-**Visual References**:
-- Layout Editor screenshot: [IPTVBoss 3.5 User Manual\images\image32.png](images/image32.png)
-- EPG mapping screenshots: [image33.png](images/image33.png), [image34.png](images/image34.png), [image35.png](images/image35.png)
+![Layout Editor panel showing groups list, channels list, channel options, and group options interface](images/image21.png)
+*Layout Editor panel showing groups list, channels list, channel options, and group options interface*
+
+![Channel list showing highlighted channels with missing EPG mappings ready for auto-mapping](images/image18.png)
+*Channel list showing highlighted channels with missing EPG mappings ready for auto-mapping*
+
+![Search Options dialog showing checkboxes for different EPG guides (US, UK, Can) to enable/disable for mapping](images/image32.png)
+*Search Options dialog showing checkboxes for different EPG guides to enable/disable for mapping*
+
+![Channel Editor showing EPG Assignment section with Auto and Manual buttons and EPG sensitivity settings](images/image7.png)
+*Channel Editor showing EPG Assignment section with Auto and Manual buttons and EPG sensitivity settings*
 
 ---
 
@@ -675,7 +686,8 @@ Once you have sources configured, you need to import channels from those sources
 
 **What it does**: Imports channels from your IPTV provider sources into the current layout.
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image30.png](images/image30.png)
+![Import Channels From Sources dialog showing source selection, categories list, and channels list with import options](images/image13.png)
+*Import Channels From Sources dialog showing source selection, categories list, and channels list with import options*
 
 **Import Methods**:
 
@@ -732,7 +744,8 @@ Once you have sources configured, you need to import channels from those sources
 
 **What it does**: Copies channels from one layout to another layout.
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image31.png](images/image31.png)
+![Import Channels From Layouts dialog showing layout selection, groups list, and channels list with import options](images/image17.png)
+*Import Channels From Layouts dialog showing layout selection, groups list, and channels list with import options*
 
 **Use Cases**:
 - Creating a second layout for different users (e.g., Kids layout from Main layout)
@@ -1024,9 +1037,17 @@ DVR Recording Setup:
 - Settings → Manage Live Tags → Change "Live Tag Format" to "New"
 - Sports events now appear as "NEW" and DVR will record them
 
-**Visual References**:
-- See manual for screenshots: [IPTVBoss 3.5 User Manual\images\image26.png](images/image26.png) (EPG Layout Settings dialog)
-- Example results: [images\image27.png](images/image27.png), [image28.png](images/image28.png), [image29.png](images/image29.png)
+![EPG Layout Settings dialog showing custom title and description configuration with draggable components](images/image1.png)
+*EPG Layout Settings dialog showing custom title and description configuration with draggable components*
+
+![Example result of custom EPG layout showing formatted program title and description in player](images/image8.png)
+*Example result of custom EPG layout showing formatted program title and description in player*
+
+![Example result of custom EPG layout showing formatted program information](images/image24.png)
+*Example result of custom EPG layout showing formatted program information*
+
+![Example result of custom EPG layout showing formatted program details](images/image2.png)
+*Example result of custom EPG layout showing formatted program details*
 
 **Troubleshooting**:
 - **Components not appearing**: EPG source doesn't include that data
@@ -1466,7 +1487,8 @@ When the provider adds channels to those categories, they automatically appear i
 - Use "Don't Import Duplicate Channels" in import settings
 - Consider manual channel management for complex setups
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image36.png](images/image36.png)
+![New Channel Manager dialog showing Layout Groups on left and Included Categories with drag-and-drop interface](images/image26.png)
+*New Channel Manager dialog showing Layout Groups on left and Included Categories with drag-and-drop interface*
 
 ---
 
@@ -1741,7 +1763,9 @@ If running as service or headless, access log and commands via web endpoint:
 This page shows:
 - Server log
 - Links for Stopping and Reloading server
-- Visual reference: [IPTVBoss 3.5 User Manual\images\image40.png](images/image40.png)
+
+![XC Server Settings dialog showing server configuration options including URL, port, sync times, and XC enable options](images/image40.png)
+*XC Server Settings dialog showing server configuration options including URL, port, sync times, and XC enable options*
 
 **User Links for XC**:
 
@@ -1750,7 +1774,9 @@ View XC login credentials for users:
 - Click **"View XC Login"** button
 - Shows XC credentials for all users
 - Click user to copy link to clipboard
-- Visual reference: [image41.png](images/image41.png)
+
+![XC User Links dialog showing list of users with their XC API login credentials and URLs](images/image4.png)
+*XC User Links dialog showing list of users with their XC API login credentials and URLs*
 
 **Setting Up as Windows Service**:
 
@@ -1763,7 +1789,11 @@ Using Task Scheduler (recommended for Windows):
 5. **Trigger**: At startup (or your preference)
 6. **Settings**: Run whether user is logged in or not
 
-Visual references: [image42.png](images/image42.png), [image43.png](images/image43.png)
+![Windows Task Scheduler showing basic settings for creating a task to auto-start IPTVBoss XC Server](images/image3.png)
+*Windows Task Scheduler showing basic settings for creating a task to auto-start IPTVBoss XC Server*
+
+![Windows Task Scheduler Actions tab showing program/script and arguments configuration for starting XC Server](images/image39.png)
+*Windows Task Scheduler Actions tab showing program/script and arguments configuration for starting XC Server*
 
 **Setting Up as Ubuntu Service**:
 

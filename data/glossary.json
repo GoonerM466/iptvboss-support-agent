@@ -64,5 +64,15 @@
   "tinyurl_terms": {
     "canonical": "tinyurl",
     "synonyms": ["tinyurl", "short link", "shortened link", "url shortener", "short url"]
+  },
+
+  "cache_terms": {
+    "canonical": "cache",
+    "synonyms": ["cache", "cached data", "cached files", "temp files", "temporary files", "stale data"]
+  },
+
+  "connectivity_terms": {
+    "canonical": "connectivity",
+    "synonyms": ["internet", "connection", "online", "offline", "network", "connectivity"]
   }
 }

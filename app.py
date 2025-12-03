@@ -245,10 +245,10 @@ def handle_user_input(user_question: str):
                 conversation_history
             )
 
-            # Display answer
+            # Display answer (may contain embedded images via markdown)
             st.write(answer)
 
-            # Detect and display relevant images
+            # Detect and display relevant images that weren't already embedded
             image_handler = st.session_state.image_handler
             relevant_images = image_handler.detect_relevant_images(
                 user_question,
@@ -263,15 +263,27 @@ def handle_user_input(user_question: str):
                 if img_info and img_info not in relevant_images:
                     relevant_images.append(img_info)
 
-            # Display images
-            if relevant_images:
+            # Extract embedded images from answer to avoid duplication
+            import re
+            embedded_pattern = r'!\[.*?\]\(.*?/images/(image\d+\.png)\)'
+            embedded_images = re.findall(embedded_pattern, answer)
+
+            # Filter out images that were already embedded in the response
+            images_to_display = [
+                img for img in relevant_images
+                if img['path'].split('/')[-1] not in embedded_images and
+                   img['path'].split('\\')[-1] not in embedded_images
+            ]
+
+            # Display additional relevant images (not already embedded)
+            if images_to_display:
                 st.markdown("---")
-                st.markdown("**📷 Relevant Images:**")
+                st.markdown("**📷 Additional Relevant Images:**")
 
                 # Display in columns
-                cols = st.columns(min(len(relevant_images), 3))
+                cols = st.columns(min(len(images_to_display), 3))
 
-                for i, img_info in enumerate(relevant_images[:3]):
+                for i, img_info in enumerate(images_to_display[:3]):
                     with cols[i]:
                         try:
                             img = Image.open(img_info['path'])
@@ -283,11 +295,11 @@ def handle_user_input(user_question: str):
                         except Exception as e:
                             st.error(f"Error loading image: {e}")
 
-            # Add to message history
+            # Add to message history (store only additional images, not embedded ones)
             st.session_state.messages.append({
                 "role": "assistant",
                 "content": answer,
-                "images": relevant_images
+                "images": images_to_display
             })
 
 
@@ -301,10 +313,10 @@ def render_chat():
         with st.chat_message(role):
             st.write(content)
 
-            # Display images if present
+            # Display additional images if present (not embedded in content)
             if "images" in message and message["images"]:
                 st.markdown("---")
-                st.markdown("**📷 Relevant Images:**")
+                st.markdown("**📷 Additional Relevant Images:**")
 
                 cols = st.columns(min(len(message["images"]), 3))
                 for i, img_info in enumerate(message["images"][:3]):

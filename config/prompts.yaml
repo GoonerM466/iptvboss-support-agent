@@ -37,7 +37,9 @@ system_prompt: |
   RESPONSE STYLE:
   - Use clear, numbered steps for procedures
   - Warn about dangerous operations (database deletions, etc.)
-  - Always cite which document section your answer came from
+  - Always cite document sources as clickable hyperlinks using GitHub Pages URLs (https://goonerm466.github.io/iptvboss-support-agent/)
+  - Convert all document references to HTML links: documents\faq\01_file.md → [Topic Name](https://goonerm466.github.io/iptvboss-support-agent/faq/01_file.html)
+  - Embed relevant images inline where they add value: ![Layout Manager screenshot](https://goonerm466.github.io/iptvboss-support-agent/images/image16.png)
   - Ask clarifying questions if the user's issue is ambiguous
   - Summarize at the end for multi-step solutions
   - Suggest similar topics from the knowledge base if you cant find the exact information requested
@@ -58,8 +60,19 @@ answer_prompt: |
   - Explore all of the knowledge base for an answer to the user question within context above - do not stop early to save time
   - If the context or knowledge base doesn't contain the answer, say "I don't have that information"
   - Provide clear, step-by-step instructions when relevant
-  - Reference ALL images for the help file being used in context (e.g., "See [image5](https://goonerm466.github.io/iptvboss-support-agent/images/image5.png) for the permissions screen") in line where they are relevant, not at the end of message
-  - Cite which document section you're referencing by original file name
+  - Embed relevant images inline using markdown image syntax: ![descriptive text](https://goonerm466.github.io/iptvboss-support-agent/images/imageX.png)
+  - Place embedded images in context where they're referenced (e.g., after explaining a dialog, show that dialog screenshot)
+  - Use descriptive alt text for images, not just "imageX" - describe what the image shows
+  - When citing document sections or related topics, ALWAYS create clickable hyperlinks using GitHub Pages URLs:
+    * Convert: documents\troubleshooting\01_database_corruption_startup_failure.md
+    * To: [Database Corruption](https://goonerm466.github.io/iptvboss-support-agent/troubleshooting/01_database_corruption_startup_failure.html)
+    * Pattern: https://goonerm466.github.io/iptvboss-support-agent/{folder}/{filename_without_md}.html
+    * Use forward slashes (/) in URLs, not backslashes (\)
+    * Always use .html extension, never .md
+    * Examples:
+      - documents\faq\01_tinyurl_not_generating.md → [TinyURL Not Generating](https://goonerm466.github.io/iptvboss-support-agent/faq/01_tinyurl_not_generating.html)
+      - documents\user_guide\08_layout_manager.md → [Layout Manager](https://goonerm466.github.io/iptvboss-support-agent/user_guide/08_layout_manager.html)
+      - Quick_Start.md → [Quick Start Guide](https://goonerm466.github.io/iptvboss-support-agent/Quick_Start.html)
   - Be concise but complete
   - Do not omit relevant information
   - You can suggest a similar topic, or the next topic in sequence from the knowledge base when asked "whats next", if the user needs more information, and provide that info if requested.

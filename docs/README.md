@@ -224,16 +224,16 @@ Understanding these concepts helps with troubleshooting:
 
 ## Version Information
 
-**Documentation Generated**: November 2024
-**Based On**: Discord support threads through November 2024
+**Documentation Generated**: November 2025
+**Based On**: Discord support threads through November 2025
 **IPTVBoss Versions Covered**: 3.9.x series
-**Last Updated**: 2024-12-01
+**Last Updated**: 2025-12-04
 
 ---
 
 ## License & Disclaimer
 
-This documentation is community-maintained and not officially endorsed by IPTVBoss developers. Information is provided as-is based on community experience.
+This documentation is community-driven and not officially endorsed by IPTVBoss developers. Information is provided as-is based on community experience.
 
 **Always backup your data before following troubleshooting steps.**
 

@@ -1,4 +1,4 @@
-Total chunks: 127
+Total chunks: 128
 Embedding dimension: 384
 Model: SentenceTransformer(
   (0): Transformer({'max_seq_length': 256, 'do_lower_case': False, 'architecture': 'BertModel'})

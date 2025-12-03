@@ -40,6 +40,7 @@ Quick reference to find documentation by topic, symptom, or platform.
 
 ### Source Sync Problems
 - [Source Sync Breaking Layouts](troubleshooting/02_source_sync_breaking_layouts.md)
+- [No Data in Boss or Player](troubleshooting/13_no_data.md)
 - [Custom Channels Disappeared After Sync](faq/29_custom_channels_disappeared_after_sync.md)
 - [All Channels Disappeared But Groups Remain](faq/30_all_channels_disappeared_groups_remain.md)
 - [Handling Provider Changes](user_guide/31_handling_provider_changes.md)
@@ -74,6 +75,7 @@ Quick reference to find documentation by topic, symptom, or platform.
 
 ### "Nothing works" / Total Failure
 - [Database Corruption and Failed Startup](troubleshooting/01_database_corruption_startup_failure.md)
+- [No Data in Boss or Player](troubleshooting/13_no_data.md)
 - [Application Crashes on Startup](troubleshooting/03_application_crashes_startup_updates.md)
 - [Lost Pro Configuration Groups Empty](known_issues/03_lost_pro_configuration_groups_empty.md)
 - [Playlists Disappeared and Lost Pro](faq/19_playlists_disappeared_lost_pro.md)
