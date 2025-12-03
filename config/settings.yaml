@@ -16,7 +16,7 @@ vector_search:
 llm:
   model: "gemini-2.5-flash"
   temperature: 0.4            # INCREASED for more natural responses
-  max_output_tokens: 5000     # INCREASED for longer, more complete answers
+  max_output_tokens: 10000     # INCREASED for longer, more complete answers
   top_p: 0.8
   top_k: 40
 
@@ -61,4 +61,4 @@ analytics:
 debug:
   show_retrieved_chunks: false
   show_image_detection: false
-  log_level: "INFO"          # DEBUG, INFO, WARNING, ERROR
+  log_level: "DEBUG"          # DEBUG, INFO, WARNING, ERROR
