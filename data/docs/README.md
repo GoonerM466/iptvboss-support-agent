@@ -257,9 +257,9 @@ This documentation is community-maintained and not officially endorsed by IPTVBo
 
 ## Quick Links
 
-- **Discord Support Channel**: Primary support venue
-- **IPTVBoss Website**: Official site, downloads, license management
-- **YouTube Tutorials**: Visual guides for setup and features
+- [**Discord Support Channel**](https://discord.gg/QCxpA9yvWP): Primary support venue
+- [**IPTVBoss Website**](https://members.bosstees.net): Official site, downloads, license management
+- [**YouTube Tutorials**](https://www.youtube.com/@IPTVBoss-wt9fe): Visual guides for setup and features
 
 ---
 

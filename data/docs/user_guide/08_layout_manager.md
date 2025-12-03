@@ -32,7 +32,7 @@ Once you have a layout created, you can configure the following options:
 - When disabled: Files only save locally
 - Requires cloud provider setup (see Cloud Storage section)
 
-### EPG/M3U Upload Options
+### EPG/M3U Options
 
 **Upload Raw XML**:
 - Uploads uncompressed EPG XML file to cloud
