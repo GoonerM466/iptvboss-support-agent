@@ -3,13 +3,13 @@
     {
       "keywords": ["dropbox", "app creation", "create dropbox app", "set up dropbox", "setup dropbox", "configure dropbox", "dropbox permissions"],
       "images": ["image11.png", "image33.png", "image14.png", "image12.png"],
-      "source_files": ["08_cloud_storage_options.md", "Quick_Start.md"],
+      "source_files": ["24_cloud_storage_overview.md", "24a_dropbox_setup_detailed.md", "Quick_Start.md"],
       "description": "Dropbox setup screens"
     },
     {
       "keywords": ["google drive", "google cloud", "oauth", "drive api", "set up google drive", "setup google drive", "configure google drive", "google drive permissions"],
       "images": ["image36.png", "image22.png", "image42.png", "image5.png", "image28.png", "image43.png", "image23.png", "image31.png", "image38.png", "image19.png", "image35.png", "image34.png", "image27.png", "image25.png"],
-      "source_files": ["08_cloud_storage_options.md", "Quick_Start.md"],
+      "source_files": ["24_cloud_storage_overview.md", "24b_google_drive_setup_detailed.md", "Quick_Start.md"],
       "description": "Google Drive and OAuth setup"
     },
     {
@@ -21,73 +21,73 @@
     {
       "keywords": ["layout manager", "manage layouts", "layout panel", "create layout"],
       "images": ["image16.png"],
-      "source_files": ["03_creating_managing_layouts.md"],
+      "source_files": ["08_layout_manager.md"],
       "description": "Layout Manager panel"
     },
     {
       "keywords": ["sources manager", "playlist sources", "manage sources", "add playlist", "add source"],
       "images": ["image15.png"],
-      "source_files": ["02_setting_up_first_source.md"],
+      "source_files": ["03_source_manager_overview.md", "04_managing_playlist_sources_adding.md", "05_playlist_source_options.md"],
       "description": "Sources Manager interface"
     },
     {
       "keywords": ["epg source", "add epg", "manage epg", "epg sources"],
       "images": ["image6.png"],
-      "source_files": ["02_setting_up_first_source.md", "06_managing_epg_sources.md"],
+      "source_files": ["06_managing_epg_sources_adding.md", "20_managing_epg_sources_full.md"],
       "description": "EPG source management"
     },
     {
       "keywords": ["epg layout", "customize epg", "epg settings", "epg customization", "program info", "program display"],
       "images": ["image1.png", "image8.png", "image24.png", "image2.png"],
-      "source_files": ["06_managing_epg_sources.md"],
+      "source_files": ["21_customizing_epg_layout.md"],
       "description": "EPG layout customization"
     },
     {
       "keywords": ["import channels", "import from sources", "import by category", "import by channel"],
       "images": ["image13.png"],
-      "source_files": ["03_creating_managing_layouts.md"],
+      "source_files": ["16_import_from_sources_dialog.md"],
       "description": "Import Channels From Sources dialog"
     },
     {
       "keywords": ["import from layouts", "import channels from layouts", "import by group"],
       "images": ["image17.png"],
-      "source_files": ["03_creating_managing_layouts.md"],
+      "source_files": ["17_import_from_layouts_dialog.md"],
       "description": "Import Channels From Layouts dialog"
     },
     {
       "keywords": ["layout editor", "edit layout", "channel editor", "group editor", "channel options"],
       "images": ["image21.png"],
-      "source_files": ["03_creating_managing_layouts.md"],
+      "source_files": ["10_layout_editor_overview.md", "11_layout_editor_channel_options.md", "12_layout_editor_group_options.md"],
       "description": "Layout Editor interface"
     },
     {
       "keywords": ["epg mapping", "assign epg", "manual epg", "auto epg", "epg search", "map channels", "highlight missing epg"],
       "images": ["image18.png", "image32.png", "image7.png"],
-      "source_files": ["04_mapping_epg_to_channels.md", "03_creating_managing_layouts.md"],
+      "source_files": ["18_mapping_epg_to_channels.md", "11_layout_editor_channel_options.md"],
       "description": "EPG mapping and assignment"
     },
     {
       "keywords": ["channel manager", "automatic channels", "automatic import", "new channel manager", "new channels"],
       "images": ["image26.png"],
-      "source_files": ["11_nogui_mode.md"],
+      "source_files": ["28_new_channel_manager.md"],
       "description": "New Channel Manager"
     },
     {
       "keywords": ["manage users", "multiple users", "user management", "user system", "add users"],
       "images": ["image30.png", "image29.png"],
-      "source_files": ["15_managing_multiple_users.md"],
+      "source_files": ["32_managing_multiple_users.md"],
       "description": "User management"
     },
     {
       "keywords": ["xc server", "xtream codes", "xc settings", "xc setup", "xc api", "xc login"],
       "images": ["image40.png", "image41.png", "image4.png"],
-      "source_files": ["15_managing_multiple_users.md"],
+      "source_files": ["33_xc_server_overview.md", "34_xc_server_windows_service.md", "35_xc_server_linux_service.md"],
       "description": "XC Server configuration"
     },
     {
       "keywords": ["task scheduler", "windows service", "autostart windows", "windows startup"],
       "images": ["image3.png", "image39.png"],
-      "source_files": ["10_automatic_epg_syncing.md", "15_managing_multiple_users.md"],
+      "source_files": ["26_automatic_epg_syncing.md", "34_xc_server_windows_service.md"],
       "description": "Windows Task Scheduler setup"
     }
   ],
