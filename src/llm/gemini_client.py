@@ -58,10 +58,10 @@ class GeminiClient:
     def _generation_config(self) -> Dict:
         """Generation configuration for controlled output"""
         return {
-            "temperature": 0.3,  # Lower = more focused/deterministic
+            "temperature": 0.4,  # Lower = more focused/deterministic
             "top_p": 0.8,
             "top_k": 40,
-            "max_output_tokens": 2048,
+            "max_output_tokens": 10000,
         }
 
     def _safety_settings(self) -> List[Dict]:
@@ -123,12 +123,12 @@ class GeminiClient:
         })
 
         # Add conversation history if provided
-        if conversation_history:
-            for msg in conversation_history[-6:]:  # Last 3 exchanges
-                messages.append({
-                    'role': msg['role'],
-                    'parts': [msg['content']]
-                })
+        #if conversation_history:
+        #    for msg in conversation_history[-6:]:  # Last 3 exchanges
+        #        messages.append({
+        #            'role': msg['role'],
+        #            'parts': [msg['content']]
+        #        })
 
         # Add current question
         messages.append({
@@ -138,9 +138,10 @@ class GeminiClient:
 
         try:
             # Generate response
-            chat = self.model.start_chat(history=messages[:-1])
-            response = chat.send_message(messages[-1]['parts'][0])
-
+            # chat = self.model.start_chat(history=messages[:-1])
+            response = self.model.generate_content(
+                contents=messages
+            )
             answer = response.text.strip()
 
             # Validate answer doesn't hallucinate

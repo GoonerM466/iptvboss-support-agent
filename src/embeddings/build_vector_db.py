@@ -139,7 +139,7 @@ def main():
 
     # Step 1: Process documents
     logger.info("\n[1/4] Processing documents...")
-    processor = DocumentProcessor(chunk_size=1000, chunk_overlap=200)
+    processor = DocumentProcessor(chunk_size=5000, chunk_overlap=1000)
     documents = processor.load_documents(str(docs_dir))
 
     if not documents:

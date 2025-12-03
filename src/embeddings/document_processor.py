@@ -227,7 +227,7 @@ class DocumentProcessor:
 
 def main():
     """Test document processor"""
-    processor = DocumentProcessor(chunk_size=1000, chunk_overlap=200)
+    processor = DocumentProcessor(chunk_size=5000, chunk_overlap=1000)
 
     # Load documents
     docs_dir = "../../data/documents"
