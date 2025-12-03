@@ -18,7 +18,7 @@ from ui.image_handler import ImageHandler
 
 # Page configuration
 st.set_page_config(
-    page_title="IPTVBoss Support Agent",
+    page_title="IPTVBoss QSA",
     page_icon="🎬",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -117,7 +117,7 @@ def load_components():
 
 def render_header():
     """Render page header"""
-    st.markdown('<div class="main-header">🎬 IPTVBoss Support Agent</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-header">🎬 IPTVBoss Quick Support Agent</div>', unsafe_allow_html=True)
     st.markdown(
         '<div class="subheader">AI-powered support for IPTVBoss & EPGBoss</div>',
         unsafe_allow_html=True
@@ -143,11 +143,11 @@ def render_sidebar():
         - Troubleshooting issues
         - Finding documentation
 
-        **I cannot:**
+        **It cannot:**
         - Access your system
         - Modify your files
         - Help with account/billing
-        - Provide provider credentials
+        - Supply provider credentials or links
         """)
 
         st.divider()
@@ -156,6 +156,7 @@ def render_sidebar():
         st.markdown("""
         - [Discord Support](https://discord.gg/QCxpA9yvWP)
         - [Official Website](https://members.bosstees.net)
+        - [User Guide](https://goonerm466.github.io/iptvboss-support-agent/)
         """)
 
         st.divider()
