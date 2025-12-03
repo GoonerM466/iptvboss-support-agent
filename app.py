@@ -19,7 +19,7 @@ from ui.image_handler import ImageHandler
 # Page configuration
 st.set_page_config(
     page_title="IPTVBoss QSA",
-    page_icon="🎬",
+    page_icon="📺",
     layout="wide",
     initial_sidebar_state="expanded"
 )
