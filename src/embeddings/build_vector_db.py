@@ -5,6 +5,7 @@ Vector Database Builder - Create FAISS index from documents
 import os
 import sys
 import pickle
+import yaml
 import logging
 from pathlib import Path
 from typing import List, Dict
@@ -30,11 +31,21 @@ logger = logging.getLogger(__name__)
 class VectorDBBuilder:
     """Build FAISS vector database from documents"""
 
-    def __init__(self, model_name: str = 'all-MiniLM-L6-v2'):
+    def __init__(self, config_path: str = None):
         """
         Args:
-            model_name: SentenceTransformer model name
+            config_path: Path to settings.yaml
         """
+        # Load settings
+        if config_path is None:
+            config_path = Path(__file__).parent.parent.parent / "config" / "settings.yaml"
+
+        with open(config_path, 'r') as f:
+            config = yaml.safe_load(f)
+
+        # Get embedding model from settings
+        model_name = config['vector_search']['embedding_model']
+
         logger.info(f"Loading embedding model: {model_name}")
         self.model = SentenceTransformer(model_name)
         self.embedding_dim = self.model.get_sentence_embedding_dimension()
@@ -137,9 +148,12 @@ def main():
         logger.info("Please copy documents to data/documents/ first")
         return
 
+    # All settings now come from settings.yaml
+    config_path = project_root / "config" / "settings.yaml"
+
     # Step 1: Process documents
     logger.info("\n[1/4] Processing documents...")
-    processor = DocumentProcessor(chunk_size=5000, chunk_overlap=1000)
+    processor = DocumentProcessor(config_path=str(config_path))
     documents = processor.load_documents(str(docs_dir))
 
     if not documents:
@@ -151,9 +165,20 @@ def main():
     chunks = processor.chunk_documents(documents)
     chunks = processor.extract_metadata(chunks)
 
+    # Step 2.5: Add synonym metadata
+    logger.info("\n[2.5/4] Adding synonym metadata...")
+    glossary_path = data_dir / "glossary.json"
+    if glossary_path.exists():
+        from embeddings.synonym_mapper import SynonymMapper
+        mapper = SynonymMapper(str(glossary_path))
+        chunks = [mapper.add_synonym_metadata(chunk) for chunk in chunks]
+        logger.info(f"Added synonym metadata to {len(chunks)} chunks")
+    else:
+        logger.warning(f"Glossary not found at {glossary_path} - skipping synonym metadata")
+
     # Step 3: Create embeddings
     logger.info("\n[3/4] Creating embeddings...")
-    builder = VectorDBBuilder()
+    builder = VectorDBBuilder(config_path=str(config_path))
     embeddings = builder.create_embeddings(chunks)
 
     # Step 4: Build and save index

@@ -1,0 +1,68 @@
+{
+  "_comment": "IPTVBoss terminology synonyms for query expansion and chunk metadata",
+
+  "sync_terms": {
+    "canonical": "sync",
+    "synonyms": ["sync", "update", "refresh", "pull", "fetch", "reload", "synchronize"]
+  },
+
+  "playlist_terms": {
+    "canonical": "playlist",
+    "synonyms": ["playlist", "m3u", "layout", "channel list", "channels"]
+  },
+
+  "epg_terms": {
+    "canonical": "epg",
+    "synonyms": ["epg", "guide", "program guide", "tv guide", "schedule", "electronic program guide"]
+  },
+
+  "crash_terms": {
+    "canonical": "crash",
+    "synonyms": ["crash", "freeze", "hang", "won't start", "stuck", "not responding", "frozen", "unresponsive"]
+  },
+
+  "database_terms": {
+    "canonical": "database",
+    "synonyms": ["database", "db", "data", "backup", "restore"]
+  },
+
+  "cloud_terms": {
+    "canonical": "cloud storage",
+    "synonyms": ["dropbox", "google drive", "cloud", "cloud storage", "cloud sync"]
+  },
+
+  "output_terms": {
+    "canonical": "output",
+    "synonyms": ["output", "export", "generate", "create", "save"]
+  },
+
+  "app_names": {
+    "canonical": "IPTVBoss",
+    "synonyms": ["iptvboss", "boss", "the app", "the program", "iptv boss"]
+  },
+
+  "credentials_terms": {
+    "canonical": "credentials",
+    "synonyms": ["api key", "token", "password", "credentials", "auth", "license", "key"]
+  },
+
+  "provider_terms": {
+    "canonical": "provider",
+    "synonyms": ["provider", "source", "service", "iptv service", "iptv provider"]
+  },
+
+  "player_terms": {
+    "canonical": "player",
+    "synonyms": ["player", "tivimate", "app", "streaming app", "iptv player"]
+  },
+
+  "nogui_terms": {
+    "canonical": "nogui",
+    "synonyms": ["nogui", "no gui", "headless", "command line", "cli", "automated", "sync schedule"]
+  },
+
+  "tinyurl_terms": {
+    "canonical": "tinyurl",
+    "synonyms": ["tinyurl", "short link", "shortened link", "url shortener", "short url"]
+  }
+}

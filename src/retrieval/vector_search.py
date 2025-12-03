@@ -3,9 +3,10 @@ Vector Search - FAISS-based semantic search for document retrieval
 """
 
 import pickle
+import yaml
 import logging
 from pathlib import Path
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Optional
 import numpy as np
 
 try:
@@ -23,14 +24,36 @@ logger = logging.getLogger(__name__)
 class VectorSearch:
     """Semantic search using FAISS vector database"""
 
-    def __init__(self, vector_db_path: str, model_name: str = 'all-MiniLM-L6-v2'):
+    def __init__(self, vector_db_path: str, settings_config_path: Optional[str] = None):
         """
         Args:
             vector_db_path: Path to directory containing FAISS index and metadata
-            model_name: SentenceTransformer model name (must match build model)
+            settings_config_path: Path to settings.yaml (optional, defaults to config/settings.yaml)
         """
         self.vector_db_path = Path(vector_db_path)
+
+        # Load settings from YAML
+        if settings_config_path is None:
+            settings_config_path = Path(__file__).parent.parent.parent / "config" / "settings.yaml"
+
+        with open(settings_config_path, 'r', encoding='utf-8') as f:
+            settings = yaml.safe_load(f)
+
+        # Get embedding model from settings
+        model_name = settings['vector_search']['embedding_model']
         self.model = SentenceTransformer(model_name)
+
+        # Load synonym mapper if glossary exists
+        glossary_path = Path(__file__).parent.parent.parent / "data" / "glossary.json"
+        if glossary_path.exists():
+            import sys
+            sys.path.append(str(Path(__file__).parent.parent))
+            from embeddings.synonym_mapper import SynonymMapper
+            self.synonym_mapper = SynonymMapper(str(glossary_path))
+            logger.info("Loaded synonym mapper for query expansion")
+        else:
+            self.synonym_mapper = None
+            logger.warning(f"Glossary not found at {glossary_path} - synonym expansion disabled")
 
         # Load FAISS index
         index_file = self.vector_db_path / "faiss_index.bin"
@@ -71,8 +94,15 @@ class VectorSearch:
         Returns:
             List of dicts with 'text', 'source', 'score', and other metadata
         """
+        # Expand query with synonyms if available
+        expanded_query = query
+        if self.synonym_mapper:
+            expanded_query = self.synonym_mapper.expand_query(query)
+            if expanded_query != query:
+                logger.debug(f"Query expansion: '{query}' -> '{expanded_query}'")
+
         # Encode query
-        query_embedding = self.model.encode([query], convert_to_numpy=True)
+        query_embedding = self.model.encode([expanded_query], convert_to_numpy=True)
 
         # Normalize for cosine similarity
         faiss.normalize_L2(query_embedding)

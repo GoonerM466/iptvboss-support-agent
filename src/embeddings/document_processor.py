@@ -4,6 +4,7 @@ Document Processor - Loads and chunks markdown documents for embedding
 
 import os
 import re
+import yaml
 from pathlib import Path
 from typing import List, Dict, Tuple
 import logging
@@ -15,14 +16,30 @@ logger = logging.getLogger(__name__)
 class DocumentProcessor:
     """Process markdown documents into chunks for embedding"""
 
-    def __init__(self, chunk_size: int = 5000, chunk_overlap: int = 1000):
+    def __init__(self, config_path: str = None):
         """
         Args:
-            chunk_size: Target size for each text chunk (characters) - INCREASED to keep sections together
-            chunk_overlap: Number of overlapping characters between chunks - INCREASED for better continuity
+            config_path: Path to settings.yaml (optional, defaults to config/settings.yaml)
         """
-        self.chunk_size = chunk_size
-        self.chunk_overlap = chunk_overlap
+        # Load settings from YAML
+        if config_path is None:
+            config_path = Path(__file__).parent.parent.parent / "config" / "settings.yaml"
+
+        with open(config_path, 'r') as f:
+            config = yaml.safe_load(f)
+
+        # Extract document processing settings
+        doc_config = config['document_processing']
+        self.split_files = doc_config.get('split_files', False)
+        self.chunk_size = doc_config.get('chunk_size', 5000)
+        self.chunk_overlap = doc_config.get('chunk_overlap', 1000)
+        self.max_file_size = doc_config.get('max_file_size', 15000)
+
+        logger.info(f"Document Processor initialized:")
+        logger.info(f"  split_files: {self.split_files}")
+        logger.info(f"  chunk_size: {self.chunk_size}")
+        logger.info(f"  chunk_overlap: {self.chunk_overlap}")
+        logger.info(f"  max_file_size: {self.max_file_size}")
 
     def load_documents(self, docs_dir: str) -> List[Dict[str, str]]:
         """
@@ -102,7 +119,25 @@ class DocumentProcessor:
         return chunks
 
     def _split_by_sections(self, content: str) -> List[str]:
-        """Split document by #### headings (level 4) to keep subsections together"""
+        """
+        Split document into sections based on configuration
+
+        If split_files=False: Keep file intact (unless exceeds max_file_size)
+        If split_files=True: Split on ## headings as before
+        """
+        file_size = len(content)
+
+        # Priority 1: If split_files is disabled, keep file intact
+        if not self.split_files:
+            # Safety check: if file is HUGE, split it anyway
+            if file_size > self.max_file_size:
+                logger.warning(f"File exceeds max_file_size ({file_size} > {self.max_file_size}). Forcing split.")
+                # Fall through to splitting logic below
+            else:
+                logger.debug(f"Keeping file intact ({file_size} chars)")
+                return [content]
+
+        # Priority 2: If split_files=True or file too large, split normally
         # Split on #### (level 4 headings) but keep the heading
         sections = re.split(r'(^####\s+.+$)', content, flags=re.MULTILINE)
 
@@ -227,7 +262,8 @@ class DocumentProcessor:
 
 def main():
     """Test document processor"""
-    processor = DocumentProcessor(chunk_size=5000, chunk_overlap=1000)
+    # Use default config (loads from settings.yaml)
+    processor = DocumentProcessor()
 
     # Load documents
     docs_dir = "../../data/documents"

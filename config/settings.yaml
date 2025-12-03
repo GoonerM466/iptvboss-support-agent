@@ -2,23 +2,23 @@
 
 # Application Info
 app:
-  name: "IPTVBoss Support Agent"
-  version: "1.0.0"
+  name: "IPTVBoss Quick Support Agent"
+  version: "1.1 Alpha"
   description: "AI-powered support for IPTVBoss & EPGBoss"
 
 # Vector Search Settings
 vector_search:
-  top_k: 4                   # Number of chunks to retrieve (INCREASED for better coverage)
+  top_k: 5                   # Number of chunks to retrieve (INCREASED for better coverage)
   min_score: 0.5             # Minimum similarity score (LOWERED for more lenient matching)
   embedding_model: "all-MiniLM-L6-v2"
 
 # LLM Settings
 llm:
   model: "gemini-2.5-flash"
-  temperature: 0.4            # INCREASED for more natural responses
-  max_output_tokens: 10000     # INCREASED for longer, more complete answers
-  top_p: 0.8
-  top_k: 40
+  temperature: 0.4            #  Randomness (0.0=deterministic, 1.0=creative). Higher = more varied responses
+  max_output_tokens: 10000    # INCREASED for longer, more complete answers
+  top_p: 0.8                  # Nucleus sampling (0.0-1.0). Lower = more focused, higher = more diverse
+  top_k: 40                   # Consider top K tokens. Lower = more focused, higher = more varied vocabulary
 
 # Image Display Settings
 images:
@@ -28,13 +28,15 @@ images:
 
 # Document Processing Settings
 document_processing:
-  chunk_size: 5000           # Characters per chunk (INCREASED to keep sections together)
-  chunk_overlap: 1000          # Overlap between chunks (INCREASED for better continuity)
+  split_files: false           # If false, keep files intact regardless of size
+  chunk_size: 5000             # Characters per chunk (only used if split_files=true)
+  chunk_overlap: 1000          # Overlap between chunks (only used if split_files=true)
+  max_file_size: 15000         # Maximum file size before forcing split (safety limit)
 
 # UI Settings
 ui:
-  page_title: "IPTVBoss Support Agent"
-  page_icon: "🎬"
+  page_title: "IPTVBoss Quick Support Agent 1.1 Alpha"
+  page_icon: "📺"
   layout: "wide"
   theme: "light"
   show_sidebar: true
@@ -43,7 +45,7 @@ ui:
 support:
   discord: "https://discord.gg/QCxpA9yvWP"
   website: "https://members.bosstees.net"
-  documentation: "https://github.com/YOUR_USERNAME/iptv-support"
+  documentation: "https://goonerm466.github.io/iptvboss-support-agent/"
 
 # Rate Limiting (future feature)
 rate_limiting:

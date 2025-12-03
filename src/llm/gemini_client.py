@@ -26,17 +26,31 @@ class GeminiClient:
         self,
         api_key: str,
         prompts_config_path: Optional[str] = None,
-        model_name: str = "gemini-2.5-flash"
+        settings_config_path: Optional[str] = None
     ):
         """
         Args:
             api_key: Gemini API key
             prompts_config_path: Path to prompts.yaml file
-            model_name: Gemini model to use
+            settings_config_path: Path to settings.yaml (optional, defaults to config/settings.yaml)
         """
         # Configure Gemini
         genai.configure(api_key=api_key)
-        self.model_name = model_name
+
+        # Load settings from YAML
+        if settings_config_path is None:
+            settings_config_path = Path(__file__).parent.parent.parent / "config" / "settings.yaml"
+
+        with open(settings_config_path, 'r', encoding='utf-8') as f:
+            settings = yaml.safe_load(f)
+
+        # Extract LLM settings
+        llm_config = settings['llm']
+        self.model_name = llm_config.get('model', 'gemini-2.5-flash')
+        self.temperature = llm_config.get('temperature', 0.4)
+        self.top_p = llm_config.get('top_p', 0.8)
+        self.top_k = llm_config.get('top_k', 40)
+        self.max_output_tokens = llm_config.get('max_output_tokens', 10000)
 
         # Load prompts
         if prompts_config_path:
@@ -48,20 +62,24 @@ class GeminiClient:
 
         # Initialize model with safety settings
         self.model = genai.GenerativeModel(
-            model_name=model_name,
+            model_name=self.model_name,
             generation_config=self._generation_config(),
             safety_settings=self._safety_settings()
         )
 
-        logger.info(f"Initialized Gemini client with model: {model_name}")
+        logger.info(f"Initialized Gemini client with model: {self.model_name}")
+        logger.info(f"  temperature: {self.temperature}")
+        logger.info(f"  top_p: {self.top_p}")
+        logger.info(f"  top_k: {self.top_k}")
+        logger.info(f"  max_output_tokens: {self.max_output_tokens}")
 
     def _generation_config(self) -> Dict:
         """Generation configuration for controlled output"""
         return {
-            "temperature": 0.4,  # Lower = more focused/deterministic
-            "top_p": 0.8,
-            "top_k": 40,
-            "max_output_tokens": 10000,
+            "temperature": self.temperature,
+            "top_p": self.top_p,
+            "top_k": self.top_k,
+            "max_output_tokens": self.max_output_tokens,
         }
 
     def _safety_settings(self) -> List[Dict]:
