@@ -8,15 +8,15 @@ app:
 
 # Vector Search Settings
 vector_search:
-  top_k: 10                   # Number of chunks to retrieve (INCREASED for better coverage)
-  min_score: 0.2              # Minimum similarity score (LOWERED for more lenient matching)
+  top_k: 4                   # Number of chunks to retrieve (INCREASED for better coverage)
+  min_score: 0.3              # Minimum similarity score (LOWERED for more lenient matching)
   embedding_model: "all-MiniLM-L6-v2"
 
 # LLM Settings
 llm:
   model: "gemini-2.5-flash"
-  temperature: 0.5            # INCREASED for more natural responses
-  max_output_tokens: 3072     # INCREASED for longer, more complete answers
+  temperature: 0.4            # INCREASED for more natural responses
+  max_output_tokens: 5000     # INCREASED for longer, more complete answers
   top_p: 0.8
   top_k: 40
 
