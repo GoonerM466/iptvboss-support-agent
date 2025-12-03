@@ -110,7 +110,7 @@ After adding a source, you can configure advanced options in Sources Manager to 
 
 **Access**: **Sources → Sources Manager**
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image24.png](../data/images/image24.png)
+**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image24.png](images/image24.png)
 
 ---
 
@@ -239,7 +239,7 @@ EPG sources provide guide data for your channels.
 3. Paste EPG URL (XML format)
 4. Click OK
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image25.png](../data/images/image25.png)
+**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image25.png](images/image25.png)
 
 **EPG Layout Settings**:
 - See [Customizing EPG Layout](#customizing-epg-layout-advanced) section
@@ -264,7 +264,7 @@ The Layout Manager Panel is the main control center for creating and configuring
 
 **Access**: **Layout → Layout Manager**
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image23.png](../data/images/image23.png)
+**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image23.png](images/image23.png)
 
 **Creating a New Layout**:
 
@@ -658,8 +658,8 @@ Buttons above Channels List (left to right):
 - Alternative to manual find/replace
 
 **Visual References**:
-- Layout Editor screenshot: [IPTVBoss 3.5 User Manual\images\image32.png](../data/images/image32.png)
-- EPG mapping screenshots: [image33.png](../data/images/image33.png), [image34.png](../data/images/image34.png), [image35.png](../data/images/image35.png)
+- Layout Editor screenshot: [IPTVBoss 3.5 User Manual\images\image32.png](images/image32.png)
+- EPG mapping screenshots: [image33.png](images/image33.png), [image34.png](images/image34.png), [image35.png](images/image35.png)
 
 ---
 
@@ -675,7 +675,7 @@ Once you have sources configured, you need to import channels from those sources
 
 **What it does**: Imports channels from your IPTV provider sources into the current layout.
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image30.png](../data/images/image30.png)
+**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image30.png](images/image30.png)
 
 **Import Methods**:
 
@@ -732,7 +732,7 @@ Once you have sources configured, you need to import channels from those sources
 
 **What it does**: Copies channels from one layout to another layout.
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image31.png](../data/images/image31.png)
+**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image31.png](images/image31.png)
 
 **Use Cases**:
 - Creating a second layout for different users (e.g., Kids layout from Main layout)
@@ -1025,8 +1025,8 @@ DVR Recording Setup:
 - Sports events now appear as "NEW" and DVR will record them
 
 **Visual References**:
-- See manual for screenshots: [IPTVBoss 3.5 User Manual\images\image26.png](../data/images/image26.png) (EPG Layout Settings dialog)
-- Example results: [images\image27.png](../data/images/image27.png), [image28.png](../data/images/image28.png), [image29.png](../data/images/image29.png)
+- See manual for screenshots: [IPTVBoss 3.5 User Manual\images\image26.png](images/image26.png) (EPG Layout Settings dialog)
+- Example results: [images\image27.png](images/image27.png), [image28.png](images/image28.png), [image29.png](images/image29.png)
 
 **Troubleshooting**:
 - **Components not appearing**: EPG source doesn't include that data
@@ -1344,7 +1344,7 @@ iptvboss -nogui
 This runs Boss in command-line mode to test that sync works. Watch output to see what happens.
 
 **Troubleshooting NoGUI**:
-- **Completes in 5 seconds**: Not finding configuration/database - check paths
+- **Completes in 5 seconds**: Not finding configurationbase - check paths
 - **No output generated**: Check permissions, paths, or that layouts are enabled
 - **Errors**: Check **Logs → View Logs** for error messages
 
@@ -1466,7 +1466,7 @@ When the provider adds channels to those categories, they automatically appear i
 - Use "Don't Import Duplicate Channels" in import settings
 - Consider manual channel management for complex setups
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image36.png](../data/images/image36.png)
+**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image36.png](images/image36.png)
 
 ---
 
@@ -1741,7 +1741,7 @@ If running as service or headless, access log and commands via web endpoint:
 This page shows:
 - Server log
 - Links for Stopping and Reloading server
-- Visual reference: [IPTVBoss 3.5 User Manual\images\image40.png](../data/images/image40.png)
+- Visual reference: [IPTVBoss 3.5 User Manual\images\image40.png](images/image40.png)
 
 **User Links for XC**:
 
@@ -1750,7 +1750,7 @@ View XC login credentials for users:
 - Click **"View XC Login"** button
 - Shows XC credentials for all users
 - Click user to copy link to clipboard
-- Visual reference: [image41.png](../data/images/image41.png)
+- Visual reference: [image41.png](images/image41.png)
 
 **Setting Up as Windows Service**:
 
@@ -1763,7 +1763,7 @@ Using Task Scheduler (recommended for Windows):
 5. **Trigger**: At startup (or your preference)
 6. **Settings**: Run whether user is logged in or not
 
-Visual references: [image42.png](../data/images/image42.png), [image43.png](../data/images/image43.png)
+Visual references: [image42.png](images/image42.png), [image43.png](images/image43.png)
 
 **Setting Up as Ubuntu Service**:
 
