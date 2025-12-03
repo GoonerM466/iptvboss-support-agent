@@ -22,7 +22,7 @@ Auto-assign feature conflicts with manual mapping. Service credential changes (M
 
 **1. Disable conflicting Auto-Assign**
 - Navigate to the problematic group
-- Group Options ’ Disable "Auto Assign"
+- Group Options â€™ Disable "Auto Assign"
 - This prevents automatic remapping during syncs
 
 **2. Map EPG manually**
@@ -36,12 +36,12 @@ Auto-assign feature conflicts with manual mapping. Service credential changes (M
 - Output and test in player
 
 **4. For lost mappings after renewal:**
-- Menu ’ Restore
+- Menu â€™ Restore
 - Select database backup from before credential change
 - This recovers all previous mappings
 
 **5. Output and verify**
-- Layout Manager ’ Output Current Layout M3U and EPG
+- Layout Manager â€™ Output Current Layout M3U and EPG
 - Check that EPG data appears in output
 
 ### For Service Renewal Specifically

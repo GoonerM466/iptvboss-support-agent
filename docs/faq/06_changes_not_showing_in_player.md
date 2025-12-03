@@ -11,9 +11,9 @@ Changes made in IPTVBoss (layouts, EPG mappings, channel edits, etc.) aren't sho
 **Required workflow:**
 
 1. Make your changes in IPTVBoss (layouts, EPG mappings, channel edits, etc.)
-2. **Output** your layout: **Layout Manager ’ Output Current Layout's M3U and EPG**
+2. **Output** your layout: **Layout Manager â€™ Output Current Layout's M3U and EPG**
 3. Wait for files to upload to your cloud storage
-4. **Update** the playlist in your player app (TiviMate: Settings ’ Playlists ’ Update)
+4. **Update** the playlist in your player app (TiviMate: Settings â€™ Playlists â€™ Update)
 
 ### Important Notes
 

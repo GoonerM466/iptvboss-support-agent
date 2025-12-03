@@ -2,6 +2,8 @@
 
 When you select a group, the Group Options panel lets you configure group settings.
 
+
+**Visual Reference**: [image21](https://goonerm466.github.io/iptvboss-support-agent/images/image21.png) - Layout Editor panel showing groups list, channels list, channel options, and group options interface
 **Group Name**:
 - Editable text box
 - Your custom name for this group

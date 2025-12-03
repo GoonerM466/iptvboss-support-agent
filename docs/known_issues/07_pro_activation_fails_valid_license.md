@@ -21,7 +21,7 @@ Pro license validation fails even though the license key is confirmed valid on t
 
 - Network/firewall blocking validation servers
 - Boss validation servers experiencing issues
-- Credential migration incomplete (old website ’ new website)
+- Credential migration incomplete (old website â€™ new website)
 - Boss can't reach validation endpoint (corporate firewall, VPN, etc.)
 
 ### Workaround

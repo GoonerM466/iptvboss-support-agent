@@ -1,8 +1,9 @@
 # Import Channels From Sources Dialog
 
+
+**Visual Reference**: [image13](https://goonerm466.github.io/iptvboss-support-agent/images/image13.png) - Import Channels From Sources dialog showing source selection, categories list, and channels list with import options
 **What it does**: Imports channels from your IPTV provider sources into the current layout.
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image30.png](../IPTVBoss 3.5 User Manual/images/image30.png)
 
 ### Import Methods
 

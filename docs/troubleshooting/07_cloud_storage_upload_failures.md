@@ -22,7 +22,7 @@ OAuth tokens expired periodically. Free Dropbox bandwidth limit (20GB/month) exc
 ### Solution
 
 **Step 1: Reauthorize cloud storage**
-- Settings ’ IPTVBoss Settings (Dropbox or Google Drive)
+- Settings â€™ IPTVBoss Settings (Dropbox or Google Drive)
 - Click Authorize
 - Complete OAuth flow in browser
 - Verify authorization success in IPTVBoss
@@ -37,14 +37,14 @@ OAuth tokens expired periodically. Free Dropbox bandwidth limit (20GB/month) exc
 - These can cause conflicts, better to regenerate fresh
 
 **Step 3: Test upload**
-- In IPTVBoss: Layout Manager ’ Output
+- In IPTVBoss: Layout Manager â€™ Output
 - Check View Cloud Links to verify upload
 - Verify files appear in cloud storage
 
 ### For Bandwidth Limit Issues
 
 **1. Use Universal EPG**
-- Sources ’ Universal EPG Options
+- Sources â€™ Universal EPG Options
 - Generates one EPG for all layouts
 - Massive bandwidth savings over individual EPGs
 

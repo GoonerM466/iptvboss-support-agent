@@ -88,8 +88,8 @@ DVR Recording Setup:
 - **Too much information**: Player apps have display limits, simplify your layout
 
 **Visual References**:
-- See manual for screenshots: [IPTVBoss 3.5 User Manual\images\image26.png](../IPTVBoss 3.5 User Manual/images/image26.png) (EPG Layout Settings dialog)
-- Example results: [images\image27.png](../IPTVBoss 3.5 User Manual/images/image27.png), [image28.png](../IPTVBoss 3.5 User Manual/images/image28.png), [image29.png](../IPTVBoss 3.5 User Manual/images/image29.png)
+- See manual for screenshots: [image26](https://goonerm466.github.io/iptvboss-support-agent/images/image26.png) (EPG Layout Settings dialog)
+- Example results: [image27](https://goonerm466.github.io/iptvboss-support-agent/images/image27.png), [image28](https://goonerm466.github.io/iptvboss-support-agent/images/image28.png), [image29](https://goonerm466.github.io/iptvboss-support-agent/images/image29.png)
 
 ---
 

@@ -4,7 +4,7 @@ Request for fuzzy matching to detect channel renames and preserve mappings.
 
 ### Current Limitation
 
-Provider renames channels ’ all mappings lost.
+Provider renames channels â€™ all mappings lost.
 
 ### Feature Request
 

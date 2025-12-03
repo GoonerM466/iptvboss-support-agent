@@ -13,7 +13,7 @@ IPTVBoss says "Database failed to load or is corrupt" and freezes.
 1. Force close IPTVBoss (Task Manager on Windows)
 2. Go to `IPTVBoss/db` folder and delete any files with "lock" in the name
 3. Restart IPTVBoss - it should attempt auto-restore
-4. If still frozen, manually restore: **Menu ’ Restore ’ Local, Cloud or URL**
+4. If still frozen, manually restore: **Menu â€™ Restore â€™ Local, Cloud or URL**
 
 **If restore fails:**
 

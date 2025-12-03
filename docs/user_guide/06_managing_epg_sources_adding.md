@@ -23,7 +23,7 @@ EPG sources provide guide data for your channels.
 3. Paste EPG URL (XML format)
 4. Click OK
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image25.png](../IPTVBoss 3.5 User Manual/images/image25.png)
+**Visual Reference**: [image25](https://goonerm466.github.io/iptvboss-support-agent/images/image25.png)
 
 ### EPG Layout Settings
 

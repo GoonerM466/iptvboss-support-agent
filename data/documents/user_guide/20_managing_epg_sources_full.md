@@ -2,6 +2,8 @@
 
 Boss Pro includes many built-in EPG sources. You enable what you need.
 
+
+**Visual Reference**: [image6](https://goonerm466.github.io/iptvboss-support-agent/images/image6.png) - Add EPG dialog showing EPG source dropdown with built-in guide options
 ### Available sources
 
 - US: US channels (networks, cable, etc.)

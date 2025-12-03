@@ -2,6 +2,8 @@
 
 There are 3 ways to add playlist sources:
 
+
+**Visual Reference**: [image15](https://goonerm466.github.io/iptvboss-support-agent/images/image15.png) - Sources Manager panel showing playlist sources and EPG sources management interface
 ### M3U URL (Basic)
 
 - Name the playlist (don't use symbols in name)

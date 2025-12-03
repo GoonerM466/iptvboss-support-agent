@@ -2,6 +2,12 @@
 
 Complete step-by-step instructions for setting up Dropbox as your cloud storage provider.
 
+
+**Visual References**:
+- [image11](https://goonerm466.github.io/iptvboss-support-agent/images/image11.png) - Dropbox developer page showing 'Create an App' button
+- [image33](https://goonerm466.github.io/iptvboss-support-agent/images/image33.png) - Dropbox app creation dialog with options for Scoped Access, App Folder, and naming the app
+- [image14](https://goonerm466.github.io/iptvboss-support-agent/images/image14.png) - Dropbox app permissions tab showing required permissions for IPTVBoss
+- [image12](https://goonerm466.github.io/iptvboss-support-agent/images/image12.png) - IPTVBoss settings dialog showing Dropbox cloud provider configuration with App Key and App Secret fields
 **Video Tutorial**: https://youtu.be/2cfEEqFYHrc
 
 ---
@@ -33,7 +39,6 @@ If you don't already have one:
      - This folder will contain all your outputted M3U/EPG files
 4. Click **"Create"**
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image11.png](../../IPTVBoss 3.5 User Manual/images/image11.png), [image33.png](../../IPTVBoss 3.5 User Manual/images/image33.png)
 
 ### 3. Set App Permissions
 
@@ -45,7 +50,6 @@ If you don't already have one:
    - `files.content.read`
 3. Click **"Submit"** button at bottom
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image14.png](../../IPTVBoss 3.5 User Manual/images/image14.png)
 
 **Important**: You must click Submit after enabling permissions, or they won't be saved.
 
@@ -67,7 +71,6 @@ If you don't already have one:
 - [Outputting Playlists for Players](23_outputting_layouts_or_playlists.md)
 - [Using TinyURL for Short Links](25_tinyurl_short_links.md)
 
-### Images
 
 - image11.png - Dropbox developer page - Create an App button
 - image33.png - Dropbox app creation - Scoped Access, App Folder options
@@ -108,7 +111,6 @@ If you don't already have one:
 7. **Save Settings**:
    - Click **"OK"** to save
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image12.png](../../IPTVBoss 3.5 User Manual/images/image12.png)
 
 ### 6. Verify Setup
 
@@ -150,7 +152,6 @@ If you don't already have one:
 - [Outputting Playlists for Players](23_outputting_layouts_or_playlists.md)
 - [Using TinyURL for Short Links](25_tinyurl_short_links.md)
 
-### Images
 
 - image12.png - IPTVBoss settings - Dropbox configuration
 

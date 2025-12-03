@@ -2,6 +2,11 @@
 
 The IPTVBoss XC Server delivers streams and EPG to players using XC API instead of traditional M3U and XML files.
 
+
+**Visual References**:
+- [image40](https://goonerm466.github.io/iptvboss-support-agent/images/image40.png) - XC Server Settings dialog showing server configuration options including URL, port, sync times, and XC enable options
+- [image41](https://goonerm466.github.io/iptvboss-support-agent/images/image41.png) - XC Server web interface showing server log and control buttons (Stop/Reload) for headless operation
+- [image4](https://goonerm466.github.io/iptvboss-support-agent/images/image4.png) - XC User Links dialog showing list of users with their XC API login credentials and URLs
 **What is XC Server**:
 - Built-in server that runs alongside or instead of traditional file-based output
 - Uses IPTVBoss databases to feed players with channel lineups and EPG
@@ -103,7 +108,7 @@ If running as service or headless, access log and commands via web endpoint:
 This page shows:
 - Server log
 - Links for Stopping and Reloading server
-- Visual reference: [IPTVBoss 3.5 User Manual\images\image40.png](../IPTVBoss 3.5 User Manual/images/image40.png)
+- Visual reference: [image40](https://goonerm466.github.io/iptvboss-support-agent/images/image40.png)
 
 **User Links for XC**:
 
@@ -112,7 +117,7 @@ View XC login credentials for users:
 - Click **"View XC Login"** button
 - Shows XC credentials for all users
 - Click user to copy link to clipboard
-- Visual reference: [image41.png](../IPTVBoss 3.5 User Manual/images/image41.png)
+- Visual reference: [image41](https://goonerm466.github.io/iptvboss-support-agent/images/image41.png)
 
 ---
 

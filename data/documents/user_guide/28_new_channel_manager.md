@@ -1,7 +1,10 @@
 # New Channel Manager (Automatic Channel Imports)
 
+
 The New Channel Manager controls how new channels added by your provider are automatically imported into your layouts.
 
+
+**Visual Reference**: [image26](https://goonerm466.github.io/iptvboss-support-agent/images/image26.png) - New Channel Manager dialog showing Layout Groups on left and Included Categories with drag-and-drop interface
 **What it does**:
 - When providers add new channels to enabled categories
 - IPTVBoss can automatically add them to your Layout Groups
@@ -92,8 +95,6 @@ When the provider adds channels to those categories, they automatically appear i
 - Be more selective with category links
 - Use "Don't Import Duplicate Channels" in import settings
 - Consider manual channel management for complex setups
-
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image36.png](../IPTVBoss 3.5 User Manual/images/image36.png)
 
 
 ---

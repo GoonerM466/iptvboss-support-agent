@@ -1,7 +1,14 @@
 # Customizing EPG Layout (Advanced)
 
+
 IPTVBoss allows you to customize how EPG information appears in your player apps. This powerful feature lets you control what information shows in program titles and descriptions.
 
+
+**Visual References**:
+- [image1](https://goonerm466.github.io/iptvboss-support-agent/images/image1.png) - EPG Layout Settings dialog showing custom title and description configuration with draggable components
+- [image8](https://goonerm466.github.io/iptvboss-support-agent/images/image8.png) - Example result of custom EPG layout showing formatted program title and description in player
+- [image24](https://goonerm466.github.io/iptvboss-support-agent/images/image24.png) - Another example result of custom EPG layout showing formatted program information
+- [image2](https://goonerm466.github.io/iptvboss-support-agent/images/image2.png) - Third example result of custom EPG layout showing formatted program details
 **Compatible Players**:
 - TiviMate (enable "Two-line program titles")
 - Implayer (enable "Two-line program titles")
@@ -87,9 +94,6 @@ DVR Recording Setup:
 - **Player not showing custom format**: Enable "Two-line program titles" in player settings
 - **Too much information**: Player apps have display limits, simplify your layout
 
-**Visual References**:
-- See manual for screenshots: [IPTVBoss 3.5 User Manual\images\image26.png](../IPTVBoss 3.5 User Manual/images/image26.png) (EPG Layout Settings dialog)
-- Example results: [images\image27.png](../IPTVBoss 3.5 User Manual/images/image27.png), [image28.png](../IPTVBoss 3.5 User Manual/images/image28.png), [image29.png](../IPTVBoss 3.5 User Manual/images/image29.png)
 
 ---
 

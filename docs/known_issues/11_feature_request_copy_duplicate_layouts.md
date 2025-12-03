@@ -12,7 +12,7 @@ Use User System for identical layouts, or manual recreation.
 
 ### Feature Request
 
-Right-click ’ Duplicate Layout/Group
+Right-click â€™ Duplicate Layout/Group
 
 ### Use Case
 

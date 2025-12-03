@@ -26,7 +26,7 @@ Provider changed channel names, IDs, or entire structure. IPTVBoss treats rename
 - Switch your source to XC before the next scheduled sync
 
 **2. After problematic sync (Recovery):**
-- Menu ’ Restore
+- Menu â€™ Restore
 - Select backup from immediately before the sync
 - Your channel mapping will return to pre-sync state
 

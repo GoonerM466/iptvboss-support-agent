@@ -27,7 +27,7 @@ Incorrect setup sequence - restore attempted before Pro activation. Old website 
 
 **2. Enter Pro license key FIRST**
 - Before anything else
-- Menu ’ Activate Pro
+- Menu â€™ Activate Pro
 - Enter license key from new website
 - Wait for validation
 
@@ -38,7 +38,7 @@ Incorrect setup sequence - restore attempted before Pro activation. Old website 
 
 **4. THEN restore from backup**
 - Now that Pro and cloud are set up
-- Menu ’ Restore
+- Menu â€™ Restore
 - Choose Local or Cloud
 - Select backup file
 

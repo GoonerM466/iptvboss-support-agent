@@ -23,8 +23,8 @@
 - Alternative to manual find/replace
 
 **Visual References**:
-- Layout Editor screenshot: [IPTVBoss 3.5 User Manual\images\image32.png](../IPTVBoss 3.5 User Manual/images/image32.png)
-- EPG mapping screenshots: [image33.png](../IPTVBoss 3.5 User Manual/images/image33.png), [image34.png](../IPTVBoss 3.5 User Manual/images/image34.png), [image35.png](../IPTVBoss 3.5 User Manual/images/image35.png)
+- Layout Editor screenshot: [image32](https://goonerm466.github.io/iptvboss-support-agent/images/image32.png)
+- EPG mapping screenshots: [image33](https://goonerm466.github.io/iptvboss-support-agent/images/image33.png), [image34](https://goonerm466.github.io/iptvboss-support-agent/images/image34.png), [image35](https://goonerm466.github.io/iptvboss-support-agent/images/image35.png)
 
 
 ---

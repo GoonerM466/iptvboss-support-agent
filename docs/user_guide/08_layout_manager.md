@@ -4,7 +4,7 @@ The Layout Manager Panel is the main control center for creating and configuring
 
 **Access**: **Layout → Layout Manager**
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image23.png](../IPTVBoss 3.5 User Manual/images/image23.png)
+**Visual Reference**: [image23](https://goonerm466.github.io/iptvboss-support-agent/images/image23.png)
 
 ---
 

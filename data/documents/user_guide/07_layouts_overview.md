@@ -2,6 +2,8 @@
 
 Layouts are your custom channel organizations. You can have multiple layouts for different purposes or users.
 
+
+**Visual Reference**: [image16](https://goonerm466.github.io/iptvboss-support-agent/images/image16.png) - Layout Manager panel showing layout list and configuration options
 ### Video Tutorials
 
 - IPTVBoss First Layout Overview: https://youtu.be/gfw0RLfSAnI

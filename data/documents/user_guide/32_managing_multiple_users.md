@@ -1,7 +1,12 @@
 # Managing Multiple Users
 
+
 User System allows managing multiple users with identical or customized layouts.
 
+
+**Visual References**:
+- [image30](https://goonerm466.github.io/iptvboss-support-agent/images/image30.png) - Manage Users dialog showing user list with username/password fields and playlist enable/disable options
+- [image29](https://goonerm466.github.io/iptvboss-support-agent/images/image29.png) - Layout Users dialog showing list of users that can be enabled/disabled for a specific layout
 **Use cases**:
 - Family members with same channels
 - Friends on same provider

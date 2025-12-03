@@ -1,5 +1,7 @@
 # Layout Editor - Groups and Channels List Controls
 
+
+**Visual Reference**: [image21](https://goonerm466.github.io/iptvboss-support-agent/images/image21.png) - Layout Editor panel showing groups list, channels list, channel options, and group options interface
 ### Groups List Controls (Left Side, Top)
 
 Buttons above Groups List (left to right):

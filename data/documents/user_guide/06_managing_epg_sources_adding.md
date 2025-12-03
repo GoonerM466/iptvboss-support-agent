@@ -2,6 +2,8 @@
 
 EPG sources provide guide data for your channels.
 
+
+**Visual Reference**: [image6](https://goonerm466.github.io/iptvboss-support-agent/images/image6.png) - Add EPG dialog showing EPG source dropdown with built-in guide options
 ### Adding EPG Sources
 
 **Access**: **Sources → Sources Manager** → EPG tab (or Add EPG button)
@@ -23,7 +25,6 @@ EPG sources provide guide data for your channels.
 3. Paste EPG URL (XML format)
 4. Click OK
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image25.png](../IPTVBoss 3.5 User Manual/images/image25.png)
 
 ### EPG Layout Settings
 

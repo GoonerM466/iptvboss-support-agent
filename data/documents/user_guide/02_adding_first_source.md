@@ -2,6 +2,8 @@
 
 Sources are your IPTV provider connections.
 
+
+**Visual Reference**: [image15](https://goonerm466.github.io/iptvboss-support-agent/images/image15.png) - Sources Manager panel showing playlist sources and EPG sources management interface
 **Prerequisites**:
 - IPTV service subscription
 - Either M3U URL or XC API credentials from your provider

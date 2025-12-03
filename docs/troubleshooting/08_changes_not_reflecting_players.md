@@ -28,7 +28,7 @@ User didn't output updated files from IPTVBoss. Player wasn't updated/refreshed 
 - Save your changes
 
 **2. Output the layout**
-- Layout Manager ’ Output Current Layout M3U and EPG
+- Layout Manager â€™ Output Current Layout M3U and EPG
 - Wait for progress indicator to complete
 
 **3. Verify cloud upload**
@@ -37,7 +37,7 @@ User didn't output updated files from IPTVBoss. Player wasn't updated/refreshed 
 - If using TinyURL, verify links updated
 
 **4. Update playlist in player**
-- TiviMate: Settings ’ Playlists ’ [Select your playlist] ’ Update
+- TiviMate: Settings â€™ Playlists â€™ [Select your playlist] â€™ Update
 - Other players: Find playlist refresh/update option
 - This pulls new files from cloud
 

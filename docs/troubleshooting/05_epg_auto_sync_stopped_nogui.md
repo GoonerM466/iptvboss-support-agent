@@ -65,7 +65,7 @@ Watch output. Does it sync EPGs? If manual works, problem is with automation.
 
 **Mac:**
 - Grant Full Disk Access to IPTVBoss
-  - System Preferences ’ Security & Privacy ’ Privacy ’ Full Disk Access
+  - System Preferences â€™ Security & Privacy â€™ Privacy â€™ Full Disk Access
   - Add IPTVBoss
 - Consider using launchd instead of cron (more reliable on Mac)
 - Cron on Mac has additional permission restrictions

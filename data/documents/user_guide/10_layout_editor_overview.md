@@ -2,6 +2,8 @@
 
 The Layout Editor is where you organize, edit, and manage channels within a layout.
 
+
+**Visual Reference**: [image21](https://goonerm466.github.io/iptvboss-support-agent/images/image21.png) - Layout Editor panel showing groups list, channels list, channel options, and group options interface
 **Access**: **Layout → Layout Editor**
 
 ### Layout Editor Interface

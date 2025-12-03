@@ -10,7 +10,7 @@ All your channels disappeared from layout after syncing, but groups remain.
 
 **Restore immediately:**
 
-1. **Menu ’ Restore ’ Local, Cloud or URL**
+1. **Menu â€™ Restore â€™ Local, Cloud or URL**
 2. Select backup from before the sync
 3. This recovers your channel mappings
 

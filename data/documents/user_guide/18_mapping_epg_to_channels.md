@@ -1,7 +1,13 @@
 # Mapping EPG to Channels
 
+
 EPG (Electronic Program Guide) shows what's playing now and upcoming programs. IPTVBoss matches your channels to EPG sources.
 
+
+**Visual References**:
+- [image18](https://goonerm466.github.io/iptvboss-support-agent/images/image18.png) - Channel list showing highlighted channels with missing EPG mappings ready for auto-mapping
+- [image32](https://goonerm466.github.io/iptvboss-support-agent/images/image32.png) - Search Options dialog showing checkboxes for different EPG guides (US, UK, Can) to enable/disable for mapping
+- [image7](https://goonerm466.github.io/iptvboss-support-agent/images/image7.png) - Channel Editor showing EPG Assignment section with Auto and Manual buttons and EPG sensitivity settings
 **Why mapping is needed**: Your provider's channel names rarely match EPG source channel names exactly. Boss tries auto-matching but sometimes needs manual help.
 
 ### Prerequisites

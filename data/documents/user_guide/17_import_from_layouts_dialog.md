@@ -1,8 +1,9 @@
 # Import Channels From Layouts Dialog
 
+
+**Visual Reference**: [image17](https://goonerm466.github.io/iptvboss-support-agent/images/image17.png) - Import Channels From Layouts dialog showing layout selection, groups list, and channels list with import options
 **What it does**: Copies channels from one layout to another layout.
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image31.png](../IPTVBoss 3.5 User Manual/images/image31.png)
 
 ### Use Cases
 

@@ -32,7 +32,7 @@ TinyURL API key not configured or incorrect. Users haven't migrated from old Tin
 - Enable all permissions
 
 **3. Configure in IPTVBoss**
-- Settings ’ TinyURL
+- Settings â€™ TinyURL
 - Enter API key (copy-paste carefully - no spaces)
 - Save settings
 

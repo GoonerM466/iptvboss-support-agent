@@ -22,8 +22,8 @@ Database corruption from improper shutdown, disk full, file system errors, or lo
 ### Solution
 
 **1. Force close all IPTVBoss processes**
-- Windows: Open Task Manager (Ctrl+Shift+Esc) ’ Find IPTVBoss ’ End Task
-- Mac: Activity Monitor ’ Find IPTVBoss ’ Force Quit
+- Windows: Open Task Manager (Ctrl+Shift+Esc) â€™ Find IPTVBoss â€™ End Task
+- Mac: Activity Monitor â€™ Find IPTVBoss â€™ Force Quit
 
 **2. Delete lock files**
 - Navigate to `IPTVBoss/db` folder
@@ -36,7 +36,7 @@ Database corruption from improper shutdown, disk full, file system errors, or lo
 
 **4. If still fails: Manual restore**
 - Open IPTVBoss (may show empty)
-- Menu ’ Restore ’ Local
+- Menu â€™ Restore â€™ Local
 - Select most recent backup that predates the problem
 - Look in `IPTVBoss/backup` folder for dated backups
 
@@ -46,7 +46,7 @@ Database corruption from improper shutdown, disk full, file system errors, or lo
 - Go back several days if needed
 
 **6. Re-enter Pro license if needed**
-- Menu ’ Activate Pro
+- Menu â€™ Activate Pro
 - Enter license key
 
 ### Prevention

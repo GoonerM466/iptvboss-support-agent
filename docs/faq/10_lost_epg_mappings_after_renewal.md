@@ -12,7 +12,7 @@ If you added the source as an M3U URL with credentials, **new** credentials crea
 
 ### Recovery
 
-1. Restore from a recent database backup: **Menu ’ Restore ’ Local or Cloud**
+1. Restore from a recent database backup: **Menu â€™ Restore â€™ Local or Cloud**
 2. Check `IPTVBoss/backup` folder for dated backup files
 
 ### Prevention

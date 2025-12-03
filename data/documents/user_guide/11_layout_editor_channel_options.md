@@ -2,6 +2,8 @@
 
 When you select one or more channels, the Channel Options panel lets you edit channel properties.
 
+
+**Visual Reference**: [image21](https://goonerm466.github.io/iptvboss-support-agent/images/image21.png) - Layout Editor panel showing groups list, channels list, channel options, and group options interface
 **Channel Name**:
 - Editable text box
 - Your custom name for the channel

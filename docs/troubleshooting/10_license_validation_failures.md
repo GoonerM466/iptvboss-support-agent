@@ -33,7 +33,7 @@ User hasn't migrated account to new IPTVBoss website. Using old website credenti
 - Use license key from NEW website
 
 **Step 3: Enter license correctly**
-- IPTVBoss GUI ’ Menu ’ Activate Pro
+- IPTVBoss GUI â€™ Menu â€™ Activate Pro
 - Copy license key (don't type manually)
 - Paste carefully - no extra spaces or line breaks
 - Click Activate

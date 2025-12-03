@@ -2,6 +2,22 @@
 
 Complete step-by-step instructions for setting up Google Drive as your cloud storage provider.
 
+
+**Visual References**:
+- [image36](https://goonerm466.github.io/iptvboss-support-agent/images/image36.png) - Google Cloud Console showing the project dropdown and 'New Project' option
+- [image22](https://goonerm466.github.io/iptvboss-support-agent/images/image22.png) - Google Cloud Console new project creation dialog with project name field
+- [image42](https://goonerm466.github.io/iptvboss-support-agent/images/image42.png) - Google Cloud Console showing the '+ ENABLE APIS AND SERVICES' button
+- [image5](https://goonerm466.github.io/iptvboss-support-agent/images/image5.png) - Google Cloud Console API library showing search results for 'drive' with Google Drive API
+- [image28](https://goonerm466.github.io/iptvboss-support-agent/images/image28.png) - Google Drive API page showing the blue 'Enable' button
+- [image43](https://goonerm466.github.io/iptvboss-support-agent/images/image43.png) - Google Cloud Console showing the OAuth Consent Screen option in left sidebar
+- [image23](https://goonerm466.github.io/iptvboss-support-agent/images/image23.png) - OAuth consent screen type selection showing 'External' option
+- [image31](https://goonerm466.github.io/iptvboss-support-agent/images/image31.png) - OAuth consent screen Scopes page with 'Add or Remove Scopes' button
+- [image38](https://goonerm466.github.io/iptvboss-support-agent/images/image38.png) - Scopes selection dialog showing drive.appdate and drive.file scopes selected
+- [image19](https://goonerm466.github.io/iptvboss-support-agent/images/image19.png) - OAuth consent screen showing 'Publish App' button to avoid token expiration
+- [image35](https://goonerm466.github.io/iptvboss-support-agent/images/image35.png) - Google Cloud Console showing 'Credentials' option in left sidebar
+- [image34](https://goonerm466.github.io/iptvboss-support-agent/images/image34.png) - Credentials page showing 'Create Credentials' dropdown with 'OAuth client ID' option
+- [image27](https://goonerm466.github.io/iptvboss-support-agent/images/image27.png) - OAuth client ID creation dialog showing application type dropdown with 'TVs and Limited Input devices' selected
+- [image25](https://goonerm466.github.io/iptvboss-support-agent/images/image25.png) - IPTVBoss settings dialog showing Google Drive cloud provider configuration with Client ID and Client Secret fields
 **Video Tutorial**: https://youtu.be/A45N6Vgk-OU
 
 **⚠️ CRITICAL**: You **MUST use the .gz EPG link** with Google Drive, NOT .xml. This is a Google Drive API limitation.
@@ -25,7 +41,6 @@ This process involves creating a Google Cloud Project and configuring OAuth auth
 2. Go to [https://console.developers.google.com/](https://console.developers.google.com/)
 3. You may need to accept terms of service on first visit
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image36.png](../../IPTVBoss 3.5 User Manual/images/image36.png)
 
 ### 2. Create New Project
 
@@ -36,7 +51,6 @@ This process involves creating a Google Cloud Project and configuring OAuth auth
 5. Click **"Create"**
 6. Wait for project creation (takes ~30 seconds)
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image22.png](../../IPTVBoss 3.5 User Manual/images/image22.png)
 
 ### 3. Enable Google Drive API
 
@@ -47,7 +61,6 @@ This process involves creating a Google Cloud Project and configuring OAuth auth
 5. Click **"Enable"** button
 6. Wait for API to enable
 
-**Visual References**: [IPTVBoss 3.5 User Manual\images\image42.png](../../IPTVBoss 3.5 User Manual/images/image42.png), [image5.png](../../IPTVBoss 3.5 User Manual/images/image5.png), [image28.png](../../IPTVBoss 3.5 User Manual/images/image28.png)
 
 ### 4. Configure OAuth Consent Screen
 
@@ -58,7 +71,6 @@ This step tells Google what your app does and who can use it.
    - If prompted, select **"External"**
    - Click **"Create"**
 
-**Visual References**: [IPTVBoss 3.5 User Manual\images\image43.png](../../IPTVBoss 3.5 User Manual/images/image43.png), [image23.png](../../IPTVBoss 3.5 User Manual/images/image23.png)
 
 2. **Fill in App Information**:
    - **App Name**: "IPTVBoss" (or your choice)
@@ -78,7 +90,6 @@ Scopes define what permissions your app needs.
 3. Click **"Update"** button (bottom of scope selector)
 4. Click **"Save and Continue"**
 
-**Visual References**: [IPTVBoss 3.5 User Manual\images\image31.png](../../IPTVBoss 3.5 User Manual/images/image31.png), [image38.png](../../IPTVBoss 3.5 User Manual/images/image38.png)
 
 **Important**: These exact scopes are required. Don't add additional scopes.
 
@@ -104,7 +115,6 @@ Scopes define what permissions your app needs.
 
 **Note**: Publishing for "External" use does NOT require Google verification for personal use. Your app is only accessible to users you explicitly authorize.
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image19.png](../../IPTVBoss 3.5 User Manual/images/image19.png)
 
 ### 8. Create OAuth Credentials
 
@@ -115,7 +125,6 @@ Now create the actual credentials IPTVBoss will use.
    - Click **"Create Credentials"** button at top
    - Select **"OAuth client ID"**
 
-**Visual References**: [IPTVBoss 3.5 User Manual\images\image35.png](../../IPTVBoss 3.5 User Manual/images/image35.png), [image34.png](../../IPTVBoss 3.5 User Manual/images/image34.png)
 
 2. **Configure Client**:
    - In **"Application type"** dropdown, select **"TVs and Limited Input devices"**
@@ -127,7 +136,6 @@ Now create the actual credentials IPTVBoss will use.
    - Copy both or leave this window open
    - You'll need these in the next step
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image27.png](../../IPTVBoss 3.5 User Manual/images/image27.png)
 
 ---
 
@@ -138,7 +146,6 @@ Now create the actual credentials IPTVBoss will use.
 - [Outputting Playlists for Players](23_outputting_layouts_or_playlists.md)
 - [Using TinyURL for Short Links](25_tinyurl_short_links.md)
 
-### Images
 
 - image36.png - Google Cloud Console - New Project dropdown
 - image22.png - Google Cloud Console - New project creation
@@ -184,7 +191,6 @@ Now create the actual credentials IPTVBoss will use.
 7. **Save**:
    - Click **"OK"** to save IPTVBoss settings
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image25.png](../../IPTVBoss 3.5 User Manual/images/image25.png)
 
 ### 10. Verify Setup
 
@@ -247,7 +253,6 @@ Now create the actual credentials IPTVBoss will use.
 - [Outputting Playlists for Players](23_outputting_layouts_or_playlists.md)
 - [Using TinyURL for Short Links](25_tinyurl_short_links.md)
 
-### Images
 
 - image25.png - IPTVBoss settings - Google Drive configuration
 

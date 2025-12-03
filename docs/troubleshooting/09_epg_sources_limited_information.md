@@ -23,7 +23,7 @@ Certain EPG sources display minimal or no program guide information.
 **Step 1: Check Days to Keep settings** (multiple places!)
 
 **1. Source level:**
-- Go to **Sources ’ Sources Manager**
+- Go to **Sources â€™ Sources Manager**
 - Highlight your EPG source
 - Click **EPG Settings**
 - Check **"Days to Keep"** for EPG
@@ -45,7 +45,7 @@ Certain EPG sources display minimal or no program guide information.
    - USA_Local.xml or USA_Local.gz
    - Any other problematic source files
 4. Start IPTVBoss
-5. Sync all EPGs (Sources ’ Sync All EPGs)
+5. Sync all EPGs (Sources â€™ Sync All EPGs)
 6. Output and test
 
 **Step 3: Player cache check**

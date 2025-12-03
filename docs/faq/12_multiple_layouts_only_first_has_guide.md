@@ -10,7 +10,7 @@ You created additional layouts/EPGs but they only show guide for the first layou
 
 **Use Universal EPG instead:**
 
-1. Set up Universal EPG once: **Sources ’ Universal EPG Options**
+1. Set up Universal EPG once: **Sources â€™ Universal EPG Options**
 2. All layouts automatically use the same EPG source
 3. No need to manage multiple EPG files
 4. Saves significant cloud bandwidth

@@ -11,7 +11,7 @@ You're receiving one of these errors when trying to use TinyURL:
 ### Solution
 
 **For 'Unauthenticated' error:**
-1. Go to **Settings ’ TinyURL**
+1. Go to **Settings â€™ TinyURL**
 2. Verify your API key is entered correctly (no extra spaces)
 3. If needed, generate a new API key from tinyurl.com and re-enter it
 

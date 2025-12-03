@@ -2,9 +2,10 @@
 
 After adding a source, you can configure advanced options in Sources Manager to control how the source behaves.
 
+
+**Visual Reference**: [image15](https://goonerm466.github.io/iptvboss-support-agent/images/image15.png) - Sources Manager panel showing playlist sources and EPG sources management interface
 **Access**: **Sources → Sources Manager**
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image24.png](../IPTVBoss 3.5 User Manual/images/image24.png)
 
 ---
 

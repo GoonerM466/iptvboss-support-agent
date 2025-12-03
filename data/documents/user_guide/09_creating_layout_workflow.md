@@ -1,5 +1,9 @@
 # Creating a Layout - Workflow and Strategies
 
+
+**Visual References**:
+- [image16](https://goonerm466.github.io/iptvboss-support-agent/images/image16.png) - Layout Manager panel showing layout list and configuration options
+- [image21](https://goonerm466.github.io/iptvboss-support-agent/images/image21.png) - Layout Editor panel showing groups list, channels list, channel options, and group options interface
 ### Creating a layout
 
 **Start new layout**:

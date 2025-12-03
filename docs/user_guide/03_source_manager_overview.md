@@ -4,7 +4,7 @@ After adding a source, you can configure advanced options in Sources Manager to 
 
 **Access**: **Sources → Sources Manager**
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image24.png](../IPTVBoss 3.5 User Manual/images/image24.png)
+**Visual Reference**: [image24](https://goonerm466.github.io/iptvboss-support-agent/images/image24.png)
 
 ---
 
