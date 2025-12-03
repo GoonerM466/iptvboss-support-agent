@@ -55,8 +55,7 @@ answer_prompt: |
   User Question: {question}
 
   Instructions:
-  - Answer the question using ONLY the context above & the knowledge base
-  - Explore all of the knowledge base for an anser - do not stop early to save time
+  - Explore all of the knowledge base for an answer to the user question within context above - do not stop early to save time
   - If the context or knowledge base doesn't contain the answer, say "I don't have that information"
   - Provide clear, step-by-step instructions when relevant
   - Reference images if they would help (e.g., "See image5.png") in line where they are relevant, not at the end of message
