@@ -40,7 +40,7 @@
 **Steps to Diagnose**:
 
 1. Check for IPTVBoss updates:
-   - Menu → Check for Updates
+   - Restart IPTVBoss or download the latest install file
    - Install latest version
    - May fix API compatibility
 

@@ -61,7 +61,7 @@ Problem-solution guide for common IPTVBoss/EPGBoss issues. Issues are organized 
 
 4. **If still fails: Manual restore**
    - Open IPTVBoss (may show empty)
-   - Menu → Restore → Local
+   - Settings → Restore Database → Local
    - Select most recent backup that predates the problem
    - Look in `IPTVBoss/backup` folder for dated backups
 
@@ -71,7 +71,7 @@ Problem-solution guide for common IPTVBoss/EPGBoss issues. Issues are organized 
    - Go back several days if needed
 
 6. **Re-enter Pro license if needed**
-   - Menu → Activate Pro
+   - Settings → IPTVBoss Pro Settings
    - Enter license key
 
 
@@ -112,7 +112,7 @@ Problem-solution guide for common IPTVBoss/EPGBoss issues. Issues are organized 
    - Switch your source to XC before the next scheduled sync
 
 2. **After problematic sync (Recovery)**:
-   - Menu → Restore
+   - Settings → Restore Database
    - Select backup from immediately before the sync
    - Your channel mapping will return to pre-sync state
 
@@ -240,7 +240,7 @@ Problem-solution guide for common IPTVBoss/EPGBoss issues. Issues are organized 
    - Output and test in player
 
 4. **For lost mappings after renewal**:
-   - Menu → Restore
+   - Settings → Restore Database
    - Select database backup from before credential change
    - This recovers all previous mappings
 
@@ -709,9 +709,8 @@ If EPG doesn't show in Boss but shows in player:
 - Use license key from NEW website
 
 **Step 3: Enter license correctly**
-- IPTVBoss GUI → Menu → Activate Pro
-- Copy license key (don't type manually)
-- Paste carefully - no extra spaces or line breaks
+- Settings → IPTVBoss Pro Settings
+- Copy & Paste license key (don't type manually)
 - Click Activate
 
 **Step 4: Wait and verify**
@@ -782,7 +781,7 @@ If EPG doesn't show in Boss but shows in player:
 
 2. **Enter Pro license key FIRST**
    - Before anything else
-   - Menu → Activate Pro
+   - Settings → IPTVBoss Pro Settings
    - Enter license key from new website
    - Wait for validation
 
@@ -793,7 +792,7 @@ If EPG doesn't show in Boss but shows in player:
 
 4. **THEN restore from backup**
    - Now that Pro and cloud are set up
-   - Menu → Restore
+   - Settings → Restore Database
    - Choose Local or Cloud
    - Select backup file
 
@@ -859,7 +858,7 @@ Before reinstalling:
 **After ANY update, always do this checklist**:
 
 1. **Open GUI and refresh license**
-   - Menu → Check license status
+   - Settings → IPTVBoss Pro Settings
    - Re-enter license if needed
    - Don't proceed until Pro shows active
 

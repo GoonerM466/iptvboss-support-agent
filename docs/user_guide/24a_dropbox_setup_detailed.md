@@ -33,7 +33,7 @@ If you don't already have one:
      - This folder will contain all your outputted M3U/EPG files
 4. Click **"Create"**
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image11.png](../../IPTVBoss 3.5 User Manual/images/image11.png), [image33.png](../../IPTVBoss 3.5 User Manual/images/image33.png)
+**Visual Reference**: ![IPTVBoss 3.5 User Manual\images\image11.png](../../IPTVBoss 3.5 User Manual/images/image11.png), ![image33.png](../../IPTVBoss 3.5 User Manual/images/image33.png)
 
 ### 3. Set App Permissions
 
@@ -45,7 +45,7 @@ If you don't already have one:
    - `files.content.read`
 3. Click **"Submit"** button at bottom
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image14.png](../../IPTVBoss 3.5 User Manual/images/image14.png)
+**Visual Reference**: ![IPTVBoss 3.5 User Manual\images\image14.png](../../IPTVBoss 3.5 User Manual/images/image14.png)
 
 **Important**: You must click Submit after enabling permissions, or they won't be saved.
 
@@ -108,7 +108,7 @@ If you don't already have one:
 7. **Save Settings**:
    - Click **"OK"** to save
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image12.png](../../IPTVBoss 3.5 User Manual/images/image12.png)
+**Visual Reference**: ![IPTVBoss 3.5 User Manual\images\image12.png](../../IPTVBoss 3.5 User Manual/images/image12.png)
 
 ### 6. Verify Setup
 

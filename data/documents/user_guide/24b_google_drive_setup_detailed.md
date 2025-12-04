@@ -163,7 +163,7 @@ Now create the actual credentials IPTVBoss will use.
 1. **Open IPTVBoss**
 
 2. **Go to Settings**:
-   - Menu → **Settings → IPTVBoss Settings**
+   - **Settings → IPTVBoss Settings**
 
 3. **Enable Cloud Sync**:
    - At the top, check **"Cloud Sync Enabled"**

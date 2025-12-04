@@ -19,8 +19,8 @@ When things go wrong, restore from backup.
    - That's okay
 
 2. **Access restore**
-   - Menu → Restore
-   - Choose Local, Cloud or URL
+   - Settings → Restore Database → Local
+   - Select most recent backup that predates the problem
 
 3. **Select backup**
    - Browse backup files

@@ -25,7 +25,7 @@ This process involves creating a Google Cloud Project and configuring OAuth auth
 2. Go to [https://console.developers.google.com/](https://console.developers.google.com/)
 3. You may need to accept terms of service on first visit
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image36.png](../../IPTVBoss 3.5 User Manual/images/image36.png)
+**Visual Reference**: ![IPTVBoss 3.5 User Manual\images\image36.png](../../IPTVBoss 3.5 User Manual/images/image36.png)
 
 ### 2. Create New Project
 
@@ -36,7 +36,7 @@ This process involves creating a Google Cloud Project and configuring OAuth auth
 5. Click **"Create"**
 6. Wait for project creation (takes ~30 seconds)
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image22.png](../../IPTVBoss 3.5 User Manual/images/image22.png)
+**Visual Reference**: ![IPTVBoss 3.5 User Manual\images\image22.png](../../IPTVBoss 3.5 User Manual/images/image22.png)
 
 ### 3. Enable Google Drive API
 
@@ -47,7 +47,7 @@ This process involves creating a Google Cloud Project and configuring OAuth auth
 5. Click **"Enable"** button
 6. Wait for API to enable
 
-**Visual References**: [IPTVBoss 3.5 User Manual\images\image42.png](../../IPTVBoss 3.5 User Manual/images/image42.png), [image5.png](../../IPTVBoss 3.5 User Manual/images/image5.png), [image28.png](../../IPTVBoss 3.5 User Manual/images/image28.png)
+**Visual References**: ![IPTVBoss 3.5 User Manual\images\image42.png](../../IPTVBoss 3.5 User Manual/images/image42.png), ![image5.png](../../IPTVBoss 3.5 User Manual/images/image5.png), ![image28.png](../../IPTVBoss 3.5 User Manual/images/image28.png)
 
 ### 4. Configure OAuth Consent Screen
 
@@ -58,7 +58,7 @@ This step tells Google what your app does and who can use it.
    - If prompted, select **"External"**
    - Click **"Create"**
 
-**Visual References**: [IPTVBoss 3.5 User Manual\images\image43.png](../../IPTVBoss 3.5 User Manual/images/image43.png), [image23.png](../../IPTVBoss 3.5 User Manual/images/image23.png)
+**Visual References**: ![IPTVBoss 3.5 User Manual\images\image43.png](../../IPTVBoss 3.5 User Manual/images/image43.png), ![image23.png](../../IPTVBoss 3.5 User Manual/images/image23.png)
 
 2. **Fill in App Information**:
    - **App Name**: "IPTVBoss" (or your choice)
@@ -78,7 +78,7 @@ Scopes define what permissions your app needs.
 3. Click **"Update"** button (bottom of scope selector)
 4. Click **"Save and Continue"**
 
-**Visual References**: [IPTVBoss 3.5 User Manual\images\image31.png](../../IPTVBoss 3.5 User Manual/images/image31.png), [image38.png](../../IPTVBoss 3.5 User Manual/images/image38.png)
+**Visual References**: ![IPTVBoss 3.5 User Manual\images\image31.png](../../IPTVBoss 3.5 User Manual/images/image31.png), ![image38.png](../../IPTVBoss 3.5 User Manual/images/image38.png)
 
 **Important**: These exact scopes are required. Don't add additional scopes.
 
@@ -104,7 +104,7 @@ Scopes define what permissions your app needs.
 
 **Note**: Publishing for "External" use does NOT require Google verification for personal use. Your app is only accessible to users you explicitly authorize.
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image19.png](../../IPTVBoss 3.5 User Manual/images/image19.png)
+**Visual Reference**: ![IPTVBoss 3.5 User Manual\images\image19.png](../../IPTVBoss 3.5 User Manual/images/image19.png)
 
 ### 8. Create OAuth Credentials
 
@@ -115,7 +115,7 @@ Now create the actual credentials IPTVBoss will use.
    - Click **"Create Credentials"** button at top
    - Select **"OAuth client ID"**
 
-**Visual References**: [IPTVBoss 3.5 User Manual\images\image35.png](../../IPTVBoss 3.5 User Manual/images/image35.png), [image34.png](../../IPTVBoss 3.5 User Manual/images/image34.png)
+**Visual References**: ![IPTVBoss 3.5 User Manual\images\image35.png](../../IPTVBoss 3.5 User Manual/images/image35.png), ![image34.png](../../IPTVBoss 3.5 User Manual/images/image34.png)
 
 2. **Configure Client**:
    - In **"Application type"** dropdown, select **"TVs and Limited Input devices"**
@@ -127,7 +127,7 @@ Now create the actual credentials IPTVBoss will use.
    - Copy both or leave this window open
    - You'll need these in the next step
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image27.png](../../IPTVBoss 3.5 User Manual/images/image27.png)
+**Visual Reference**: ![IPTVBoss 3.5 User Manual\images\image27.png](../../IPTVBoss 3.5 User Manual/images/image27.png)
 
 ---
 
@@ -184,7 +184,7 @@ Now create the actual credentials IPTVBoss will use.
 7. **Save**:
    - Click **"OK"** to save IPTVBoss settings
 
-**Visual Reference**: [IPTVBoss 3.5 User Manual\images\image25.png](../../IPTVBoss 3.5 User Manual/images/image25.png)
+**Visual Reference**: ![IPTVBoss 3.5 User Manual\images\image25.png](../../IPTVBoss 3.5 User Manual/images/image25.png)
 
 ### 10. Verify Setup
 

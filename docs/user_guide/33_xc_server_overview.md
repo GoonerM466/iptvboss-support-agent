@@ -103,7 +103,7 @@ If running as service or headless, access log and commands via web endpoint:
 This page shows:
 - Server log
 - Links for Stopping and Reloading server
-- Visual reference: [image40](https://goonerm466.github.io/iptvboss-support-agent/images/image40.png)
+- Visual reference: ![image40](https://goonerm466.github.io/iptvboss-support-agent/images/image40.png)
 
 **User Links for XC**:
 
@@ -112,7 +112,7 @@ View XC login credentials for users:
 - Click **"View XC Login"** button
 - Shows XC credentials for all users
 - Click user to copy link to clipboard
-- Visual reference: [image41](https://goonerm466.github.io/iptvboss-support-agent/images/image41.png)
+- Visual reference: ![image41](https://goonerm466.github.io/iptvboss-support-agent/images/image41.png)
 
 ---
 

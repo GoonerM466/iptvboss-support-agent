@@ -104,5 +104,25 @@
   "http_error_codes": {
     "canonical": "http error",
     "synonyms": ["400", "401", "403", "404", "405", "408", "409", "410", "413", "415", "429", "500", "502", "503", "504", "bad request", "unauthorized", "forbidden", "not found", "timeout", "too many requests", "internal server error", "bad gateway", "service unavailable", "gateway timeout"]
+  },
+
+  "stream_testing_terms": {
+    "canonical": "stream testing",
+    "synonyms": ["open stream", "test stream", "preview stream", "play stream", "stream preview", "stream button", "vlc button", "test channel", "preview channel"]
+  },
+
+  "vlc_terms": {
+    "canonical": "vlc",
+    "synonyms": ["vlc", "vlc player", "vlc media player", "vlc64", "vlcj", "video player"]
+  },
+
+  "import_terms": {
+    "canonical": "import",
+    "synonyms": ["import", "import channels", "import source", "add channels", "import from source", "import categories", "import groups"]
+  },
+
+  "sorting_terms": {
+    "canonical": "sorting",
+    "synonyms": ["sort", "sorting", "order", "ordering", "a-z", "alphabetical", "alphabetically", "channel order", "provider order", "original order"]
   }
 }

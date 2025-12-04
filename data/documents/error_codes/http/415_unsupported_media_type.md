@@ -31,8 +31,7 @@
 **Steps to Diagnose**:
 
 1. Update IPTVBoss:
-   - Menu → Check for Updates
-   - Install latest version
+   - Install latest version by restarting Boss or downloading the lastest install file
    - Restart Boss
 
 2. Check Boss logs:

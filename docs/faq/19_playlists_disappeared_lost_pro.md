@@ -12,8 +12,11 @@ All your playlists disappeared and you lost your Pro license.
 
 **Recovery steps:**
 
-1. Re-enter your Pro license key: **Menu → Activate Pro**
-2. Restore database: **Menu → Restore → Local or Cloud**
+1. Re-enter your Pro license key: **Settings → IPTVBoss Pro Settings**
+2. Restore database: **Settings → Restore Database → Local, Cloud or URL**
+    - Cloud restore requires cloud setup to be completed first
+    - URL restore must point to a direct download file
+    - With Dropbox make sure the end of the URL is `&dl=1` for direct download
 3. Select the most recent backup that predates the problem
 4. If you've migrated to the new IPTVBoss website, make sure you're using new credentials
 

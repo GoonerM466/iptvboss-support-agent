@@ -83,7 +83,7 @@ If you don't already have one:
 1. **Open IPTVBoss**
 
 2. **Go to Settings**:
-   - Menu → **Settings → IPTVBoss Settings**
+   - **Settings → IPTVBoss Settings**
 
 3. **Select Dropbox**:
    - In the **"Cloud Provider"** dropdown, select **"Dropbox"**

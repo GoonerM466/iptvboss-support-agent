@@ -169,8 +169,9 @@ If TiviMate shows info but Boss doesn't, TiviMate is likely using cached EPG dat
 If you added the source as an M3U URL with credentials, **new** credentials create a new source identity, which loses all mappings.
 
 **Recovery**:
-1. Restore from a recent database backup: Menu → Restore → Local or Cloud
-2. Check IPTVBoss/backup folder for dated backup files
+1. Restore from a recent database backup: Settings → Restore Database → Local, Cloud or URL
+    - URL restore must point to a direct download file
+    - With Dropbox make sure the end of the URL is `&dl=1` for direct download
 
 **Prevention**:
 - Use XC API connection instead of M3U when available (preserves mappings better)
@@ -308,7 +309,7 @@ C:\Users\{user}\IPTVBoss
 - `/output` - Local M3U/XML output files
 
 **Tips**:
-- **Backup folder**: Check here when restoring (Menu → Restore → Local)
+- **Backup folder**: Check here when restoring (Settings → Restore Database → Local)
 - **Logs folder**: Share logs when asking for support (remove sensitive info first)
 - **Output folder**: Find locally generated M3U/EPG files here (if not using cloud)
 
@@ -320,12 +321,15 @@ C:\Users\{user}\IPTVBoss
 1. Close IPTVBoss completely
 2. Navigate to IPTVBoss/backup folder
 3. Note there are multiple dated backup files
-4. Start IPTVBoss and try Menu → Restore → Local
+4. Start IPTVBoss and try Settings → Restore Database → Local
 5. If it crashes, try restoring from an older backup file
 6. If all backups fail, check logs (IPTVBoss/logs) for specific errors
 
 **Alternative**:
 - Try cloud (reccomended) or URL restore if you have cloud sync enabled
+  - Settings → Restore Database → Cloud or URL
+    - URL restore must point to a direct download file
+    - With Dropbox make sure the end of the URL is `&dl=1` for direct download
 - Contact support with logs
 
 **See also**: [Database Corruption and Failed Startup](Troubleshooting_Guide.md#database-corruption-and-failed-startup)
@@ -338,7 +342,9 @@ C:\Users\{user}\IPTVBoss
 1. Force close IPTVBoss (Task Manager on Windows)
 2. Go to IPTVBoss/db folder and delete any files with "lock" in the name
 3. Restart IPTVBoss - it should attempt auto-restore
-4. If still frozen, manually restore: Menu → Restore → Local, Cloud or URL
+4. If still frozen, manually restore: Settings → Restore Database → Local, Cloud or URL
+    - URL restore must point to a direct download file
+    - With Dropbox make sure the end of the URL is `&dl=1` for direct download
 
 **If restore fails**:
 - Try older backup files from IPTVBoss/backup
@@ -355,8 +361,10 @@ C:\Users\{user}\IPTVBoss
 **Don't panic - your backups should still exist.**
 
 **Recovery steps**:
-1. Re-enter your Pro license key (Menu → Activate Pro)
-2. Restore database: Menu → Restore → Local or Cloud
+1. Re-enter your Pro license key (Settings → IPTVBoss Pro Settings)
+2. Restore database: Settings → Restore Database → Local, Cloud or URL
+    - URL restore must point to a direct download file
+    - With Dropbox make sure the end of the URL is `&dl=1` for direct download
 3. Select the most recent backup that predates the problem
 4. If you've migrated to the new IPTVBoss website, make sure you're using new credentials
 
@@ -396,10 +404,13 @@ Yes, database backups are portable.
   - Start the program once and shut down
   - Copy your saved IPTVBoss folders to the IPTVBoss folder on the new install/computer
   - Start IPTVBoss & make sure transfer is sucessfull. If it isn't continue below
-3. Use Menu → Restore → Local
+3. Use Settings → Restore Database → Local
 4. Re-Authorize cloud
 
-**Alternative**: If using cloud sync (Dropbox/Google Drive), you can restore from cloud after reinstalling however you must enter your cloud settings first.
+**Alternative**: If using cloud sync (Dropbox/Google Drive), you can restore from cloud after reinstalling however you must enter your cloud settings first
+  - Settings → Restore Database → Cloud or URL
+    - URL restore must point to a direct download file
+    - With Dropbox make sure the end of the URL is `&dl=1` for direct download
 
 ---
 
@@ -509,7 +520,9 @@ Channel sorting uses the first character/number in the channel name. If channels
 ### All my channels disappeared from layout after syncing, but groups remain. Can I recover?
 
 **Restore immediately**:
-1. Menu → Restore → Local, Cloud or URL
+1. Settings → Restore Database → Local, Cloud or URL
+    - URL restore must point to a direct download file
+    - With Dropbox make sure the end of the URL is `&dl=1` for direct download
 2. Select backup from before the sync
 3. This recovers your channel mappings
 

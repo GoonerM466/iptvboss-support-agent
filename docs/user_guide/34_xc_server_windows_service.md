@@ -11,7 +11,7 @@ Using Task Scheduler (recommended for Windows):
 5. **Trigger**: At startup (or your preference)
 6. **Settings**: Run whether user is logged in or not
 
-Visual references: [image42](https://goonerm466.github.io/iptvboss-support-agent/images/image42.png), [image43](https://goonerm466.github.io/iptvboss-support-agent/images/image43.png)
+Visual references: ![image42](https://goonerm466.github.io/iptvboss-support-agent/images/image42.png), ![image43](https://goonerm466.github.io/iptvboss-support-agent/images/image43.png)
 
 ---
 

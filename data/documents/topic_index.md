@@ -52,6 +52,9 @@ Quick reference to find documentation by topic, symptom, or platform.
 - [Provider Shows All Categories](faq/07_provider_shows_all_categories.md)
 - [No Streams Found After Output](faq/09_no_streams_found_after_output.md)
 
+### Stream Testing & Preview
+- [Open Stream Button Not Working](faq/37_open_stream_button_not_working.md) - VLC requirement for stream preview
+
 ### License & Pro Features
 - [License Validation Failures and Loops](troubleshooting/10_license_validation_failures.md)
 - [Keeps Asking to Reauthorize Pro](faq/20_keeps_asking_reauthorize_pro.md)
@@ -96,6 +99,9 @@ Quick reference to find documentation by topic, symptom, or platform.
 - [Source Sync Breaking Layouts](troubleshooting/02_source_sync_breaking_layouts.md)
 - [Custom Channels Disappeared After Sync](faq/29_custom_channels_disappeared_after_sync.md)
 
+### "Button doesn't work" / Feature not working
+- [Open Stream Button Not Working](faq/37_open_stream_button_not_working.md) - VLC not installed
+
 ---
 
 ## By Platform
@@ -134,6 +140,7 @@ Quick reference to find documentation by topic, symptom, or platform.
 ## Customization & Advanced Features
 
 - [Adding Numbered Logos](faq/36_adding_numbered_logos.md) - Bulk-assign sequential numbered logos to channels
+- [Import Channels in Provider Order](faq/38_import_channels_in_provider_order.md) - Preserve provider's channel order when importing
 
 ---
 

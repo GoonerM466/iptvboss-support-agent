@@ -2,7 +2,7 @@
 
 **What it does**: Copies channels from one layout to another layout.
 
-**Visual Reference**: [image31](https://goonerm466.github.io/iptvboss-support-agent/images/image31.png)
+**Visual Reference**: ![image31](https://goonerm466.github.io/iptvboss-support-agent/images/image31.png)
 
 ### Use Cases
 

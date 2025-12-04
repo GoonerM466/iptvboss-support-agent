@@ -21,7 +21,7 @@ Get IPTVBoss/EPGBoss working in 10-15 minutes. This guide covers essential setup
 2. **Install** following prompts for your OS
 3. **Launch** IPTVBoss
 4. **Activate Pro**:
-   - Menu → Activate Pro
+   - Settings → IPTVBoss Pro Settings
    - Enter your Pro license key
    - Wait for validation (may take 1-2 minutes)
    - Confirm "Pro Active" status
@@ -308,11 +308,10 @@ Changes don't auto-sync. You must output → update.
 
 ## Pro Tips
 
-1. **Backup regularly**: Menu → Backup (keeps you safe from disasters)
-2. **Use XC API**: More stable than M3U URLs if provider offers it
-3. **Universal EPG**: Sources → Universal EPG Options (easier than individual EPGs)
-4. **Start simple**: Master basics before exploring advanced features
-5. **Join Discord**: Community support is excellent
+1. **Use XC API**: More stable than M3U URLs if provider offers it
+2. **Universal EPG**: Sources → Universal EPG Options (easier than individual EPGs)
+3. **Start simple**: Master basics before exploring advanced features
+4. **Join Discord**: Community support is excellent
 
 ---
 

@@ -1530,7 +1530,7 @@ When things go wrong, restore from backup.
    - That's okay
 
 2. **Access restore**
-   - Menu → Restore
+   - Settings → Restore Database
    - Choose Local, Cloud or URL
 
 3. **Select backup**
@@ -1580,7 +1580,7 @@ Providers sometimes change channel names, URLs, or structure. This can break you
 - Groups empty
 
 **Recovery**:
-1. Menu → Restore
+1. Settings → Restore Database
 2. Select backup from immediately before sync
 3. Your layouts return to pre-sync state
 

@@ -93,7 +93,7 @@ When the provider adds channels to those categories, they automatically appear i
 - Use "Don't Import Duplicate Channels" in import settings
 - Consider manual channel management for complex setups
 
-**Visual Reference**: [image36](https://goonerm466.github.io/iptvboss-support-agent/images/image36.png)
+**Visual Reference**: ![image36](https://goonerm466.github.io/iptvboss-support-agent/images/image36.png)
 
 
 ---

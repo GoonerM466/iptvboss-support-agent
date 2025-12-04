@@ -2,7 +2,7 @@
 
 **What it does**: Imports channels from your IPTV provider sources into the current layout.
 
-**Visual Reference**: [image30](https://goonerm466.github.io/iptvboss-support-agent/images/image30.png)
+**Visual Reference**: ![image30](https://goonerm466.github.io/iptvboss-support-agent/images/image30.png)
 
 ### Import Methods
 

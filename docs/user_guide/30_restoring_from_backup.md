@@ -19,7 +19,7 @@ When things go wrong, restore from backup.
    - That's okay
 
 2. **Access restore**
-   - Menu → Restore
+   - Settings → Restore Database
    - Choose Local, Cloud or URL
 
 3. **Select backup**

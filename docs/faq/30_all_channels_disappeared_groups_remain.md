@@ -10,7 +10,10 @@ All your channels disappeared from layout after syncing, but groups remain.
 
 **Restore immediately:**
 
-1. **Settings → Restore → Local, Cloud or URL**
+1. **Settings → Restore Database → Local, Cloud or URL**
+    - Cloud restore requires cloud setup to be completed first if not already
+    - URL restore must point to a direct download file
+    - With Dropbox make sure the end of the URL is `&dl=1` for direct download**
 2. Select backup from before the sync
 3. This recovers your channel mappings
 4. Consider converting source to XC if you are currently using M3U

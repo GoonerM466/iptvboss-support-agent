@@ -20,7 +20,9 @@ Providers sometimes change channel names, URLs, or structure. This can break you
 - Groups empty
 
 **Recovery**:
-1. Menu → Restore
+1. Settings → Restore Database → Local, Cloud or URL
+      - URL restore must point to a direct download file
+      - With Dropbox make sure the end of the URL is `&dl=1` for direct download
 2. Select backup from immediately before sync
 3. Your layouts return to pre-sync state
 
