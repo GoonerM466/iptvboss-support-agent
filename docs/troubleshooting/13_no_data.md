@@ -26,6 +26,7 @@ Indicates a failure in the workflow. This could have multiple causes and it's im
 - In the user's Player → goto Step 1b
 
     **1a. If in IPTVBoss:**
+    - *If there are no playlists, sources or anything showing, and its like you are starting Boss for the first time, you will need to [Restore Database](01_database_corruption_startup_failure.md)*
     - Sources > Sync all sources
     - Sources > Sync all EPGs
     - Check EPG Browser & Channel lists; 
@@ -71,6 +72,7 @@ Indicates a failure in the workflow. This could have multiple causes and it's im
 
 ### Related Topics
 
+- [Database Corruption and Failed Startup](01_database_corruption_startup_failure.md)
 - [Changes Not Reflecting in Player Apps](08_changes_not_reflecting_players.md)
 - [Cloud Storage Upload Failures](07_cloud_storage_upload_failures.md)
 - [Source Sync Breaking Layouts](02_source_sync_breaking_layouts.md)

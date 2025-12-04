@@ -66,6 +66,8 @@ Database corruption from improper shutdown, disk full, file system errors, or lo
 
 ### Related Topics
 
+- [Restoring from backup](../user_guide\30_restoring_from_backup.md)
 - [No Layouts and Local Restore Crashes](../faq/17_no_layouts_local_restore_crashes.md)
 - [Database Failed to Load](../faq/18_database_failed_to_load_corrupt.md)
 - [Recurring Database Wipes](../known_issues/01_recurring_database_wipes.md)
+

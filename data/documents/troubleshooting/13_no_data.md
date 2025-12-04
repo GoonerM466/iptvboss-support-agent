@@ -1,5 +1,24 @@
 # No Data in Boss or Player
 
+**Common user descriptions of this issue:**
+- "I have no data"
+- "I got no data"
+- "Nothing is working"
+- "No data showing"
+- "Nothing is showing up"
+- "Everything is blank"
+- "Everything is empty"
+- "Boss is empty"
+- "Player is empty"
+- "No channels showing"
+- "No EPG data"
+- "No guide information"
+- "Missing all data"
+- "All my data is gone"
+- "Data disappeared"
+- "Channels disappeared"
+- "EPG disappeared"
+
 No M3U playlist data or EPG program information showing in either IPTVBoss or the user's player app.
 
 ### Problem
@@ -12,6 +31,7 @@ No data in either Boss or the Player indicating a failure in the workflow.
 - No EPG data in Player
 - No or outdated channels in M3U in Boss
 - No or outdated channels in M3U in Player
+- Boss setup has been wiped / is corrupt
 
 ### Why This Happens
 
@@ -26,9 +46,10 @@ Indicates a failure in the workflow. This could have multiple causes and it's im
 - In the user's Player → goto Step 1b
 
     **1a. If in IPTVBoss:**
+    - *If there are no playlists, sources or anything showing, and its like you are starting Boss for the first time, you will need to [Restore Database](01_database_corruption_startup_failure.md)*
     - Sources > Sync all sources
     - Sources > Sync all EPGs
-    - Check EPG Browser & Channel lists; 
+    - Check EPG Browser & Channel lists;
         - If fixed, move to step 4.
         - If not fixed, move to step 2
 
@@ -52,7 +73,7 @@ Indicates a failure in the workflow. This could have multiple causes and it's im
 - In IPTVBoss, output your layout(s) and EPG file(s)
 - Sync playlist & EPG in player
     - If you see data the issue is fixed, but you might want to ensure you have a sync schedule set up in Boss
-    - If you dont see data this means the issue is between Boss & the cloud, or the cloud and your player. Goto step 5 
+    - If you dont see data this means the issue is between Boss & the cloud, or the cloud and your player. Goto step 5
 
 **5. Check cloud files**
 - Go to your cloud provider website and download the affected files
@@ -60,8 +81,8 @@ Indicates a failure in the workflow. This could have multiple causes and it's im
 - Ensure data is current
     - If data is out of date, there is an issue with Boss outputting to the cloud.
 
-    Reauthorize cloud, and repeat the troubleshooting steps. 
-    
+    Reauthorize cloud, and repeat the troubleshooting steps.
+
     If the issue persists then you should seek help on Discord and provide clean logs.
     - If the data is current then the issue is between the cloud & your player.
 
@@ -71,6 +92,7 @@ Indicates a failure in the workflow. This could have multiple causes and it's im
 
 ### Related Topics
 
+- [Database Corruption and Failed Startup](01_database_corruption_startup_failure.md)
 - [Changes Not Reflecting in Player Apps](08_changes_not_reflecting_players.md)
 - [Cloud Storage Upload Failures](07_cloud_storage_upload_failures.md)
 - [Source Sync Breaking Layouts](02_source_sync_breaking_layouts.md)
@@ -81,4 +103,3 @@ Indicates a failure in the workflow. This could have multiple causes and it's im
 - [Automatic Syncing](../user_guide/26_automatic_syncing.md)
 - [Changes Not Showing in Player](../faq/06_changes_not_showing_in_player.md)
 - [No Streams Found After Output](../faq/09_no_streams_found_after_output.md)
-

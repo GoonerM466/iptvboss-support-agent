@@ -12,7 +12,9 @@ When things go wrong, restore from backup.
 
 **Restore process**:
 
-1. **Open IPTVBoss** (if possible)
+1. **Open IPTVBoss** 
+   - *If possible - If it wont start, empty the `IPTVBoss/db` folder, then start Boss*
+   - *Boss will attempt to auto-restore, but might require you to do it manually*
    - May show empty if database is corrupted
    - That's okay
 
