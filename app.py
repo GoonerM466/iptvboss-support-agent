@@ -217,8 +217,8 @@ def render_sidebar():
             "Search confidence threshold",
             min_value=0.0,
             max_value=1.0,
-            value=0.35,
-            step=0.05
+            value=0.30,
+            step=0.01
         )
 
 
