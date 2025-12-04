@@ -1,10 +1,10 @@
 # Application Crashes on Startup or After Updates
 
-IPTVBoss crashes when launching or immediately after opening.
+IPTVBoss crashes or freezes when launching or immediately after opening or fails to start at all.
 
 ### Problem
 
-IPTVBoss crashes during or immediately after startup.
+IPTVBoss crashes during or immediately after startup, or fails to start at all.
 
 ### Symptoms
 
@@ -45,6 +45,9 @@ Corrupted database loaded on startup, corrupted settings/preferences, lock files
 - Try older backup file
 - Recent backup might also be corrupted
 - Go back to last known good state
+- Try cloud or URL backups
+   - URL must point to a direct download file
+      - With Dropbox make sure the end of the URL is `&dl=1` for direct download
 
 **7. Get diagnostic information**
 - Before moving IPTVBoss folder, copy most recent log from `IPTVBoss/logs`

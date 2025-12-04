@@ -45,6 +45,9 @@ Database corruption from improper shutdown, disk full, file system errors, or lo
 - Try progressively older backup files
 - Newest backup might also be corrupted
 - Go back several days if needed
+- Try cloud or URL backups
+    - URL restore must point to a direct download file
+    - With Dropbox make sure the end of the URL is `&dl=1` for direct download
 
 **6. Re-enter Pro license if needed**
 - Menu � Activate Pro

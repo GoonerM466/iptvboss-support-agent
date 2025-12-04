@@ -20,6 +20,8 @@ IPTVBoss shows no layouts or sources, and local restore crashes the app.
 **Alternative:**
 
 - Try cloud (recommended) or URL restore if you have cloud sync enabled
+    - URL restore must point to a direct download file
+    - With Dropbox make sure the end of the URL is `&dl=1` for direct download
 - Contact support with logs
 
 ### Related Topics

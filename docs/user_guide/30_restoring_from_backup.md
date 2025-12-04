@@ -25,6 +25,7 @@ When things go wrong, restore from backup.
 3. **Select backup**
    - Browse backup files
    - URL must point to a direct download file
+      - With Dropbox make sure the end of the URL is `&dl=1` for direct download
 
 4. **Wait for restore**
    - Takes 1-5 minutes
@@ -39,6 +40,8 @@ When things go wrong, restore from backup.
 - Try older backup
 - Recent one might be corrupted too
 - Try cloud or URL restore if local fails (or vice versa)
+- Ensure the url is a direct download URL. 
+   - For Dropbox make sure the end of the URL is `&dl=1`
 
 **After restore**:
 - Re-enter Pro license if prompted

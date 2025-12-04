@@ -13,13 +13,15 @@ IPTVBoss shows no layouts or sources, and local restore crashes the app.
 1. Close IPTVBoss completely
 2. Navigate to `IPTVBoss/backup` folder
 3. Note there are multiple dated backup files
-4. Start IPTVBoss and try **Menu ’ Restore ’ Local**
+4. Start IPTVBoss and try **Menu ï¿½ Restore ï¿½ Local**
 5. If it crashes, try restoring from an older backup file
 6. If all backups fail, check logs (`IPTVBoss/logs`) for specific errors
 
 **Alternative:**
 
 - Try cloud (recommended) or URL restore if you have cloud sync enabled
+    - URL restore must point to a direct download file
+    - With Dropbox make sure the end of the URL is `&dl=1` for direct download
 - Contact support with logs
 
 ### Related Topics
