@@ -10,25 +10,20 @@
 ### Windows
 
 **Application Location**:
-- Default: `C:\Program Files\IPTVBoss\` (installed version)
-- Portable: Wherever user extracted the ZIP file
+- Default: `C:\Users\[Username]\AppData\Roaming\IPTVBoss\` (App version)
+- Jar: Wherever user choose (advanced setup)
 
 **Database Location**:
-- `%APPDATA%\IPTVBoss\iptvboss.db`
-- Full path typically: `C:\Users\[Username]\AppData\Roaming\IPTVBoss\iptvboss.db`
+- Full path typically: `C:\Users\[Username]\IPTVBoss\db`
 
 **Backup Location**:
-- `%APPDATA%\IPTVBoss\Backups\`
-- Full path: `C:\Users\[Username]\AppData\Roaming\IPTVBoss\Backups\`
-- Backup files: `iptvboss_backup_YYYY-MM-DD_HH-MM-SS.db`
+- Full path: `C:\Users\[Username]\IPTVBoss\backups`
 
-**Output Files** (local, before cloud upload):
-- `%APPDATA%\IPTVBoss\Output\`
-- Full path: `C:\Users\[Username]\AppData\Roaming\IPTVBoss\Output\`
+**Local Output Files**:
+- Full path: `C:\Users\[Username]\IPTVBoss\output`
 
-**NoGUI Script Location** (if used):
-- User-defined location
-- Commonly: Desktop or Documents folder
+**Log Files**:
+- Logs: `C:\Users\[Username]\IPTVBoss\logs`
 
 ---
 
@@ -44,8 +39,11 @@
 **Backup Location**:
 - `~/Library/Application Support/IPTVBoss/Backups/`
 
-**Output Files** (local, before cloud upload):
+**Local LOutput Files**:
 - `~/Library/Application Support/IPTVBoss/Output/`
+
+**Log Files**:
+- Logs: `~/Library/Application Support/IPTVBoss/Logs/`
 
 ---
 
@@ -62,8 +60,11 @@
 **Backup Location**:
 - `~/.config/IPTVBoss/Backups/`
 
-**Output Files** (local, before cloud upload):
+**Local Output Files**:
 - `~/.config/IPTVBoss/Output/`
+
+**Log Files**:
+- Logs: `~/.config/IPTVBoss/Logs/`
 
 ---
 
@@ -72,7 +73,7 @@
 ### Dropbox
 
 **App Folder** (recommended):
-- Path in Dropbox: `Dropbox/Apps/[YourAppName]/`
+- Default Path in Dropbox: `Dropbox/Apps/[YourAppName]/`
 - Files stored here: `playlist.m3u`, `guide.xml`
 
 **Full Dropbox** (if configured):
@@ -121,15 +122,6 @@
 
 ## Database Backup Files
 
-### Automatic Backups
-- Filename format: `iptvboss_backup_YYYY-MM-DD_HH-MM-SS.db`
-- Example: `iptvboss_backup_2024-12-01_14-30-00.db`
-- Location: Platform-specific Backups folder (see above)
-
-### Manual Backups
-- Same format as automatic
-- User can specify custom location via Tools → Database Backup
-
 ### Retention
 - IPTVBoss keeps last 30 days of backups by default
 - Older backups automatically deleted
@@ -137,15 +129,7 @@
 
 ---
 
-## NoGUI Script Locations
-
-### Windows
-- Script file: `iptvboss-nogui.bat` or `iptvboss-nogui.ps1`
-- User-created, typically on Desktop or Documents
-
-### macOS/Linux
-- Script file: `iptvboss-nogui.sh`
-- User-created, typically in home directory or `/usr/local/bin/`
+## NoGUI Locations
 
 ### Task Scheduler (Windows)
 - Tasks stored in: Task Scheduler Library
@@ -157,18 +141,11 @@
 
 ---
 
-## Log Files (if applicable)
+## Log File Types
 
-### Windows
-- Logs: `%APPDATA%\IPTVBoss\Logs\`
-- Error logs: `iptvboss_error.log`
-- General logs: `iptvboss.log`
-
-### macOS
-- Logs: `~/Library/Application Support/IPTVBoss/Logs/`
-
-### Linux
-- Logs: `~/.config/IPTVBoss/Logs/`
+- General logs: `IPTVBoss-YYYY-MM-DD.log`
+- NoGUI Log: `NoGUI-YYYY-MM-DD.log`
+- AED Log: `AdvEPGDummy-YYYY-MM-DD.log`
 
 ---
 
@@ -233,7 +210,7 @@ When users can't find files, ask:
 3. **Is IPTVBoss installed or portable?**
 
 ### Common Issues
-- **Can't find database**: Look in `%APPDATA%` (Windows) or `~/Library/Application Support` (Mac)
+- **Can't find database**: Look in `Users Directory` (Windows) or `~/Library/Application Support` (Mac)
 - **Can't find cloud files**: Check Dropbox Apps folder or Google Drive
 - **Backups disappeared**: Check retention period (30 days default)
 

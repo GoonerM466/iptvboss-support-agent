@@ -41,10 +41,11 @@ C:\Users\{user}\IPTVBoss
 
 ### Tips
 
-- **Backup folder**: Check here when restoring (Menu ’ Restore ’ Local)
+- **Backup folder**: Check here when restoring (Menu ï¿½ Restore ï¿½ Local)
 - **Logs folder**: Share logs when asking for support (remove sensitive info first)
 - **Output folder**: Find locally generated M3U/EPG files here (if not using cloud)
 
 ### Related Topics
 
 - [Database Backup Portability](24_database_backup_portable_reinstall.md)
+[Folder Locations](../folder_locations.md)
