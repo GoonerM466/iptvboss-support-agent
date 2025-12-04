@@ -141,12 +141,12 @@ class GeminiClient:
         })
 
         # Add conversation history if provided
-        #if conversation_history:
-        #    for msg in conversation_history[-6:]:  # Last 3 exchanges
-        #        messages.append({
-        #            'role': msg['role'],
-        #            'parts': [msg['content']]
-        #        })
+        if conversation_history:
+            for msg in conversation_history[-6:]:  # Last 3 exchanges
+                messages.append({
+                    'role': msg['role'],
+                    'parts': [msg['content']]
+                })
 
         # Add current question
         messages.append({
