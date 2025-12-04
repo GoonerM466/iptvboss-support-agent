@@ -7,6 +7,7 @@ import sys
 from pathlib import Path
 import streamlit as st
 from PIL import Image
+from streamlit_extras.copy_button import copy_button
 
 # Add src to path
 sys.path.append(str(Path(__file__).parent / "src"))
@@ -248,6 +249,9 @@ def handle_user_input(user_question: str):
             # Display answer (may contain embedded images via markdown)
             st.write(answer)
 
+            # Add copy button for the response
+            copy_button(answer, "📋 Copy Response")
+
             # Detect and display relevant images that weren't already embedded
             image_handler = st.session_state.image_handler
             relevant_images = image_handler.detect_relevant_images(
@@ -312,6 +316,10 @@ def render_chat():
 
         with st.chat_message(role):
             st.write(content)
+
+            # Add copy button for assistant messages in history
+            if role == "assistant":
+                copy_button(content, "📋 Copy Response", key=f"copy_history_{len(st.session_state.messages)}_{hash(content)}")
 
             # Display additional images if present (not embedded in content)
             if "images" in message and message["images"]:

@@ -23,7 +23,7 @@
 
   "database_terms": {
     "canonical": "database",
-    "synonyms": ["database", "db", "data", "backup", "restore"]
+    "synonyms": ["database", "db", "backup", "restore"]
   },
 
   "cloud_terms": {
