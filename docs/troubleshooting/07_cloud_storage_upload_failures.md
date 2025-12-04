@@ -17,12 +17,12 @@ Files fail to upload to cloud storage services.
 
 ### Why This Happens
 
-OAuth tokens expired periodically. Free Dropbox bandwidth limit (20GB/month) exceeded with many users. Multiple Boss instances causing sync conflicts. File permissions changed after OS update. Firewall blocking cloud services.
+OAuth tokens expire periodically. Free Dropbox bandwidth limit (20GB/month) exceeded with many users. Multiple Boss instances causing sync conflicts. File permissions changed after OS update. Firewall blocking cloud services.
 
 ### Solution
 
 **Step 1: Reauthorize cloud storage**
-- Settings ’ IPTVBoss Settings (Dropbox or Google Drive)
+- Settings → IPTVBoss Settings (Dropbox or Google Drive)
 - Click Authorize
 - Complete OAuth flow in browser
 - Verify authorization success in IPTVBoss
@@ -30,27 +30,26 @@ OAuth tokens expired periodically. Free Dropbox bandwidth limit (20GB/month) exc
 **Step 2: Clean stale cloud files**
 - Go to Dropbox/Google Drive website
 - Navigate to IPTVBoss sync folder
-- Delete these files:
-  - IPTVBossSync.backup
-  - lockfile.json
-  - Any files with "lock" in name
+- Delete any files with "lock" in name
 - These can cause conflicts, better to regenerate fresh
 
 **Step 3: Test upload**
-- In IPTVBoss: Layout Manager ’ Output
+- In IPTVBoss: **Output → Output current M3u & EPG**
 - Check View Cloud Links to verify upload
 - Verify files appear in cloud storage
 
 ### For Bandwidth Limit Issues
 
 **1. Use Universal EPG**
-- Sources ’ Universal EPG Options
+- Sources → Universal EPG Options
 - Generates one EPG for all layouts
 - Massive bandwidth savings over individual EPGs
+- Once enabled, disable layout EPG upload, delete cloud XML & GZ files, update player URLS
 
-**2. Exclude VOD from M3U**
+**2. Exclude VOD & Series from M3U**
 - VOD lists are enormous
 - If you don't use VOD, disable it in output
+- Also "Igore" both to save time syncing
 - Reduces M3U file size by 70-90%
 
 **3. Use .gz format**
@@ -58,11 +57,11 @@ OAuth tokens expired periodically. Free Dropbox bandwidth limit (20GB/month) exc
 - Much smaller than XML
 - Most players support it
 
-**4. Reduce sync frequency**
+**4. Reduce player sync frequency**
 - Don't sync more than 2x daily
 - EPG providers update 1-2x daily anyway
 
-**5. Consider Google Drive**
+**5. Consider Google Drive (requires gz)**
 - Often more generous bandwidth limits
 - Or upgrade to Dropbox paid tier
 
@@ -77,7 +76,7 @@ OAuth tokens expired periodically. Free Dropbox bandwidth limit (20GB/month) exc
 
 - Don't run multiple instances simultaneously
 - Cloud sync gets confused
-- If you must run multiple: Disable cloud sync on all but one "primary" instance
+- If you must run multiple only 1 machine should have an auto sync shedule
 
 ### Prevention
 
@@ -91,6 +90,10 @@ OAuth tokens expired periodically. Free Dropbox bandwidth limit (20GB/month) exc
 - Free Dropbox insufficient for 40-50+ users
 - Multiple instances without coordination cause issues
 - OS upgrades reliably break cloud auth
+
+### Escalation
+
+If you cannot resolve the issue contact support on [Discord](https://discord.gg/QCxpA9yvWP)
 
 ### Related Topics
 

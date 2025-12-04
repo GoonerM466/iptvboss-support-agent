@@ -86,9 +86,13 @@
 ### Settings Menu
 
 **Settings → IPTVBoss Settings**
+- User Agent
+- Timeout
+- Logging level
+- TinyURL API
 - Cloud Provider configuration (Dropbox/Google Drive)
 - Cloud sync enable/disable
-- Authorization and credentials
+- Cloud Authorization and credentials
 
 **Settings → IPTVBoss Pro Settings**
 - IPTVBoss Pro token entry

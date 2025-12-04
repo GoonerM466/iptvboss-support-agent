@@ -14,12 +14,16 @@ Your provider likely changed channel names/IDs, causing IPTVBoss to see them as 
 
 1. Restore database backup from before the sync
 2. All your channel mapping should return
+3. Convert source to XC
 
 ### Prevention
 
 - Use **XC sources** instead of M3U when possible (less susceptible to changes)
 - Check logs for "... Was removed" messages after syncs
 - Consider preventing source sync temporarily if your provider is unstable
+- Increase the "auto remove" setting for the source: **Sources → Sources Manager → (Highlight Source) → Settings → set auto remove to a higher number.**
+
+*If channels are totally gone and not available to import then your provider removed them from their line up*.
 
 **If you must remap everything**: Provider changed their channel structure fundamentally. Keep frequent backups before syncing.
 

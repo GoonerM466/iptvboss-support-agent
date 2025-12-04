@@ -18,7 +18,6 @@ How to effectively report new issues and contribute workarounds.
    - Clear description of problem
    - Steps to reproduce
    - What you've already tried
-4. **Post** in Discord support channel (not DM - community can help)
 
 **Don't include in logs:**
 - Provider names or URLs
@@ -33,6 +32,12 @@ Found a workaround for a known issue? Help the community:
 1. Post in Discord with clear steps
 2. Tag moderators to add to documentation
 3. Be specific - others need to reproduce your success
+
+### Where to post
+
+Contact support on [Discord](https://discord.gg/QCxpA9yvWP). Please use the correct channels when posting ensuring your issue fits the channel topic.
+**Never** DM mods, support or any other memeber of the Discord without prior discussion and consent.
+**Never** send logs to anyone who isn't offical support.
 
 ### Issue Priorities
 

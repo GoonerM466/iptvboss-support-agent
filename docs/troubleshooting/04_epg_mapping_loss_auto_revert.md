@@ -22,7 +22,7 @@ Auto-assign feature conflicts with manual mapping. Service credential changes (M
 
 **1. Disable conflicting Auto-Assign**
 - Navigate to the problematic group
-- Group Options ’ Disable "Auto Assign"
+- Group Options: Disable "Auto Assign"
 - This prevents automatic remapping during syncs
 
 **2. Map EPG manually**
@@ -36,12 +36,14 @@ Auto-assign feature conflicts with manual mapping. Service credential changes (M
 - Output and test in player
 
 **4. For lost mappings after renewal:**
-- Menu ’ Restore
-- Select database backup from before credential change
-- This recovers all previous mappings
+- Settings → Restore Database → Local, Cloud or URL
+    - URL restore must point to a direct download file
+    - With Dropbox make sure the end of the URL is `&dl=1` for direct download
+- Select backup from immediately before the sync
+- Your channel mapping will return to pre-sync state
 
 **5. Output and verify**
-- Layout Manager ’ Output Current Layout M3U and EPG
+- Output → Output Current Layout M3U and EPG
 - Check that EPG data appears in output
 
 ### For Service Renewal Specifically
@@ -59,9 +61,9 @@ Auto-assign feature conflicts with manual mapping. Service credential changes (M
 
 ### Prevention
 
-- Default Auto-Assign to OFF for VOD and movie categories
+- Auto-Assign to OFF unless absolutely required
 - Backup before service renewals
-- When provider gives new credentials, don't immediately remove old source - set up new source as test first
+- When provider gives new credentials, don't immediately remove old source - set up new source as test first (if M3U)
 
 ### Known Limitations
 

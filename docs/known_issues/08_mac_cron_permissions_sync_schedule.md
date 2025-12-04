@@ -26,13 +26,17 @@ macOS requires explicit permissions for cron to access files.
 **Documented but often missed:**
 
 1. Grant Full Disk Access to IPTVBoss:
-   - System Preferences ’ Security & Privacy ’ Privacy
-   - Full Disk Access ’ Add IPTVBoss
+   - System Preferences → Security & Privacy → Privacy
+   - Full Disk Access → Add IPTVBoss
 2. Or switch from cron to launchd (more Mac-native)
 
 ### Recommendation
 
 Boss should use launchd on Mac by default, not cron.
+
+### Escalation
+
+If you cannot resolve the issue contact support on [Discord](https://discord.gg/QCxpA9yvWP)
 
 ### Related Topics
 

@@ -17,7 +17,7 @@ Yes, database backups are portable.
    - Start the program once and shut down
    - Copy your saved IPTVBoss folders to the IPTVBoss folder on the new install/computer
    - Start IPTVBoss & make sure transfer is successful. If it isn't continue below
-3. Use **Menu ’ Restore ’ Local**
+3. Your setup should be reinstated, however if you have issues try **Settings → Restore Database → Local**
 4. Re-Authorize cloud
 
 **Alternative**: If using cloud sync (Dropbox/Google Drive), you can restore from cloud after reinstalling however you must enter your cloud settings first.

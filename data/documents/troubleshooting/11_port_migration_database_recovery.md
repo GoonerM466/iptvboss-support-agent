@@ -24,10 +24,11 @@ Incorrect setup sequence - restore attempted before Pro activation. Old website 
 
 **1. Install IPTVBoss on new machine**
 - Download and install clean
+- Start IPTVBoss once, then shut down to create user folders
 
 **2. Enter Pro license key FIRST**
 - Before anything else
-- Menu � Activate Pro
+- IPTVBoss Pro Settings → Activate Pro
 - Enter license key from new website
 - Wait for validation
 
@@ -38,16 +39,19 @@ Incorrect setup sequence - restore attempted before Pro activation. Old website 
 
 **4. THEN restore from backup**
 - Now that Pro and cloud are set up
-- Menu � Restore
-- Choose Local or Cloud
+- Settings → Restore Database → Local, Cloud or URL
+    - URL restore must point to a direct download file
+    - With Dropbox make sure the end of the URL is `&dl=1` for direct download
 - Select backup file
 
 ### For Manual Backup Restore
 
 Before reinstalling:
-1. Copy entire `IPTVBoss/backup` folder to USB or external drive
+1. Copy `IPTVBoss\db` and `IPTVBoss/backup` folder to USB or external drive from old system
 2. Copy folder to known location on new machine
-3. After Pro activation, browse to saved backup location for restore
+3. After starting IPTVBoss once and shutting down, move files to the new location. EG: `C:\Users\(USER)\IPTVBoss` on Windows
+4. Start Boss & reauthorize cloud: **Settings → IPTVBoss Settings**
+5. Sync all epgs: **Sources → Sync EPGs**
 
 ### Version Compatibility
 
@@ -66,7 +70,6 @@ Before reinstalling:
 
 - Trying to restore before activating Pro
 - Using old website credentials
-- Not waiting for Pro validation to complete
 - Trying to restore from cloud before authorizing cloud storage
 
 ### Why Sequence Matters
@@ -80,13 +83,10 @@ Before reinstalling:
 - Document correct sequence before starting
 - Keep manual backup copies on external storage
 - Take screenshots of settings before migration
-- Test restore on old machine before wiping
 
-### Known Limitations
+### Escalation
 
-- Setup wizard doesn't enforce sequence
-- Error messages don't clearly indicate sequence problem
-- Intuitive to try restore first (but wrong order)
+If you cannot resolve the issue contact support on [Discord](https://discord.gg/QCxpA9yvWP)
 
 ### Related Topics
 

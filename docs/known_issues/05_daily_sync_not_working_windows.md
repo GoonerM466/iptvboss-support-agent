@@ -19,22 +19,28 @@ Windows Task Scheduler shows task is running but EPG data doesn't update.
 
 ### Possible Causes
 
+- Lock files in `IPTVBoss\db`or cloud sync folder
+- Corrupt noGUI database in `IPTVBoss\db`
 - Task Scheduler disabled the task (Windows update)
 - Path in task incorrect after Boss update
 - Permissions changed
-- Task running but Boss can't access database
+- Task running but Boss can't access database (partial corruption or lock file)
 - Task running under wrong user account
+- Power or Internet issues
+- Authoriztion or HTTP issues
 
 ### Workaround
 
-1. Delete existing Task Scheduler task
-2. Recreate sync schedule from Boss GUI, ensuring you start Boss with admin rights
-3. Verify new task created and enabled
-4. Test task runs manually from Task Scheduler
+- Remove lock files locally or in cloud
+- Remove partial or corrupt noGUI database from `IPTVBoss\db`
+- Delete existing Task Scheduler task
+- Recreate sync schedule from Boss GUI, ensuring you start Boss with admin rights
+    - Verify new task created and enabled
+- Test task runs manually from Task Scheduler
 
-### What's Needed
+### Escalation
 
-Better Task Scheduler integration, automated verification.
+If you cannot resolve the issue contact support on [Discord](https://discord.gg/QCxpA9yvWP)
 
 ### Related Topics
 

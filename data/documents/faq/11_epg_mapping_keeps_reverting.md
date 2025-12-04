@@ -17,6 +17,8 @@ EPG mapping for a specific group (like US|Movies) keeps reverting after you save
 **Steps to fix:**
 
 1. Disable "Auto Assign" for the problematic group (Group Options)
+    - Uncheck "Assign AED..."
+    - Uncheck "Assign Dummy..."
 2. Map your EPG for the channels
 3. Click Save
 4. Don't sync sources immediately

@@ -8,9 +8,13 @@ You created additional layouts/EPGs but they only show guide for the first layou
 
 ### Solution
 
-**Use Universal EPG instead:**
+You must either:
+    - Ensure you are outputting an EPG for each layout & it is used with the M3U in the player
+    *or*
+    - Use Universal EPG instead (Recommended)
 
-1. Set up Universal EPG once: **Sources ’ Universal EPG Options**
+1. Set up Universal EPG:
+**Sources â†’ Universal EPG Options**
 2. All layouts automatically use the same EPG source
 3. No need to manage multiple EPG files
 4. Saves significant cloud bandwidth

@@ -32,14 +32,16 @@ TinyURL API key not configured or incorrect. Users haven't migrated from old Tin
 - Enable all permissions
 
 **3. Configure in IPTVBoss**
-- Settings � TinyURL
+- Settings → IPTVBoss Settings → TinyURL
 - Enter API key (copy-paste carefully - no spaces)
 - Save settings
 
 **4. Force fresh generation**
 - Delete cloud files from Dropbox/Google Drive website
+    - This will force new links to be created
 - Re-output layout from IPTVBoss
 - New TinyURL links should generate
+    - add new links to player
 
 ### For Specific Errors
 
@@ -63,6 +65,7 @@ TinyURL API key not configured or incorrect. Users haven't migrated from old Tin
 ### Workaround
 
 Use direct Dropbox/Google Drive URLs without TinyURL if TinyURL has ongoing issues. Players accept full URLs, TinyURL is just for convenience.
+You can also manually convert your links to TinyURL (or another shortener) via their website. Note that if done this way, Boss cannnot generate them or manager the link directy. Your cloud files will still update.
 
 ### Migration Note
 

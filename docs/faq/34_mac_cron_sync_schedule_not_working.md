@@ -26,10 +26,13 @@ sudo crontab -l
 **Mac-specific:**
 
 - Cron may require Full Disk Access permission for IPTVBoss
-- Check **System Preferences ’ Security & Privacy ’ Privacy ’ Full Disk Access**
+- Check **System Preferences → Security & Privacy → Privacy → Full Disk Access**
 - Alternatively, use **launchd** instead of cron on Mac (more reliable)
 
 **Test**: Run nogui command manually to verify it works outside cron before debugging cron itself.
+
+### Escalation
+Macs can be a bit more difficult to setup with IPTVBoss. If you have tried everyting and are still strugging, contact support on [Discord](https://discord.gg/QCxpA9yvWP)
 
 ### Related Topics
 

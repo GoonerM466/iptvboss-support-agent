@@ -13,7 +13,7 @@
 
   "epg_terms": {
     "canonical": "epg",
-    "synonyms": ["epg", "guide", "program guide", "tv guide", "schedule", "electronic program guide"]
+    "synonyms": ["epg", "guide", "program guide", "tv guide", "schedule", "electronic program guide", "epgboss", "aed", "advanced epg dummy", "sports epg"]
   },
 
   "crash_terms": {
@@ -38,7 +38,7 @@
 
   "app_names": {
     "canonical": "IPTVBoss",
-    "synonyms": ["iptvboss", "boss", "the app", "the program", "iptv boss"]
+    "synonyms": ["iptvboss", "boss", "the app", "the program", "iptv boss", "iptvboss editor", "epgboss"]
   },
 
   "credentials_terms": {
@@ -53,7 +53,7 @@
 
   "player_terms": {
     "canonical": "player",
-    "synonyms": ["player", "tivimate", "app", "streaming app", "iptv player"]
+    "synonyms": ["player", "tivimate", "app", "streaming app", "iptv player", "implayer", "emby"]
   },
 
   "nogui_terms": {
@@ -73,6 +73,36 @@
 
   "connectivity_terms": {
     "canonical": "connectivity",
-    "synonyms": ["internet", "connection", "online", "offline", "network", "connectivity"]
+    "synonyms": ["internet", "connection", "online", "offline", "network", "connectivity", "timeout", "dns", "ssl", "certificate", "refused", "reset"]
+  },
+
+  "download_terms": {
+    "canonical": "download",
+    "synonyms": ["download", "install", "installer", "installation", "get", "obtain", "beta", "jar", "docker"]
+  },
+
+  "pricing_terms": {
+    "canonical": "pricing",
+    "synonyms": ["pricing", "price", "cost", "subscription", "tier", "free", "pro", "basic", "upgrade", "pay", "payment"]
+  },
+
+  "logo_terms": {
+    "canonical": "logo",
+    "synonyms": ["logo", "logos", "icon", "icons", "image", "images", "channel logo", "numbered logo", "bulk logo"]
+  },
+
+  "error_terms": {
+    "canonical": "error",
+    "synonyms": ["error", "http error", "error code", "status code", "4xx", "5xx", "failed", "failure", "problem"]
+  },
+
+  "subscription_terms": {
+    "canonical": "subscription",
+    "synonyms": ["subscription", "license", "pro", "basic", "tier", "upgrade", "renewal", "expired", "activate", "activation"]
+  },
+
+  "http_error_codes": {
+    "canonical": "http error",
+    "synonyms": ["400", "401", "403", "404", "405", "408", "409", "410", "413", "415", "429", "500", "502", "503", "504", "bad request", "unauthorized", "forbidden", "not found", "timeout", "too many requests", "internal server error", "bad gateway", "service unavailable", "gateway timeout"]
   }
 }

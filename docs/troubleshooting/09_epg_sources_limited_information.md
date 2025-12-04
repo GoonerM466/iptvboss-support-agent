@@ -23,7 +23,7 @@ Certain EPG sources display minimal or no program guide information.
 **Step 1: Check Days to Keep settings** (multiple places!)
 
 **1. Source level:**
-- Go to **Sources ’ Sources Manager**
+- Go to **Sources → Sources Manager**
 - Highlight your EPG source
 - Click **EPG Settings**
 - Check **"Days to Keep"** for EPG
@@ -40,12 +40,9 @@ Certain EPG sources display minimal or no program guide information.
 
 1. Shut down IPTVBoss completely
 2. Navigate to `IPTVBoss/cache` folder
-3. Find and delete files for problematic EPG sources:
-   - USA.xml or USA.gz
-   - USA_Local.xml or USA_Local.gz
-   - Any other problematic source files
+3. Find and delete files for problematic EPG sources or delete all
 4. Start IPTVBoss
-5. Sync all EPGs (Sources ’ Sync All EPGs)
+5. Sync all EPGs (Sources → Sync All EPGs)
 6. Output and test
 
 **Step 3: Player cache check**
@@ -74,11 +71,9 @@ If EPG doesn't show in Boss but shows in player:
 - Check Universal EPG days to keep settings
 - Same cache clearing process works
 
-### Known Limitations
+### Escalation
 
-- USA EPG sources particularly affected (provider issue?)
-- Override hierarchy not always clear to users
-- Cache location not well documented in official docs
+If you cannot resolve the issue contact support on [Discord](https://discord.gg/QCxpA9yvWP)
 
 ### Related Topics
 

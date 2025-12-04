@@ -11,6 +11,7 @@ EPG is not updating and keeps showing the same old TinyURL.
 **Force TinyURL regeneration:**
 
 1. Delete cloud files from your Dropbox/Google Drive (via the website)
+*This forces new URLs to be generated*
 2. Save your TinyURL API settings again in IPTVBoss
 3. Output layouts again
 4. New TinyURL links should generate

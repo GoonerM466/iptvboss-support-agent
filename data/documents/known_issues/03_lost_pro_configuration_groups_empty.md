@@ -30,9 +30,9 @@ Groups exist in layout but contain no channels, accompanied by Pro license valid
 - No recovery from empty-but-existing groups
 - If backups don't work, must rebuild from scratch
 
-### What's Needed
+### Escalation
 
-Better diagnostic tools for partial corruption, clearer error messages.
+If you cannot resolve the issue contact support on [Discord](https://discord.gg/QCxpA9yvWP)
 
 ### Related Topics
 

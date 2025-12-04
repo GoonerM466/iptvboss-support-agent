@@ -47,8 +47,8 @@ Indicates a failure in the workflow. This could have multiple causes and it's im
 
     **1a. If in IPTVBoss:**
     - *If there are no playlists, sources or anything showing, and its like you are starting Boss for the first time, you will need to [Restore Database](01_database_corruption_startup_failure.md)*
-    - Sources > Sync all sources
-    - Sources > Sync all EPGs
+    - Sources → Sync all sources
+    - Sources → Sync all EPGs
     - Check EPG Browser & Channel lists;
         - If fixed, move to step 4.
         - If not fixed, move to step 2
@@ -62,7 +62,7 @@ Indicates a failure in the workflow. This could have multiple causes and it's im
 - Is the internet connected; if not, connect internet & try again
 - If channel/group or M3U related, check provider is online. If it is and issues persist you should ask for support on Discord
 - If EPG related, check subscription is valid
-- Still not fixed > continue to Step 3
+- Still not fixed → continue to Step 3
 
 **3. Clear EPG Cache**
 - Shut down IPTVBoss

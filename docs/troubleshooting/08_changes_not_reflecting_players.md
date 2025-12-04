@@ -28,7 +28,7 @@ User didn't output updated files from IPTVBoss. Player wasn't updated/refreshed 
 - Save your changes
 
 **2. Output the layout**
-- Layout Manager ’ Output Current Layout M3U and EPG
+- Output → Output Current Layout M3U and EPG
 - Wait for progress indicator to complete
 
 **3. Verify cloud upload**
@@ -37,7 +37,7 @@ User didn't output updated files from IPTVBoss. Player wasn't updated/refreshed 
 - If using TinyURL, verify links updated
 
 **4. Update playlist in player**
-- TiviMate: Settings ’ Playlists ’ [Select your playlist] ’ Update
+- TiviMate: Settings → Playlists → [Select your playlist] → Update
 - Other players: Find playlist refresh/update option
 - This pulls new files from cloud
 
@@ -53,14 +53,15 @@ User didn't output updated files from IPTVBoss. Player wasn't updated/refreshed 
 - NOT using provider's direct URL
 - Easy mistake: Having both URLs and forgetting which is active
 
-**2. Clear player cache (nuclear option)**
+**2. Clear player cache**:
+*You will lose "past days" of EPG which will accumalate in the following days after syncing*
 - Completely remove playlist from player
 - Re-add playlist using IPTVBoss URL
 - This forces fresh data, no cache
 
 **3. Verify files actually changed**
 - Download M3U from cloud link in browser
-- Open with text editor
+- Open with text editor such as Notepad++ or Sublime
 - Search for channel that should be deleted/changed
 - Confirms output actually reflected your changes
 
@@ -77,10 +78,14 @@ Many users expect real-time sync like streaming apps. IPTVBoss works like publis
 
 ### Known Limitations
 
-- No push mechanism to players
-- Multiple URLs (provider, Boss, TinyURL) cause confusion
+- Boss cannot make your player update - you must do it yourself or set up an auto sync freqency
+- Multiple URLs (provider, Boss, TinyURL) can be confusing
 - Player cache more aggressive than users realize
-- Workflow requires 3 separate steps - easy to forget one
+- Workflow requires 3 separate steps - easy to forget one!
+
+### Escalation
+
+If you cannot resolve the issue contact support on [Discord](https://discord.gg/QCxpA9yvWP)
 
 ### Related Topics
 

@@ -16,6 +16,8 @@ When you output your playlist, TinyURL links are not being generated.
 
 ### Important Notes
 
+**This will generate new cloud links for any file you deleted whicc *must* be updated on any player it was used on**
+
 IPTVBoss now requires the new TinyURL API system (announced in Discord). Old TinyURL credentials won't work.
 
 ### Related Topics

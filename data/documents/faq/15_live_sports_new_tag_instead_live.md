@@ -12,7 +12,7 @@ Some DVR software (Emby, Plex, etc.) only records episodes marked "NEW", not "LI
 
 **Solution:**
 
-1. Go to **Settings ’ Manage Live Tags**
+1. Go to **Settings â†’ Manage Live Tags**
 2. Change "Live Tag Format" to "New"
 3. Output your playlist and EPG
 4. Update in your player/DVR

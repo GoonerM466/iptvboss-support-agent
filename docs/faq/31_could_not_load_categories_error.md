@@ -14,6 +14,7 @@ You're getting "Could not load categories, check your source link" error.
 2. Check username/password are correct
 3. Ensure provider service is active
 4. Try source URL in VLC to verify it's valid M3U format
+5. Check logs for HTTP or connection errors
 
 **Common causes:**
 

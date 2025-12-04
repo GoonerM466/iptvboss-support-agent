@@ -48,7 +48,7 @@ Corrupted database loaded on startup, corrupted settings/preferences, lock files
 - Try cloud or URL backups
    - URL must point to a direct download file
       - With Dropbox make sure the end of the URL is `&dl=1` for direct download
-
+      
 **7. Get diagnostic information**
 - Before moving IPTVBoss folder, copy most recent log from `IPTVBoss/logs`
 - Post in support Discord with log (clean sensitive provider info first)

@@ -10,17 +10,17 @@
 ### Windows
 
 **Application Location**:
-- Default: `C:\Users\[Username]\AppData\Roaming\IPTVBoss\` (App version)
+- Default: `C:\Program Files\WindowsApps\IPTVBoss\` (App version - hidden/restricted access - **users should never need to access this folder**)
 - Jar: Wherever user choose (advanced setup)
 
 **Database Location**:
-- Full path typically: `C:\Users\[Username]\IPTVBoss\db`
+- Full path: `C:\Users\[Username]\IPTVBoss\db`
 
 **Backup Location**:
-- Full path: `C:\Users\[Username]\IPTVBoss\Backups\`
+- Full path: `C:\Users\[Username]\IPTVBoss\backups\`
 
 **Local Output Files**:
-- Full path: `C:\Users\[Username]\IPTVBoss\\Output\`
+- Full path: `C:\Users\[Username]\IPTVBoss\output\`
 
 **Log Files**:
 - Logs: `C:\Users\[Username]\IPTVBoss\Logs\`
@@ -37,13 +37,13 @@
 - Full path: `/Users/[Username]/Library/Application Support/IPTVBoss/iptvboss.db`
 
 **Backup Location**:
-- `~/Library/Application Support/IPTVBoss/Backups/`
+- `~/Library/Application Support/IPTVBoss/backups/`
 
 **Local LOutput Files**:
-- `~/Library/Application Support/IPTVBoss/Output/`
+- `~/Library/Application Support/IPTVBoss/output/`
 
 **Log Files**:
-- Logs: `~/Library/Application Support/IPTVBoss/Logs/`
+- Logs: `~/Library/Application Support/IPTVBoss/logs/`
 
 ---
 
@@ -58,13 +58,13 @@
 - Full path: `/home/[username]/.config/IPTVBoss/iptvboss.db`
 
 **Backup Location**:
-- `~/.config/IPTVBoss/Backups/`
+- `~/.config/IPTVBoss/backups/`
 
 **Local Output Files**:
-- `~/.config/IPTVBoss/Output/`
+- `~/.config/IPTVBoss/output/`
 
 **Log Files**:
-- Logs: `~/.config/IPTVBoss/Logs/`
+- Logs: `~/.config/IPTVBoss/logs/`
 
 ---
 
@@ -123,7 +123,9 @@
 ## Database Backup Files
 
 ### Retention
-- IPTVBoss keeps last 30 days of backups by default
+- IPTVBoss keeps last 5 days of backups by default
+    - This can be changed in IPTVBoss Settings
+    - Cloud often stores upto 30 days in "Deleted Items" or "Trash" folders
 - Older backups automatically deleted
 - User can manually save important backups elsewhere
 
@@ -169,8 +171,8 @@
 
 ### Container Internal Paths
 - Database: `/config/iptvboss.db`
-- Backups: `/config/Backups/`
-- Output: `/config/Output/`
+- Backups: `/config/backups/`
+- Output: `/config/output/`
 
 ### Volume Mounts (user-configured)
 - Host path: User-defined
@@ -193,9 +195,10 @@ Some users may have custom paths via environment variables:
 
 | File Type | Windows | macOS | Linux |
 |-----------|---------|-------|-------|
-| Database | `%APPDATA%\IPTVBoss\` | `~/Library/Application Support/IPTVBoss/` | `~/.config/IPTVBoss/` |
-| Backups | `%APPDATA%\IPTVBoss\Backups\` | `~/Library/Application Support/IPTVBoss/Backups/` | `~/.config/IPTVBoss/Backups/` |
-| Output | `%APPDATA%\IPTVBoss\Output\` | `~/Library/Application Support/IPTVBoss/Output/` | `~/.config/IPTVBoss/Output/` |
+| Database | `C:\Users\[Username]\IPTVBoss\db` | `~/Library/Application Support/IPTVBoss/db` | `~/.config/IPTVBoss/db` |
+| Backups | `C:\Users\[Username]\IPTVBoss\backups` | `~/Library/Application Support/IPTVBoss/backups/` | `~/.config/IPTVBoss/backups/` |
+| Output | C:\Users\[Username]\IPTVBoss\output` | `~/Library/Application Support/IPTVBoss/output/` | `~/.config/IPTVBoss/output/` |
+| Logs | C:\Users\[Username]\IPTVBoss\logs` | `~/Library/Application Support/IPTVBoss/logs/` | `~/.config/IPTVBoss/logs/` |
 | Cloud (Dropbox) | `Dropbox/Apps/[AppName]/` | `Dropbox/Apps/[AppName]/` | `Dropbox/Apps/[AppName]/` |
 | Cloud (GDrive) | Google Drive app folder | Google Drive app folder | Google Drive app folder |
 
@@ -212,8 +215,8 @@ When users can't find files, ask:
 ### Common Issues
 - **Can't find database**: Look in `Users Directory` (Windows) or `~/Library/Application Support` (Mac)
 - **Can't find cloud files**: Check Dropbox Apps folder or Google Drive
-- **Backups disappeared**: Check retention period (30 days default)
+- **Backups disappeared**: Check retention period (5 days local, 30 days cloud is default)
 
 ---
 
-**Last Updated**: December 1, 2024
+**Last Updated**: December 4, 2005

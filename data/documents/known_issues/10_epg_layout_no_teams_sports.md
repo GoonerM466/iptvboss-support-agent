@@ -24,9 +24,12 @@ EPG source provides data this way.
 
 Use EPG title format settings (may have limited control).
 
-### What's Needed
+### Recommended
 
-EPG source provider to improve data format, or Boss to parse description into title.
+Use AED instead to populate EPG for sports & event channels.
+
+Check out the AED channels on [Discord](https://discord.gg/QCxpA9yvWP) for more info - Help docs coming soon!
+
 
 ### Related Topics
 

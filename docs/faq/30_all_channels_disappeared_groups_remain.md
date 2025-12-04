@@ -10,9 +10,10 @@ All your channels disappeared from layout after syncing, but groups remain.
 
 **Restore immediately:**
 
-1. **Menu ’ Restore ’ Local, Cloud or URL**
+1. **Settings → Restore → Local, Cloud or URL**
 2. Select backup from before the sync
 3. This recovers your channel mappings
+4. Consider converting source to XC if you are currently using M3U
 
 ### Why This Happened
 
@@ -22,7 +23,10 @@ All your channels disappeared from layout after syncing, but groups remain.
 
 ### Prevention
 
-Keep regular backups before syncing. Use XC sources when possible (more stable).
+- Keep regular backups before syncing. Use XC sources when possible (more stable).
+- Increase the "auto remove" setting for the source: **Sources → Sources Manager → (Highlight Source) → Settings → set auto remove to a higher number.**
+
+*If channels are totally gone and not available to import then your provider removed them from their line up*.
 
 ### Related Topics
 

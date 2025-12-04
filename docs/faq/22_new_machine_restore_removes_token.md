@@ -22,7 +22,8 @@ Setting up IPTVBoss on new machine - restore keeps removing Boss token and faili
 - Internet connection works
 - Logs for specific error messages
 
-Logs help diagnose - post in support Discord with cleaned logs (remove provider names and sensitive info).
+If you cannot resolve your issue, contact support on [Discord](https://discord.gg/QCxpA9yvWP) with clean logs
+Logs will help the team diagnose the issue (remove provider names and sensitive info).
 
 ### Related Topics
 

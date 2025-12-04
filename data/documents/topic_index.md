@@ -123,9 +123,40 @@ Quick reference to find documentation by topic, symptom, or platform.
 
 ---
 
-## Feature Requests
+## Downloads & Pricing
 
-- [Copy/Duplicate Layouts](known_issues/11_feature_request_copy_duplicate_layouts.md)
-- [Prevent Source Sync Temporarily](known_issues/12_feature_request_prevent_source_sync.md)
-- [Auto-Backup Before Syncs](known_issues/13_feature_request_auto_backup_before_syncs.md)
-- [Smart Provider Change Detection](known_issues/14_feature_request_smart_provider_change_detection.md)
+- [Download Links](download_links.md) - Official downloads for all platforms (installer, BETA, Docker, JAR)
+- [Pricing Information](pricing.md) - Free vs Pro feature comparison and subscription tiers
+- [IPTVBoss vs EPGBoss](iptvboss_vs_epgboss.md) - Understanding the difference between products
+
+---
+
+## Customization & Advanced Features
+
+- [Adding Numbered Logos](faq/36_adding_numbered_logos.md) - Bulk-assign sequential numbered logos to channels
+
+---
+
+## Error Reference
+
+- [HTTP Error Code Overview](error_codes/http/http_error_overview.md) - Complete guide to HTTP errors in IPTVBoss
+- [400 Bad Request](error_codes/http/400_bad_request.md) - Malformed URL or parameters
+- [401 Unauthorized](error_codes/http/401_unauthorized.md) - Wrong or expired credentials
+- [403 Forbidden](error_codes/http/403_forbidden.md) - Permission denied or quota exceeded
+- [404 Not Found](error_codes/http/404_not_found.md) - Wrong URL or deleted resource
+- [405 Method Not Allowed](error_codes/http/405_method_not_allowed.md) - API method mismatch
+- [408 Request Timeout](error_codes/http/408_request_timeout.md) - Transfer too slow
+- [409 Conflict](error_codes/http/409_conflict.md) - Simultaneous update conflicts
+- [410 Gone](error_codes/http/410_gone.md) - Resource permanently deleted
+- [413 Payload Too Large](error_codes/http/413_payload_too_large.md) - File exceeds size limit
+- [415 Unsupported Media Type](error_codes/http/415_unsupported_media_type.md) - Wrong content format
+- [429 Too Many Requests](error_codes/http/429_too_many_requests.md) - Rate limiting
+- [500 Internal Server Error](error_codes/http/500_internal_server_error.md) - Provider server crash
+- [502 Bad Gateway](error_codes/http/502_bad_gateway.md) - Provider infrastructure issue
+- [503 Service Unavailable](error_codes/http/503_service_unavailable.md) - Maintenance or overload
+- [504 Gateway Timeout](error_codes/http/504_gateway_timeout.md) - Provider server too slow
+- [Connection Refused](error_codes/http/connection_refused.md) - Wrong port or firewall
+- [Connection Reset](error_codes/http/connection_reset.md) - Server dropped connection
+- [DNS Resolution Failed](error_codes/http/dns_resolution_failed.md) - Cannot resolve hostname
+- [SSL Certificate Errors](error_codes/http/ssl_certificate_errors.md) - Invalid or expired certificate
+- [Network Timeout](error_codes/http/network_timeout.md) - Connection too slow

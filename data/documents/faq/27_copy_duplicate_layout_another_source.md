@@ -7,9 +7,10 @@ Use the User System for identical layouts across sources.
 Can I copy/duplicate a layout to use for another source or user?
 
 ### Answer
+**Not another source - it **must** resolve to the same provider**
 
 **For identical layouts across sources**: Use the User System
-- This is designed for creating the same layout for multiple users/sources
+- This is designed for creating the same layout for multiple users with the same source/provider 
 - See documentation for User System setup
 
 **For similar but customizable layouts**:
@@ -18,6 +19,8 @@ Can I copy/duplicate a layout to use for another source or user?
 - You can also import groups from other layouts as "linked" groups, which will be synced with the layout they were imported from
 
 **If both sources are from the same server**: User System is definitely what you want.
+
+**If the provider or source is different there are no short cuts unfortunetely**: each source is required to be setup / mapped once.
 
 ### Related Topics
 

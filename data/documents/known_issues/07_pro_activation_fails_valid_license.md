@@ -20,8 +20,9 @@ Pro license validation fails even though the license key is confirmed valid on t
 ### Possible Causes
 
 - Network/firewall blocking validation servers
+- DNS issue
 - Boss validation servers experiencing issues
-- Credential migration incomplete (old website ’ new website)
+- Credential migration incomplete (old website â†’ new website)
 - Boss can't reach validation endpoint (corporate firewall, VPN, etc.)
 
 ### Workaround
@@ -29,11 +30,12 @@ Pro license validation fails even though the license key is confirmed valid on t
 1. Verify license on new IPTVBoss website (not old)
 2. Try different network (disable VPN, try mobile hotspot)
 3. Check firewall rules for Boss
-4. Contact support with logs if verified valid license
+4. Check logs for HTTP, authorization or connection errors
+5. Contact support with logs if verified valid license
 
-### What's Needed
+### Escalation
 
-Better validation error messages, local validation option, clearer migration docs.
+If you cannot resolve the issue contact support on [Discord](https://discord.gg/QCxpA9yvWP)
 
 ### Related Topics
 

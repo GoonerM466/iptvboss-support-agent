@@ -11,7 +11,7 @@ IPTVBoss fails to start properly, showing database-related errors or crashing.
 - IPTVBoss won't open or immediately closes
 - Error message: "Database failed to load or is corrupt"
 - GUI running in Task Manager but no window appears on screen
-- All playlists and layouts disappeared
+- All playlists and/or layouts disappeared
 - Lost Pro license activation
 - Application freezes during startup
 
@@ -22,8 +22,9 @@ Database corruption from improper shutdown, disk full, file system errors, or lo
 ### Solution
 
 **1. Force close all IPTVBoss processes**
-- Windows: Open Task Manager (Ctrl+Shift+Esc) � Find IPTVBoss � End Task
-- Mac: Activity Monitor � Find IPTVBoss � Force Quit
+- Windows: Open Task Manager (Ctrl+Shift+Esc) → Find IPTVBoss → End Task
+- Mac: Activity Monitor → Find IPTVBoss → Force Quit
+*Rebooting your computer is also highly recommended*
 
 **2. Delete lock files**
 - Navigate to `IPTVBoss/db` folder
@@ -37,27 +38,25 @@ Database corruption from improper shutdown, disk full, file system errors, or lo
 
 **4. If still fails: Manual restore**
 - Open IPTVBoss (may show empty)
-- Menu � Restore � Local
+- Settings → Restore Database → Local, Cloud or URL
+    - URL restore must point to a direct download file
+    - With Dropbox make sure the end of the URL is `&dl=1` for direct download
 - Select most recent backup that predates the problem
-- Look in `IPTVBoss/backup` folder for dated backups
 
 **5. If recent backups fail**
 - Try progressively older backup files
 - Newest backup might also be corrupted
 - Go back several days if needed
-- Try cloud or URL backups
-    - URL restore must point to a direct download file
-    - With Dropbox make sure the end of the URL is `&dl=1` for direct download
 
 **6. Re-enter Pro license if needed**
-- Menu � Activate Pro
+- Settings → IPTVBoss Pro Settings → Activate Pro
 - Enter license key
 
 ### Prevention
 
 - Always close IPTVBoss properly (don't force quit)
 - Ensure adequate disk space
-- Don't run multiple instances simultaneously
+- Don't run multiple instances simultaneously or open boss if a sync is scheduled or underway
 - Keep antivirus from quarantining database files
 - Don't store database on network drives
 
@@ -73,3 +72,4 @@ Database corruption from improper shutdown, disk full, file system errors, or lo
 - [No Layouts and Local Restore Crashes](../faq/17_no_layouts_local_restore_crashes.md)
 - [Database Failed to Load](../faq/18_database_failed_to_load_corrupt.md)
 - [Recurring Database Wipes](../known_issues/01_recurring_database_wipes.md)
+

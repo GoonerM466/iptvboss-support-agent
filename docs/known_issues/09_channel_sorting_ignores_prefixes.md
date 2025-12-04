@@ -23,10 +23,8 @@ Sort uses first character/number in channel name.
 ### Workaround
 
 Remove or standardize prefixes in channel names.
-
-### Enhancement Request
-
-Option for "smart sort" ignoring common prefixes.
+- You can revert your changes or to provider name after if prefered
+- Ignore Channel Name CHanges will ensure prefix dont get added back on next sync
 
 ### Related Topics
 

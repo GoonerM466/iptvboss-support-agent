@@ -33,7 +33,10 @@ iptvboss -nogui
 ```
 Check if EPGs sync manually. If manual works but automatic doesn't, it's a scheduling issue.
 
-**Check logs**: IPTVBoss logs should show sync attempts. If no log entries, the scheduler isn't running IPTVBoss.
+### If issue persist
+Remove the current sync schedule and recreate
+
+**Check logs**: IPTVBoss logs should show sync attempts. If no log entries, the scheduler isn't running IPTVBoss, should be set up again & monitored for future issues.
 
 ### Related Topics
 

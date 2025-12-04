@@ -11,7 +11,9 @@ How do I export or download the M3U file to my laptop?
 **To generate and access files:**
 
 1. Set up cloud storage (Dropbox or Google Drive) in IPTVBoss settings
-2. Output your layout: **Layout Manager ’ Output Current Layout M3U and EPG**
+*Not required for local outputs, but recommended*
+2. Output your layout: 
+**Layout Manager â†’ Output Current Layout M3U and EPG**
 3. Files automatically upload to your cloud storage
 4. Access via "View Cloud Links" or TinyURL
 5. **Use these URLs in your player apps**

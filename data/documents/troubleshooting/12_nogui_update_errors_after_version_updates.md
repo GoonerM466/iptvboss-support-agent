@@ -23,12 +23,12 @@ Update changed file structure or locations. Cloud storage authorization reset du
 **After ANY update, always do this checklist:**
 
 **1. Open GUI and refresh license**
-- Menu ’ Check license status
+- Settings â†’ IPTVBoss Pro Settings â†’ Check license status
 - Re-enter license if needed
 - Don't proceed until Pro shows active
 
 **2. Reauthorize cloud storage**
-- Settings ’ IPTVBoss Settings
+- Settings â†’ IPTVBoss Settings
 - Reauthorize Dropbox/Google Drive
 - Complete OAuth flow
 - Verify authorization success
@@ -47,7 +47,7 @@ Update changed file structure or locations. Cloud storage authorization reset du
 **5. Regenerate auto-generated files**
 - Output layouts again
 - This regenerates mappings.txt and other auto files
-- Layout Manager ’ Output All Layouts
+- Output â†’ Output All Layouts
 
 **6. Verify sync schedule**
 - Task Scheduler (Windows) or cron (Linux/Mac)
@@ -80,16 +80,12 @@ Update changed file structure or locations. Cloud storage authorization reset du
 
 ### Best Practice
 
-- Update during low-usage time
-- Plan 30 minutes for post-update verification
 - Keep previous version installer as backup
+- Move backup files somewhere safe before updating
 
-### Known Limitations
+### Escalation
 
-- Update process doesn't always preserve all configurations
-- Breaking changes not always clearly communicated
-- Automated tasks particularly vulnerable to updates
-- Some updates require full reconfiguration
+If you cannot resolve the issue contact support on [Discord](https://discord.gg/QCxpA9yvWP)
 
 ### Related Topics
 

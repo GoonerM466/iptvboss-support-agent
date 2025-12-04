@@ -22,7 +22,10 @@ Every time you open IPTVBoss (every 1-2 weeks) it shows no data and you have to 
 - Database on network drive or slow storage
 - Memory issues during shutdown
 
-**Temporary workaround**: Restore from Dropbox backup file (change last digit to 0). Keep external backups until root cause is found.
+**Temporary workaround**: Restore from Dropbox backup file (change last digit to 0). Keep external backups until root cause is found (NOT Recommended for long term solution)
+
+**This issue should be escalated to the support team on 
+[Discord](https://discord.gg/QCxpA9yvWP) - Provide clean logs on request
 
 ### Related Topics
 

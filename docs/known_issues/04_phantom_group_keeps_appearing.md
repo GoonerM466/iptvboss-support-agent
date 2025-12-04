@@ -24,6 +24,7 @@ A group deleted from IPTVBoss layout continues to appear in player apps despite 
 - M3U file not actually updated despite Boss saying so
 - Cloud storage serving stale/cached file
 - Hidden group or reference somewhere in Boss
+- Other syncing or output issue
 
 ### Workaround
 
@@ -31,9 +32,10 @@ A group deleted from IPTVBoss layout continues to appear in player apps despite 
 - Try: Complete playlist removal and re-add in player
 - Try: Delete cloud files completely, re-output, re-add in player
 
-### What's Needed
+### Escalation
 
-Reproducible case, M3U file inspection at each step.
+If you cannot resolve the issue contact support on [Discord](https://discord.gg/QCxpA9yvWP)
+
 
 ### Related Topics
 

@@ -26,7 +26,7 @@ Get IPTVBoss/EPGBoss working in 10-15 minutes. This guide covers essential setup
    - Wait for validation (may take 1-2 minutes)
    - Confirm "Pro Active" status
 
-![Menu showing how to access IPTVBoss Pro Settings dialog](images/image10.png)
+![Menu showing how to access IPTVBoss Pro Settings dialog](images/image10.jpg)
 
 *Menu showing how to access IPTVBoss Pro Settings dialog*
 

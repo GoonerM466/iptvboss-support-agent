@@ -26,7 +26,9 @@ Provider changed channel names, IDs, or entire structure. IPTVBoss treats rename
 - Switch your source to XC before the next scheduled sync
 
 **2. After problematic sync (Recovery):**
-- Menu ’ Restore
+- Settings → Restore Database → Local, Cloud or URL
+    - URL restore must point to a direct download file
+    - With Dropbox make sure the end of the URL is `&dl=1` for direct download
 - Select backup from immediately before the sync
 - Your channel mapping will return to pre-sync state
 
@@ -49,6 +51,8 @@ If provider frequently changes structure:
 - Do manual syncs only when you have time to remap if needed
 - Keep recent backup immediately before each sync attempt
 - Some users sync weekly instead of daily to reduce exposure
+- Raise auto remove setting for the source in source settings
+- Ignore both VOD & Series
 
 **Why recovery works**: Backups preserve your channel-to-layout associations. Since providers rarely delete actual streams (just rename them), your backed-up associations often still work even with "old" IDs.
 

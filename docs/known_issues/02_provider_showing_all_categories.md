@@ -24,16 +24,17 @@ Player displays all provider categories even though IPTVBoss has filtered and or
 - Player cache from before Boss setup
 - Boss output URL not actually being used
 
-### Workaround
+### Solution
 
 1. Completely remove playlist from player
-2. Verify you're using ONLY the Boss M3U URL (from cloud links)
+2. Verify you're using ONLY the Boss M3U URL together with a Boss EPG URL (from cloud links)
 3. Re-add playlist fresh with Boss URL
 4. Don't add provider's direct URL to player
 
 ### Why Investigation Needed
 
 Almost always user configuration, but hard to diagnose remotely without seeing player setup.
+If issue persists contact support on [Discord](https://discord.gg/QCxpA9yvWP)
 
 ### Related Topics
 

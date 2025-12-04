@@ -1,6 +1,6 @@
 # No Streams Found in Player After Output
 
-Files may be empty, malformed, or player is caching old version.
+Files may be empty, malformed, player is caching old version, or incorrect URL
 
 ### Problem
 
@@ -24,8 +24,10 @@ After you output from IPTVBoss, no streams are found in your player.
 **If files look good but player says no streams:**
 
 - Player might be caching old version
-- Remove and re-add playlist in player completely
+- Player might be using the wrong URL
 - Verify you're using the correct URL format
+- Remove and re-add playlist in player completely
+
 
 ### Related Topics
 

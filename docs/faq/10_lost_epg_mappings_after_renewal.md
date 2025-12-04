@@ -1,6 +1,6 @@
 # Lost EPG Mappings After Service Expired or Renewed
 
-New credentials create a new source identity, which loses all mappings.
+New credentials create a new source identity if you add sources using M3U, which loses all mappings.
 
 ### Problem
 
@@ -12,8 +12,9 @@ If you added the source as an M3U URL with credentials, **new** credentials crea
 
 ### Recovery
 
-1. Restore from a recent database backup: **Menu ’ Restore ’ Local or Cloud**
-2. Check `IPTVBoss/backup` folder for dated backup files
+1. Restore from a recent database backup: 
+**Settings → Restore Database → Local, Cloud or URL**
+2. Convert source to XC via **Sources → Sources Manager → (highlight source) → Settings → Convert to XC**
 
 ### Prevention
 

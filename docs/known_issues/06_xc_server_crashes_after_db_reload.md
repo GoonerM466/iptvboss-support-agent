@@ -26,12 +26,11 @@ XC server component crashes when reloading database after completing a source sy
 ### Workaround
 
 1. Identify XC database file in `IPTVBoss/db` folder
-2. Restore from backup (if XC-specific backup exists)
-3. Or delete XC database and recreate XC configuration
+2. Delete XC database and run sync / refresh
 
-### What's Needed
+### Escalation
 
-XC database structure documentation, better error messages.
+If you cannot resolve the issue contact support on [Discord](https://discord.gg/QCxpA9yvWP)
 
 ### Related Topics
 

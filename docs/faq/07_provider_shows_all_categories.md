@@ -10,7 +10,7 @@ Your IPTV provider shows ALL categories in your player despite filtering in IPTV
 
 **Check:**
 
-1. Verify in your player that you're using the **IPTVBoss M3U URL** (from Dropbox/Google Drive/TinyURL), NOT your provider's direct URL
+1. Verify in your player that you're using the **IPTVBoss M3U URL** (from Dropbox/Google Drive/TinyURL), **NOT** your provider's direct URL
 2. Confirm you've output the layout from IPTVBoss after making changes
 3. Update the playlist in your player after outputting
 

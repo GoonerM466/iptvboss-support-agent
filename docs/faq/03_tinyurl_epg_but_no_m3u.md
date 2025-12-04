@@ -10,7 +10,7 @@ TinyURL EPG links appear in cloud view, but the M3U link is missing.
 
 1. Verify both **Dropbox/Google Drive AND TinyURL API credentials** are configured
 2. Check IPTVBoss logs for upload errors
-3. Delete existing cloud files from your cloud storage website
+3. Delete existing cloud files from your cloud storage website (will force generation of new links)
 4. Re-output your layout's playlist (.m3u) and EPG
 5. Check your cloud storage to confirm **both files uploaded** before checking TinyURL links
 

@@ -38,16 +38,11 @@ IPTVBoss loses all data on a consistent recurring schedule (every 1-2 weeks).
 5. Verify antivirus isn't flagging Boss files
 6. Check if database is on local drive (not network)
 
-### Workaround
+### Escalation
+This issue needs investigation if you cannot solve on your own
+- Contact support on [Discord](https://discord.gg/QCxpA9yvWP)
 
-- Keep frequent external backups
-- Restore from Dropbox backup: IPTVBossSync.backup (change last digit to 0)
-- Document exactly when failures occur (time of day, after what actions)
-- Consider dedicated machine for Boss if running on shared system
-
-### What's Needed
-
-Detailed logs from user at time of failure, environment specifics.
+Detailed logs from the time of failure, environment specifics, etc will be needed - ensure they are clean before posting to support channels.
 
 ### Related Topics
 
