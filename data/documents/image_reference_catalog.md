@@ -177,4 +177,4 @@ This catalog provides a comprehensive reference for all 43 images in the IPTVBos
 
 ---
 
-*Last Updated: December 2, 2024*
+*Last Updated: December 4, 2025*

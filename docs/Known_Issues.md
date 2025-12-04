@@ -261,48 +261,6 @@ Unresolved problems, limitations, and workarounds. Issues are organized by sever
 
 ---
 
-## Feature Requests / Enhancements
-
-### Copy/Duplicate Layouts
-
-**Current**: No built-in copy function for layouts or groups
-
-**Workaround**: Use User System for identical layouts, or manual recreation
-
-**Request**: Right-click → Duplicate Layout/Group
-
----
-
-### Prevent Source Sync Temporarily
-
-**Current**: Can disable source, but cumbersome
-
-**Request**: "Pause sync for this source" toggle
-
-**Use Case**: Provider unstable, don't want auto-sync breaking layouts
-
----
-
-### Auto-Backup Before Syncs
-
-**Current**: Manual backup required before risky operations
-
-**Request**: Automatic backup before source syncs (with retention policy)
-
-**Benefit**: Protection from provider changes breaking layouts
-
----
-
-### Smart Detection of Provider Changes
-
-**Current**: Provider renames channels → all mappings lost
-
-**Request**: Fuzzy matching to detect renames, preserve mappings
-
-**Benefit**: Survive provider changes without complete remapping
-
----
-
 ## Reporting Issues
 
 When reporting new issues:
@@ -345,4 +303,4 @@ Found a workaround for a known issue? Help the community:
 
 ---
 
-**Last Updated**: Based on Discord support threads through November 2024
+**Last Updated**: Based on Discord support threads through December 4, 2025

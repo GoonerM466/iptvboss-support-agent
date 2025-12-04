@@ -132,7 +132,7 @@ If you solved a problem not covered here:
 3. Tag moderators to add to documentation
 
 ### Documentation Updates
-This documentation was generated from Discord exports through November 2024. For latest information, always check Discord announcements.
+This documentation was generated from Discord exports through December 4, 2025. For latest information, always check Discord announcements.
 
 ---
 
@@ -224,8 +224,8 @@ Understanding these concepts helps with troubleshooting:
 
 ## Version Information
 
-**Documentation Generated**: November 2025
-**Based On**: Discord support threads through November 2025
+**Documentation Generated**: December 4, 2025
+**Based On**: Discord support threads through December 4, 2025
 **IPTVBoss Versions Covered**: 3.9.x series
 **Last Updated**: 2025-12-04
 

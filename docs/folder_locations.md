@@ -219,4 +219,4 @@ When users can't find files, ask:
 
 ---
 
-**Last Updated**: December 4, 2005
+**Last Updated**: December 4, 2025

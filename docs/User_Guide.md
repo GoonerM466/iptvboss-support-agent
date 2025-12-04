@@ -255,8 +255,8 @@ EPG sources provide guide data for your channels.
 Layouts are your custom channel organizations. You can have multiple layouts for different purposes or users.
 
 **Video Tutorials**:
-- IPTVBoss First Layout Overview: https://youtu.be/gfw0RLfSAnI
-- Adding a 2nd Source and Creating a 2nd Layout: https://youtu.be/VNTOei-7KxM
+- [IPTVBoss First Layout Overview](https://youtu.be/gfw0RLfSAnI)
+- [Adding a 2nd Source and Creating a 2nd Layout](https://youtu.be/VNTOei-7KxM)
 
 ---
 
@@ -1185,8 +1185,8 @@ Outputting generates M3U and EPG files for your player apps.
 IPTVBoss uploads M3U and EPG files to cloud storage for access from player apps.
 
 **Supported providers**:
-- Dropbox (Recommended)
-- Google Drive
+- [Dropbox](../user_guide/24a_dropbox_setup_detailed.md)  (Recommended)
+- [Google Drive](../user_guide/24b_google_drive_setup_detailed.md)
 
 **Choosing**:
 - Dropbox: Simple, widely supported
@@ -1209,13 +1209,13 @@ IPTVBoss uploads M3U and EPG files to cloud storage for access from player apps.
 - Or use bandwidth optimization (Universal EPG, exclude VOD, .gz format)
 
 *Watch cloud setup video of your choice and follow cloud storage setup instructions before continuing*
-- Dropbox (recommended): https://youtu.be/2cfEEqFYHrc
-- Google Drive: https://youtu.be/A45N6Vgk-OU
+- [Dropbox](https://youtu.be/2cfEEqFYHrc) (Recommended)
+- [Google Drive](https://youtu.be/A45N6Vgk-OU)
    - You must use the gz EPG link with Google Drive - Not XML
 
 **Setup** (quick reminder):
 1. Settings → IPTVBoss Settings
-2. Choose Dropbox or Google Drive
+2. Choose [Dropbox](../user_guide/24a_dropbox_setup_detailed.md) or [Google Drive](../user_guide/24b_google_drive_setup_detailed.md)
 3. Authorize (OAuth in browser)
 4. Verify authorization success
 

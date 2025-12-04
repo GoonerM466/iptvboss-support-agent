@@ -308,4 +308,4 @@ Use the → character (not >, not >>, not arrows)
 
 ---
 
-**Last Updated**: December 1, 2024 (Corrected based on actual software menus)
+**Last Updated**: December 4, 2025 (Corrected based on actual software menus)
