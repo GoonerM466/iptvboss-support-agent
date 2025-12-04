@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 import streamlit as st
 from PIL import Image
-from streamlit_extras.copy_button import copy_button
+import streamlit.components.v1 as components
 
 # Add src to path
 sys.path.append(str(Path(__file__).parent / "src"))
@@ -15,6 +15,40 @@ sys.path.append(str(Path(__file__).parent / "src"))
 from retrieval.vector_search import VectorSearch
 from llm.gemini_client import GeminiClient
 from ui.image_handler import ImageHandler
+
+
+def copy_button(text, button_id):
+    """Add a copy-to-clipboard button using JavaScript"""
+    # Escape text for JavaScript
+    escaped_text = text.replace('\\', '\\\\').replace('`', '\\`').replace('$', '\\$')
+
+    button_html = f"""
+    <div style="margin: 10px 0;">
+        <button onclick="copyToClipboard_{button_id}()" id="btn_{button_id}"
+                style="background-color: #4CAF50; color: white; padding: 8px 16px;
+                       border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">
+            📋 Copy Response
+        </button>
+    </div>
+    <script>
+        function copyToClipboard_{button_id}() {{
+            const text = `{escaped_text}`;
+            navigator.clipboard.writeText(text).then(function() {{
+                const btn = document.getElementById('btn_{button_id}');
+                btn.textContent = '✓ Copied!';
+                btn.style.backgroundColor = '#45a049';
+                setTimeout(function() {{
+                    btn.textContent = '📋 Copy Response';
+                    btn.style.backgroundColor = '#4CAF50';
+                }}, 2000);
+            }}).catch(function(err) {{
+                console.error('Failed to copy: ', err);
+            }});
+        }}
+    </script>
+    """
+    components.html(button_html, height=60)
+
 
 
 # Page configuration
@@ -250,7 +284,7 @@ def handle_user_input(user_question: str):
             st.write(answer)
 
             # Add copy button for the response
-            copy_button(answer, "📋 Copy Response")
+            copy_button(answer, f"new_{hash(answer)}")
 
             # Detect and display relevant images that weren't already embedded
             image_handler = st.session_state.image_handler
@@ -319,7 +353,7 @@ def render_chat():
 
             # Add copy button for assistant messages in history
             if role == "assistant":
-                copy_button(content, "📋 Copy Response", key=f"copy_history_{len(st.session_state.messages)}_{hash(content)}")
+                copy_button(content, f"history_{hash(content)}")
 
             # Display additional images if present (not embedded in content)
             if "images" in message and message["images"]:
