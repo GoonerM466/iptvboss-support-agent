@@ -194,11 +194,11 @@ class AbuseHandler:
         """Get shutdown message (varied)"""
         import random
         shutdowns = [
-            "I can't continue this conversation. Your behavior is unacceptable. If you need help, please refresh the page and start over with a respectful tone, or reach out on Discord where the team can assist you.",
+            "I can't continue this conversation. Your behavior is unacceptable. If you need help, please refresh the page and start over with a respectful tone, or reach out on [Discord Support](https://discord.gg/QCxpA9yvWP) where the team can assist you.",
 
-            "This conversation is over. I'm not going to tolerate abusive behavior. If you genuinely need help with IPTVBoss, refresh the page and try again with civility, or ask politely on Discord.",
+            "This conversation is over. I'm not going to tolerate abusive behavior. If you genuinely need help with IPTVBoss, refresh the page and try again with civility, or ask politely on [Discord Support](https://discord.gg/QCxpA9yvWP).",
 
-            "I'm ending this chat. Abusive language isn't acceptable. If you want technical support, refresh the page and communicate respectfully, or visit the Discord server and be polite to the support team there."
+            "I'm ending this chat. Abusive language isn't acceptable. If you want technical support, refresh the page and communicate respectfully, or visit [Discord Support](https://discord.gg/QCxpA9yvWP) and be polite to the support team there."
         ]
         return random.choice(shutdowns)
 

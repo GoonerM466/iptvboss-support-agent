@@ -349,11 +349,24 @@ def handle_user_input(user_question: str):
             default_min_score = settings.get('vector_search', {}).get('min_score', 0.30)
             min_score = st.session_state.get('min_score', default_min_score)
 
+            # Augment query with conversation context if too short/vague
+            search_query = user_question
+            if len(user_question.split()) < 5 and len(st.session_state.messages) > 2:
+                # Query is short - add context from recent messages
+                recent_user_messages = [
+                    msg['content'] for msg in st.session_state.messages[-6:]
+                    if msg['role'] == 'user'
+                ]
+                if recent_user_messages:
+                    # Combine recent context with current query
+                    context_keywords = ' '.join(recent_user_messages[-2:])  # Last 2 user messages
+                    search_query = f"{user_question} {context_keywords}"
+
             # Determine top_k based on query type
-            top_k = determine_top_k(user_question, settings)
+            top_k = determine_top_k(search_query, settings)
 
             context, retrieved_chunks = vector_search.search_with_context(
-                user_question,
+                search_query,
                 top_k=top_k,
                 min_score=min_score
             )
@@ -370,7 +383,7 @@ def handle_user_input(user_question: str):
             # Generate answer with conversation state
             conversation_history = [
                 msg for msg in st.session_state.messages[-6:]
-                if msg['role'] in ['user', 'model']
+                if msg['role'] in ['user', 'assistant']
             ]
 
             # Get session context for LLM
