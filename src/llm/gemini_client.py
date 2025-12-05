@@ -104,7 +104,8 @@ class GeminiClient:
         self,
         question: str,
         context: str,
-        conversation_history: Optional[List[Dict]] = None
+        conversation_history: Optional[List[Dict]] = None,
+        conversation_state: str = ""
     ) -> str:
         """
         Generate answer using Gemini with strict context grounding
@@ -113,6 +114,7 @@ class GeminiClient:
             question: User's question
             context: Retrieved context from vector search
             conversation_history: Optional conversation history
+            conversation_state: Conversation state context (what user has tried, etc.)
 
         Returns:
             Generated answer
@@ -121,9 +123,19 @@ class GeminiClient:
         system_prompt = self.prompts['system_prompt']
         answer_template = self.prompts['answer_prompt']
 
+        # Get diagnostic instructions
+        diagnostic_instructions = self.prompts.get('diagnostic_mode_instructions', '')
+
+        # Format conversation state
+        state_text = ""
+        if conversation_state:
+            state_text = f"\n### CONVERSATION STATE\n{conversation_state}\n"
+
         # Format with context
         user_prompt = answer_template.format(
+            diagnostic_instructions=diagnostic_instructions,
             context=context if context else "No relevant context found.",
+            conversation_state=state_text,
             question=question
         )
 

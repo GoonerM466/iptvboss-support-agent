@@ -8,6 +8,7 @@ from pathlib import Path
 import streamlit as st
 from PIL import Image
 import streamlit.components.v1 as components
+import yaml
 
 # Add src to path
 sys.path.append(str(Path(__file__).parent / "src"))
@@ -15,6 +16,7 @@ sys.path.append(str(Path(__file__).parent / "src"))
 from retrieval.vector_search import VectorSearch
 from llm.gemini_client import GeminiClient
 from ui.image_handler import ImageHandler
+from conversation_state import SessionManager
 
 
 def copy_button(text, button_id):
@@ -106,6 +108,14 @@ def initialize_session_state():
     if 'initialized' not in st.session_state:
         st.session_state.initialized = False
 
+    if 'session_manager' not in st.session_state:
+        st.session_state.session_manager = SessionManager()
+
+    # Generate unique session ID for this Streamlit session
+    if 'session_id' not in st.session_state:
+        import uuid
+        st.session_state.session_id = str(uuid.uuid4())
+
 
 def load_components():
     """Load RAG components (cached)"""
@@ -118,8 +128,13 @@ def load_components():
             project_root = Path(__file__).parent
             vector_db_path = project_root / "data" / "vector_db"
             prompts_path = project_root / "config" / "prompts.yaml"
+            settings_path = project_root / "config" / "settings.yaml"
             image_map_path = project_root / "config" / "image_map.json"
             images_dir = project_root / "data" / "images"
+
+            # Load settings
+            with open(settings_path, 'r') as f:
+                st.session_state.settings = yaml.safe_load(f)
 
             # Get Gemini API key
             gemini_api_key = os.getenv('GEMINI_API_KEY') or st.secrets.get("GEMINI_API_KEY")
@@ -213,13 +228,37 @@ def render_sidebar():
         # Settings
         st.header("⚙️ Settings")
         st.session_state.show_debug = st.checkbox("Show debug info", value=False)
+
+        # Get default from settings
+        default_min_score = st.session_state.get('settings', {}).get('vector_search', {}).get('min_score', 0.30)
         st.session_state.min_score = st.slider(
             "Search confidence threshold",
             min_value=0.0,
             max_value=1.0,
-            value=0.30,
+            value=default_min_score,
             step=0.01
         )
+
+
+def determine_top_k(query: str, settings: dict) -> int:
+    """Determine how many chunks to retrieve based on query type"""
+    query_lower = query.lower()
+
+    # Diagnostic/troubleshooting queries - fewer chunks, more focused
+    diagnostic_keywords = [
+        "not working", "doesn't work", "don't work", "broken", "error",
+        "no data", "missing", "can't", "won't", "failed", "failure",
+        "issue", "problem", "help", "stuck"
+    ]
+    if any(kw in query_lower for kw in diagnostic_keywords):
+        return settings.get('vector_search', {}).get('top_k_diagnostic', 3)
+
+    # How-to queries - moderate chunks
+    if query_lower.startswith(("how do i", "how to", "how can", "how do you")):
+        return settings.get('vector_search', {}).get('top_k_howto', 4)
+
+    # General questions - standard chunks
+    return settings.get('vector_search', {}).get('top_k_default', 5)
 
 
 def handle_user_input(user_question: str):
@@ -249,13 +288,34 @@ def handle_user_input(user_question: str):
     # Generate response
     with st.chat_message("assistant"):
         with st.spinner("Searching knowledge base..."):
-            # Vector search
+            # Get user session for state tracking
+            user_id = st.session_state.get('session_id', 'default_user')
+            session = st.session_state.session_manager.get_session(user_id)
+
+            # Parse user message for signals (tried X, it worked, etc.)
+            parsed = session.parse_user_message(user_question)
+
+            # Update session based on parsed info
+            if parsed['tried_solution']:
+                session.add_attempted_solution(parsed['solution_name'])
+                if parsed['solution_worked'] == True:
+                    # Problem solved - reset session
+                    st.session_state.session_manager.clear_session(user_id)
+
+            # Vector search with adaptive top_k
             vector_search = st.session_state.vector_search
-            min_score = st.session_state.get('min_score', 0.2)  # Updated default
+            settings = st.session_state.get('settings', {})
+
+            # Use settings.yaml values
+            default_min_score = settings.get('vector_search', {}).get('min_score', 0.30)
+            min_score = st.session_state.get('min_score', default_min_score)
+
+            # Determine top_k based on query type
+            top_k = determine_top_k(user_question, settings)
 
             context, retrieved_chunks = vector_search.search_with_context(
                 user_question,
-                top_k=5,  # INCREASED from 3 for better context coverage - shoud not be hardcoded, needs to be moved to settings.yaml
+                top_k=top_k,
                 min_score=min_score
             )
 
@@ -268,16 +328,20 @@ def handle_user_input(user_question: str):
                         st.write(chunk['text'][:300] + "...")
                         st.divider()
 
-            # Generate answer
+            # Generate answer with conversation state
             conversation_history = [
                 msg for msg in st.session_state.messages[-6:]
                 if msg['role'] in ['user', 'model']
             ]
 
+            # Get session context for LLM
+            session_context = session.get_context_for_llm()
+
             answer = gemini_client.generate_answer(
                 user_question,
                 context,
-                conversation_history
+                conversation_history,
+                conversation_state=session_context
             )
 
             # Display answer (may contain embedded images via markdown)

@@ -8,7 +8,11 @@ app:
 
 # Vector Search Settings
 vector_search:
-  top_k: 5                   # Number of chunks to retrieve (INCREASED for better coverage)
+  # Adaptive retrieval based on query type
+  top_k_diagnostic: 3        # For troubleshooting questions (fewer, focused)
+  top_k_howto: 4             # For "how to" questions
+  top_k_general: 6           # For general questions
+  top_k_default: 5           # Fallback default
   min_score: 0.30            # Minimum similarity score threshold for relevant chunks
   embedding_model: "all-MiniLM-L6-v2"
 
@@ -19,6 +23,13 @@ llm:
   max_output_tokens: 10000    # INCREASED for longer, more complete answers
   top_p: 0.6                  # Nucleus sampling (0.0-1.0). Lower = more focused, higher = more diverse
   top_k: 40                   # Consider top K tokens. Lower = more focused, higher = more varied vocabulary
+
+# Diagnostic Settings
+diagnostic:
+  confidence_threshold_ask: 0.6      # Below this, ask questions
+  confidence_threshold_solve: 0.8    # Above this, provide solution
+  max_questions_before_solve: 3      # Max questions before giving solution anyway
+  session_timeout_minutes: 15        # How long to remember conversation state
 
 # Image Display Settings
 images:
