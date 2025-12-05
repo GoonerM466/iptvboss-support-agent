@@ -111,6 +111,18 @@ class DiagnosticSession:
         if self.questions_asked > 0:
             context_parts.append(f"Questions asked so far: {self.questions_asked}")
 
+        # Track troubleshooting round count
+        solution_count = len(self.attempted_solutions)
+        if solution_count > 0:
+            context_parts.append(
+                f"Troubleshooting rounds completed: {solution_count}"
+            )
+            if solution_count >= 3:
+                context_parts.append(
+                    "⚠️ Multiple solutions attempted - if next solution fails, "
+                    "escalation to Discord may be appropriate"
+                )
+
         context_parts.append(f"Current confidence level: {self.confidence_level}")
 
         if self.flow_id:

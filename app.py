@@ -17,6 +17,7 @@ from retrieval.vector_search import VectorSearch
 from llm.gemini_client import GeminiClient
 from ui.image_handler import ImageHandler
 from conversation_state import SessionManager
+from abuse_detection import AbuseHandler
 
 
 def copy_button(text, button_id):
@@ -111,10 +112,17 @@ def initialize_session_state():
     if 'session_manager' not in st.session_state:
         st.session_state.session_manager = SessionManager()
 
+    if 'abuse_handler' not in st.session_state:
+        st.session_state.abuse_handler = AbuseHandler()
+
     # Generate unique session ID for this Streamlit session
     if 'session_id' not in st.session_state:
         import uuid
         st.session_state.session_id = str(uuid.uuid4())
+
+    # Track if conversation is terminated
+    if 'conversation_terminated' not in st.session_state:
+        st.session_state.conversation_terminated = False
 
 
 def load_components():
@@ -263,6 +271,12 @@ def determine_top_k(query: str, settings: dict) -> int:
 
 def handle_user_input(user_question: str):
     """Process user question and generate response"""
+    # Check if conversation is terminated
+    if st.session_state.get('conversation_terminated', False):
+        with st.chat_message("assistant"):
+            st.error("This conversation has been terminated. Please refresh the page to start over, or visit Discord for support.")
+        return
+
     # Add user message
     st.session_state.messages.append({
         "role": "user",
@@ -271,6 +285,27 @@ def handle_user_input(user_question: str):
 
     with st.chat_message("user"):
         st.write(user_question)
+
+    # Check for abuse/aggression
+    user_id = st.session_state.get('session_id', 'default_user')
+    abuse_handler = st.session_state.abuse_handler
+    should_continue, abuse_response = abuse_handler.handle_message(user_id, user_question)
+
+    if abuse_response:
+        # User received warning or shutdown
+        st.session_state.messages.append({
+            "role": "assistant",
+            "content": abuse_response
+        })
+
+        with st.chat_message("assistant"):
+            if should_continue:
+                st.warning(abuse_response)
+            else:
+                # Terminate conversation
+                st.session_state.conversation_terminated = True
+                st.error(abuse_response)
+        return
 
     # Check for sensitive information
     gemini_client = st.session_state.gemini_client
@@ -336,6 +371,11 @@ def handle_user_input(user_question: str):
 
             # Get session context for LLM
             session_context = session.get_context_for_llm()
+
+            # Add emotional context if user is frustrated
+            emotional_note = abuse_handler.get_context_note(user_id, user_question)
+            if emotional_note:
+                session_context = f"{session_context}\n\n{emotional_note}"
 
             answer = gemini_client.generate_answer(
                 user_question,
