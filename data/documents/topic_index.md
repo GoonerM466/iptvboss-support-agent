@@ -37,6 +37,7 @@ Quick reference to find documentation by topic, symptom, or platform.
 - [Managing EPG Sources](user_guide/20_managing_epg_sources_full.md)
 - [Mapping EPG to Channels](user_guide/18_mapping_epg_to_channels.md)
 - [Universal EPG](user_guide/19_universal_epg.md)
+- [No EPG in Player](faq/39_no_epg_in_player.md)
 
 ### Source Sync Problems
 - [Source Sync Breaking Layouts](troubleshooting/02_source_sync_breaking_layouts.md)
