@@ -57,18 +57,19 @@ def copy_button(text, button_id):
 # Page configuration
 st.set_page_config(
     page_title="IPTVBoss QSA",
-    page_icon="📺",
+    page_icon="assets/blueLogoTransparent.ico",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS
+# Custom CSS with IPTVBoss blue theme
 st.markdown("""
 <style>
+    /* IPTVBoss blue: #0380db */
     .main-header {
         font-size: 2.5rem;
         font-weight: bold;
-        color: #1f77b4;
+        color: #0380db;
         text-align: center;
         margin-bottom: 1rem;
     }
@@ -85,8 +86,8 @@ st.markdown("""
         border-radius: 4px;
     }
     .info-box {
-        background-color: #d1ecf1;
-        border-left: 4px solid #17a2b8;
+        background-color: #e6f5ff;
+        border-left: 4px solid #0380db;
         padding: 1rem;
         margin: 1rem 0;
         border-radius: 4px;
@@ -96,6 +97,24 @@ st.markdown("""
         color: #666;
         font-size: 0.9rem;
         margin-top: 0.5rem;
+    }
+
+    /* Sidebar styling */
+    section[data-testid="stSidebar"] {
+        border-right: 2px solid #0380db;
+    }
+
+    /* Divider color */
+    hr {
+        border-color: #0380db;
+    }
+
+    /* Link colors */
+    a {
+        color: #0380db;
+    }
+    a:hover {
+        color: #025ea3;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -175,7 +194,15 @@ def load_components():
 
 def render_header():
     """Render page header"""
-    st.markdown('<div class="main-header">🎬 IPTVBoss Quick Support Agent</div>', unsafe_allow_html=True)
+    # Display custom header image centered
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        st.image("assets/headerTransparent.png", use_container_width=True)
+
+    st.markdown(
+        '<div class="subheader" style="font-size: 1.5rem; margin-top: -0.5rem;">Quick Support Agent</div>',
+        unsafe_allow_html=True
+    )
     st.markdown(
         '<div class="subheader">AI-powered support for IPTVBoss & EPGBoss</div>',
         unsafe_allow_html=True
@@ -192,6 +219,10 @@ def render_header():
 def render_sidebar():
     """Render sidebar with info and settings"""
     with st.sidebar:
+        # Add banner logo at top of sidebar
+        st.image("assets/bannerTransparent.png", use_container_width=True)
+        st.markdown("<br>", unsafe_allow_html=True)
+
         st.header("ℹ️ About")
 
         st.markdown("""
@@ -273,7 +304,7 @@ def handle_user_input(user_question: str):
     """Process user question and generate response"""
     # Check if conversation is terminated
     if st.session_state.get('conversation_terminated', False):
-        with st.chat_message("model"):
+        with st.chat_message("model", avatar="assets/logo.ico"):
             st.error("This conversation has been terminated. Please refresh the page to start over, or visit Discord for support.")
         return
 
@@ -298,7 +329,7 @@ def handle_user_input(user_question: str):
             "content": abuse_response
         })
 
-        with st.chat_message("model"):
+        with st.chat_message("model", avatar="assets/logo.ico"):
             if should_continue:
                 st.warning(abuse_response)
                 # IMPORTANT: Don't return - continue processing cleaned message
@@ -320,12 +351,12 @@ def handle_user_input(user_question: str):
             "content": warning_msg
         })
 
-        with st.chat_message("model"):
+        with st.chat_message("model", avatar="assets/logo.ico"):
             st.warning(warning_msg)
         return
 
     # Generate response
-    with st.chat_message("model"):
+    with st.chat_message("model", avatar="assets/logo.ico"):
         with st.spinner("Searching knowledge base..."):
             # Get user session for state tracking
             user_id = st.session_state.get('session_id', 'default_user')
@@ -469,7 +500,10 @@ def render_chat():
         role = message["role"]
         content = message["content"]
 
-        with st.chat_message(role):
+        # Use custom avatar for model messages
+        avatar = "assets/logo.ico" if role == "model" else None
+
+        with st.chat_message(role, avatar=avatar):
             st.write(content)
 
             # Add copy button for model messages in history
