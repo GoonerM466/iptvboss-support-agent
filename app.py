@@ -289,7 +289,7 @@ def handle_user_input(user_question: str):
     # Check for abuse/aggression
     user_id = st.session_state.get('session_id', 'default_user')
     abuse_handler = st.session_state.abuse_handler
-    should_continue, abuse_response = abuse_handler.handle_message(user_id, user_question)
+    should_continue, abuse_response, cleaned_message = abuse_handler.handle_message(user_id, user_question)
 
     if abuse_response:
         # User received warning or shutdown
@@ -301,11 +301,15 @@ def handle_user_input(user_question: str):
         with st.chat_message("assistant"):
             if should_continue:
                 st.warning(abuse_response)
+                # IMPORTANT: Don't return - continue processing cleaned message
             else:
                 # Terminate conversation
                 st.session_state.conversation_terminated = True
                 st.error(abuse_response)
-        return
+                return  # Only return on shutdown
+
+    # Use cleaned message for processing (removes aggressive language but keeps actual question)
+    user_question = cleaned_message
 
     # Check for sensitive information
     gemini_client = st.session_state.gemini_client

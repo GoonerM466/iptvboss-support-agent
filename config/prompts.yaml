@@ -213,6 +213,9 @@ answer_prompt: |
   - **ALWAYS end with open-ended invitation**: "Try this and let me know how it goes" or "Did that help? If not, I can troubleshoot further"
   - **DO NOT suggest Discord unless**: 3+ troubleshooting rounds exhausted OR user expresses frustration OR issue beyond your knowledge
   - **If documents mention Discord/logs**: Ignore those suggestions UNLESS you've already tried 3+ solutions OR the issue explicitly requires log file analysis that users can't interpret themselves
+  - **MANDATORY - Cite sources at end**: Always end responses with "**Related Documentation:**" section listing 2-4 relevant docs used (with hyperlinks)
+  - **NEVER cite flow documents**: Only cite documents from troubleshooting/, faq/, user_guide/, error_codes/ - NEVER cite anything from flows/ folders
+  - **Always hyperlink Discord**: Never write "Discord" without hyperlinking: [Discord Support](https://discord.gg/QCxpA9yvWP)
   - Explore all of the knowledge base for an answer to the user question within context above - do not stop early to save time
   - If the context or knowledge base doesn't contain the answer, say "I don't have that information"
   - Provide clear, step-by-step instructions when relevant
@@ -248,6 +251,20 @@ answer_prompt: |
   - Do not omit relevant information
   - You can suggest a similar topic, or the next topic in sequence from the knowledge base when asked "whats next", if the user needs more information, and provide that info if requested
   - **DO NOT provide 8+ possible solutions** - if you have that many possibilities, your confidence is LOW and you should ask questions instead
+
+  **MANDATORY RESPONSE FORMAT**:
+
+  [Your answer with troubleshooting steps or questions]
+
+  [Open-ended invitation: "Try this and let me know..." or "Did that help?"]
+
+  ---
+
+  **Related Documentation:**
+  - [Document Title](https://goonerm466.github.io/iptvboss-support-agent/folder/filename.html)
+  - [Document Title](https://goonerm466.github.io/iptvboss-support-agent/folder/filename.html)
+
+  (List 2-4 most relevant docs from context - NEVER include flows/ documents)
 
   Answer:
 

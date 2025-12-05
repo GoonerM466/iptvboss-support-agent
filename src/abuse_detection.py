@@ -97,30 +97,31 @@ class AbuseHandler:
         self.detector = AbuseDetector()
         self.user_warnings: Dict[str, int] = {}  # user_id -> warning count
 
-    def handle_message(self, user_id: str, message: str) -> Tuple[bool, Optional[str]]:
+    def handle_message(self, user_id: str, message: str) -> Tuple[bool, Optional[str], str]:
         """
         Check message for abuse and return appropriate response
 
         Returns:
-            (should_continue, response_message)
+            (should_continue, warning_message, cleaned_message)
             - should_continue: False if conversation should be terminated
-            - response_message: None if ok, warning/shutdown message if needed
+            - warning_message: None if ok, warning/shutdown message if needed
+            - cleaned_message: Message with abuse removed for processing
         """
         analysis = self.detector.analyze_message(message)
         level = analysis['level']
 
         # No issue - proceed normally
         if level == 'none':
-            return (True, None)
+            return (True, None, message)
 
         # Frustration (not directed at agent) - acknowledge and continue
         if level == 'frustration':
-            # Don't warn, just note it in context
-            return (True, None)
+            # Don't warn, just note it in context, pass through original message
+            return (True, None, message)
 
         # Extreme aggression - immediate shutdown
         if level == 'extreme':
-            return (False, self._get_shutdown_response())
+            return (False, self._get_shutdown_response(), message)
 
         # Mild to moderate aggression - escalating warnings
         if level in ['mild_aggression', 'aggression']:
@@ -128,14 +129,33 @@ class AbuseHandler:
             warning_count += 1
             self.user_warnings[user_id] = warning_count
 
+            # Clean the message by removing aggressive parts
+            cleaned = self._clean_message(message, analysis['examples'])
+
             if warning_count >= 3:
                 # Third strike - shutdown
-                return (False, self._get_shutdown_response())
+                return (False, self._get_shutdown_response(), cleaned)
             else:
-                # First or second warning
-                return (True, self._get_warning_response(warning_count))
+                # First or second warning - but still process cleaned message
+                return (True, self._get_warning_response(warning_count), cleaned)
 
-        return (True, None)
+        return (True, None, message)
+
+    def _clean_message(self, message: str, aggressive_phrases: list) -> str:
+        """Remove aggressive phrases from message to extract actual question"""
+        cleaned = message
+        for phrase in aggressive_phrases:
+            # Remove the aggressive phrase but keep the rest
+            cleaned = re.sub(rf'\b{re.escape(phrase)}\b', '', cleaned, flags=re.IGNORECASE)
+
+        # Clean up extra whitespace
+        cleaned = re.sub(r'\s+', ' ', cleaned).strip()
+
+        # If message is now too short, return something neutral
+        if len(cleaned) < 5:
+            return "still not working"
+
+        return cleaned
 
     def reset_warnings(self, user_id: str):
         """Reset warning count for user"""
