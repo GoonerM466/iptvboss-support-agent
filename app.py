@@ -273,7 +273,7 @@ def handle_user_input(user_question: str):
     """Process user question and generate response"""
     # Check if conversation is terminated
     if st.session_state.get('conversation_terminated', False):
-        with st.chat_message("assistant"):
+        with st.chat_message("model"):
             st.error("This conversation has been terminated. Please refresh the page to start over, or visit Discord for support.")
         return
 
@@ -294,11 +294,11 @@ def handle_user_input(user_question: str):
     if abuse_response:
         # User received warning or shutdown
         st.session_state.messages.append({
-            "role": "assistant",
+            "role": "model",
             "content": abuse_response
         })
 
-        with st.chat_message("assistant"):
+        with st.chat_message("model"):
             if should_continue:
                 st.warning(abuse_response)
                 # IMPORTANT: Don't return - continue processing cleaned message
@@ -316,16 +316,16 @@ def handle_user_input(user_question: str):
     if gemini_client.detect_sensitive_request(user_question):
         warning_msg = gemini_client.get_sensitive_warning()
         st.session_state.messages.append({
-            "role": "assistant",
+            "role": "model",
             "content": warning_msg
         })
 
-        with st.chat_message("assistant"):
+        with st.chat_message("model"):
             st.warning(warning_msg)
         return
 
     # Generate response
-    with st.chat_message("assistant"):
+    with st.chat_message("model"):
         with st.spinner("Searching knowledge base..."):
             # Get user session for state tracking
             user_id = st.session_state.get('session_id', 'default_user')
@@ -383,7 +383,7 @@ def handle_user_input(user_question: str):
             # Generate answer with conversation state
             conversation_history = [
                 msg for msg in st.session_state.messages[-6:]
-                if msg['role'] in ['user', 'assistant']
+                if msg['role'] in ['user', 'model']
             ]
 
             # Get session context for LLM
@@ -456,7 +456,7 @@ def handle_user_input(user_question: str):
 
             # Add to message history (store only additional images, not embedded ones)
             st.session_state.messages.append({
-                "role": "assistant",
+                "role": "model",
                 "content": answer,
                 "images": images_to_display
             })
@@ -472,8 +472,8 @@ def render_chat():
         with st.chat_message(role):
             st.write(content)
 
-            # Add copy button for assistant messages in history
-            if role == "assistant":
+            # Add copy button for model messages in history
+            if role == "model":
                 copy_button(content, f"history_{hash(content)}")
 
             # Display additional images if present (not embedded in content)
@@ -516,7 +516,7 @@ def main():
     if not st.session_state.messages:
         greeting = st.session_state.gemini_client.get_greeting()
         st.session_state.messages.append({
-            "role": "assistant",
+            "role": "model",
             "content": greeting
         })
 
