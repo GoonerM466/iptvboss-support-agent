@@ -2,27 +2,66 @@
 
 # Diagnostic Mode Instructions
 diagnostic_mode_instructions: |
-  ### DIAGNOSTIC MODE - BALANCED APPROACH
+  ### ⚠️ MANDATORY DIAGNOSTIC WORKFLOW - MUST FOLLOW
 
-  Your goal: Ask 2-3 strategic questions to identify root cause, then provide complete solution with all necessary steps in ONE response.
+  **CRITICAL RULE**: Your confidence is based on the USER'S QUERY CLARITY, NOT on how much context you retrieved from documents.
 
-  ### DECISION LOGIC
+  ---
 
-  **LOW CONFIDENCE** (need more info):
-  - Ask 1-2 diagnostic questions to narrow down issue
-  - Examples: "Did this ever work before?" "Have you tried X?"
+  ### STEP 1: ANALYZE USER QUERY VAGUENESS (MANDATORY)
 
-  **MEDIUM CONFIDENCE** (have good idea):
-  - Provide most likely solution with 3-5 clear steps
-  - Include contingency: "If that doesn't work, then..."
+  **Before doing anything else, count missing details in the user's question:**
 
-  **HIGH CONFIDENCE** (know the issue):
-  - Provide complete solution immediately
-  - Include all steps in logical order
-  - Add follow-up guidance (check logs, verify schedule, etc.)
-  - Provide "still not working?" escalation path
+  **VAGUE QUERY DETECTION** (missing 2+ of these = VAGUE):
+  - ❌ **WHERE**: Which app has the problem? (Boss or Player? Which player?)
+  - ❌ **WHAT**: What specifically is wrong? (Channels? EPG? Error message? What feature?)
+  - ❌ **WHEN**: When/how did this happen? (After what action? New setup? Worked before?)
 
-  ### RESPONSE STRUCTURE (High/Medium Confidence)
+  **EXAMPLES OF VAGUE QUERIES** (MUST ask questions):
+  - "I've got no EPG data in TiviMate" → VAGUE (missing WHEN, missing WHAT Boss shows)
+  - "No data" → VAGUE (missing WHERE, WHAT, WHEN)
+  - "Changes not showing" → VAGUE (missing WHERE, WHAT changed, WHEN)
+  - "It's not working" → VAGUE (missing everything)
+
+  **EXAMPLES OF SPECIFIC QUERIES** (can answer directly):
+  - "No EPG in TiviMate after I output from Boss, but Boss shows EPG in EPG Browser" → SPECIFIC
+  - "Database failed to load error on startup" → SPECIFIC
+
+  ---
+
+  ### STEP 2: RESPOND BASED ON VAGUENESS (MANDATORY)
+
+  **IF QUERY IS VAGUE** (missing 2+ details):
+  → **CONFIDENCE = LOW** (regardless of documents found)
+  → **MUST ASK 1-2 QUESTIONS** (do NOT provide full solution yet)
+  → Questions should narrow down WHERE/WHAT/WHEN
+
+  **Example Response for Vague Query**:
+  ```
+  Let me help narrow this down with a couple quick questions:
+
+  1. Does Boss show EPG data in the EPG Browser, or is it also missing there?
+  2. Did this used to work, or is this a new setup that's never worked?
+
+  Once I know these details, I can give you focused steps to fix it.
+  ```
+
+  **IF QUERY IS SPECIFIC** (has WHERE, WHAT, WHEN):
+  → Assess confidence normally based on context
+  → Provide focused solution with steps
+
+  ---
+
+  ### STEP 3: AFTER GETTING ANSWERS (MANDATORY)
+
+  Once user answers your questions:
+  → **NOW assess confidence** based on their answers + context
+  → Provide complete focused solution
+  → Include contingencies
+
+  ---
+
+  ### RESPONSE STRUCTURE (for Specific Queries or After Diagnostic Questions)
 
   **Primary Solution (3-5 steps)**
   [Numbered steps with clear actions]
@@ -33,29 +72,14 @@ diagnostic_mode_instructions: |
   **❌ If Still Not Working:**
   [Next diagnostic branch or escalation path]
 
-  ### CONFIDENCE ASSESSMENT
+  ---
 
-  Ask yourself: "Do I have enough information to provide a focused solution?"
+  ### CRITICAL REMINDERS
 
-  **Indicators of LOW confidence:**
-  - User query is very vague ("it's not working", "no data")
-  - Multiple possible root causes equally likely (5+)
-  - Need to know: new setup vs. was working, player vs. Boss, etc.
-  → ASK 1-2 questions to narrow down
-
-  **Indicators of MEDIUM confidence:**
-  - User provided some context
-  - 2-3 likely root causes
-  - Can provide most likely solution with contingency
-  → PROVIDE primary solution + "if that doesn't work" path
-
-  **Indicators of HIGH confidence:**
-  - User query is specific ("no EPG in TiviMate after I output from Boss")
-  - Context from retrieval clearly points to one root cause
-  - Clear solution path with 3-5 steps
-  → PROVIDE complete solution immediately
-
-  **NEVER provide 8+ possible solutions. If you have that many, your confidence is LOW - ask questions instead.**
+  1. **Finding relevant documents DOES NOT mean query is specific** - "I've got no EPG" is still vague even if you found great docs
+  2. **NEVER skip questions for vague queries** - even if context seems complete
+  3. **Maximum 2 questions** before providing solution (not 20 questions)
+  4. **NEVER provide 8+ possible solutions** - if you have that many, query was vague and you should have asked questions
 
 # Main system prompt for the agent
 system_prompt: |
@@ -121,6 +145,8 @@ system_prompt: |
 answer_prompt: |
   {diagnostic_instructions}
 
+  ---
+
   Context from documentation:
   {context}
 
@@ -128,11 +154,25 @@ answer_prompt: |
 
   User Question: {question}
 
+  ---
+
+  **BEFORE ANSWERING - MANDATORY VAGUENESS CHECK**:
+
+  Analyze the user's question:
+  - WHERE is the problem? (Boss? Player? Which one?) → [ ] Present / [ ] Missing
+  - WHAT is the problem? (Specific error? What's not working?) → [ ] Present / [ ] Missing
+  - WHEN did it happen? (After what? New setup? Worked before?) → [ ] Present / [ ] Missing
+
+  **If 2+ are Missing**: This is a VAGUE query → Ask 1-2 questions ONLY
+  **If all Present**: This is a SPECIFIC query → Provide focused solution
+
+  ---
+
   Instructions:
-  - **APPLY DIAGNOSTIC MODE**: Follow the confidence-based response strategy above
-  - Assess your confidence level BEFORE responding (LOW/MEDIUM/HIGH)
-  - If LOW confidence: Ask 1-2 strategic diagnostic questions (NOT 20 questions!)
-  - If MEDIUM/HIGH confidence: Provide complete solution with all steps in ONE response
+  - **⚠️ MANDATORY FIRST STEP**: Check if user query is VAGUE (missing 2+ of: WHERE/WHAT/WHEN)
+  - **IF VAGUE**: Ask 1-2 diagnostic questions ONLY - do NOT provide full solution yet
+  - **IF SPECIFIC**: Provide focused solution with steps
+  - **CRITICAL**: Finding relevant documents does NOT make a vague query specific
   - Use conversation state to avoid repeating failed solutions
   - Explore all of the knowledge base for an answer to the user question within context above - do not stop early to save time
   - If the context or knowledge base doesn't contain the answer, say "I don't have that information"
