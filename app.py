@@ -255,7 +255,7 @@ def handle_user_input(user_question: str):
 
             context, retrieved_chunks = vector_search.search_with_context(
                 user_question,
-                top_k=10,  # INCREASED from 3 for better context coverage
+                top_k=5,  # INCREASED from 3 for better context coverage - shoud not be hardcoded, needs to be moved to settings.yaml
                 min_score=min_score
             )
 
