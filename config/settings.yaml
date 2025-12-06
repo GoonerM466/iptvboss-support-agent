@@ -14,13 +14,13 @@ vector_search:
   top_k_general: 6           # For general questions
   top_k_default: 5           # Fallback default
   min_score: 0.30            # Minimum similarity score threshold for relevant chunks
-  embedding_model: "all-MiniLM-L6-v2"
+  embedding_model: "all-mpnet-base-v2" # Was 'all-MiniLM-L6-v2'
 
 # LLM Settings
 llm:
   model: "gemini-2.5-flash"
-  temperature: 0.4            #  Randomness (0.0=deterministic, 1.0=creative). Higher = more varied responses
-  max_output_tokens: 10000    # INCREASED for longer, more complete answers
+  temperature: 0.2            #  Randomness (0.0=deterministic, 1.0=creative). Higher = more varied responses
+  max_output_tokens: 8192     # INCREASED for longer, more complete answers
   top_p: 0.6                  # Nucleus sampling (0.0-1.0). Lower = more focused, higher = more diverse
   top_k: 40                   # Consider top K tokens. Lower = more focused, higher = more varied vocabulary
 

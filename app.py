@@ -252,10 +252,12 @@ def render_sidebar():
 
         st.header("💡 Example Questions")
         examples = [
+            "I need help setting up Boss",
             "How do I set up Dropbox?",
             "My EPG isn't showing",
-            "What's the difference between M3U and XC?",
-            "How do I create a layout?"
+            "What's the difference between M3U and XC API?",
+            "How do I create a layout?",
+            "Where do I find Cloud Links?"
         ]
 
         for example in examples:
@@ -269,7 +271,7 @@ def render_sidebar():
         st.session_state.show_debug = st.checkbox("Show debug info", value=False)
 
         # Get default from settings
-        default_min_score = st.session_state.get('settings', {}).get('vector_search', {}).get('min_score', 0.30)
+        default_min_score = st.session_state.get('settings', {}).get('vector_search', {}).get('min_score', 0.35)
         st.session_state.min_score = st.slider(
             "Search confidence threshold",
             min_value=0.0,
@@ -413,7 +415,7 @@ def handle_user_input(user_question: str):
 
             # Generate answer with conversation state
             conversation_history = [
-                msg for msg in st.session_state.messages[-6:]
+                msg for msg in st.session_state.messages[-10:]
                 if msg['role'] in ['user', 'model']
             ]
 

@@ -309,8 +309,10 @@ greeting: |
 
 # Example queries for users
 example_queries:
+  - "I need help setting up Boss"
   - "How do I set up Dropbox?"
   - "My EPG isn't showing up"
-  - "What's the difference between M3U and XC?"
+  - "What's the difference between M3U and XC API?"
   - "How do I create a layout?"
   - "Database won't load, what should I do?"
+  - "Where do I find Cloud Links?"
