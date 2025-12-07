@@ -46,7 +46,7 @@ class GeminiClient:
 
         # Extract LLM settings
         llm_config = settings['llm']
-        self.model_name = llm_config.get('model', 'gemini-2.5-flash')
+        self.model_name = llm_config.get('model', 'gemini-2.5-flash-lite')
         self.temperature = llm_config.get('temperature', 0.4)
         self.top_p = llm_config.get('top_p', 0.8)
         self.top_k = llm_config.get('top_k', 40)

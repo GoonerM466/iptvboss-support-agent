@@ -18,7 +18,7 @@ vector_search:
 
 # LLM Settings
 llm:
-  model: "gemini-2.5-flash"
+  model: "gemini-2.5-flash-lite"
   temperature: 0.2            #  Randomness (0.0=deterministic, 1.0=creative). Higher = more varied responses
   max_output_tokens: 8192     # INCREASED for longer, more complete answers
   top_p: 0.6                  # Nucleus sampling (0.0-1.0). Lower = more focused, higher = more diverse
